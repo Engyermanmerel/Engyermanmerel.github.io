@@ -660,7 +660,7 @@ section .pro_cont-lead{
   grid-template-areas:
     "logo"
     "content";
-  grid-template-columns: 1fr 3fr 1fr; 
+  grid-template-columns: 1fr 5fr 2fr; 
 }
 
 .edu-card-log {
