@@ -472,6 +472,55 @@ section .pro_cont-lead{
   align-items: center;
 }
 
+/* ------ Layout + style of modal content ------ */
+.grid-cont-mod {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "Intro Intro"
+    "colum-fr colum-sc"
+    "concl concl";
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 28px;
+}
+
+.modal-secs {
+  background-color: var(--ink);
+  border-radius: var(--border-radius-cards);
+  padding: 20px;
+}
+
+.modal-header > span {
+  color: var(--brand-2-btn);
+  font-weight: 400;
+}
+
+.modal-header {
+  grid-area: header;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-intr {
+  grid-area: Intro;
+}
+
+.modal-col-fr {
+  grid-area: colum-fr;
+}
+
+.modal-col-sc {
+  grid-area: colum-sc;
+}
+
+.modal-concl {
+  grid-area: concl;
+}
+
+/* ---- Btn for close modal - Animation and Material Icon ---- */
 .opern-modal_icons {
   position: center;
 }
@@ -517,13 +566,14 @@ section .pro_cont-lead{
   height: 100%;
   background: rgba(0,0,0,0.5);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   z-index: 1000;
   /* Inicialmente oculto */
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+  overflow: auto;
 }
 
 .overlay.active {
@@ -532,7 +582,7 @@ section .pro_cont-lead{
 }
 
 .modal {
-  background: var(--ink); /* tono beige/rosa claro */
+  background: white; /* tono beige/rosa claro */
   color: var(--bg); /* Font color */
   padding: 2rem;
   border-radius: var(--border-radius-cards);
@@ -590,6 +640,15 @@ section .pro_cont-lead{
 }
 
 /* Skill section -Experience*/
+.card_experience{
+  background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0));
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding: 28px 32px;
+  transform: scale(1.0);
+  transition: transform 0.3s ease-in-out;
+}
+
 .skill-container {
   max-width:1100px;
   margin:0 auto;
@@ -609,7 +668,7 @@ section .pro_cont-lead{
   flex-direction: column;
 }
 
-.t-item{
+.t-item_CRTG {
   position:relative;
   background-image: 
     linear-gradient(0deg, rgba(11, 15, 26, .9) 0%, rgba(0, 0, 0, 0) 95%), 
@@ -622,6 +681,34 @@ section .pro_cont-lead{
   justify-content: space-between;
   height: 240px;
   margin-bottom: 20px;
+}
+
+.t-item_HK {
+  position:relative;
+  background-image: 
+    linear-gradient(0deg, rgba(11, 15, 26, .9) 0%, rgba(0, 0, 0, 0) 95%), 
+    url(./assets/Experience/HK/HK_Experience_BG1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left:36px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 240px;
+  margin-bottom: 20px;
+}
+
+.card_experience:hover {
+  transform: scale(1.02);
+}
+
+.muted-item-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.muted-it-ri-date {
+  margin-left: 24px;
 }
 
 .company {

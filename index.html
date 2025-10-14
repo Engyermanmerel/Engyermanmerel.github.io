@@ -209,7 +209,7 @@
           <p class="pro_cont-lead_slogan">"Creativity solves, <strong>Analysis</strong> confirms, <span class="accent-word">PROOF</span> proves." <span class="pername">-Yerman M.</span></p>
       </div>
 
-      <!--Carrusel-->
+      <!--Carrusel Container -->
       <div class="carousel-container">
         <div class="carousel" id="carousel">
 
@@ -259,17 +259,23 @@
      <!--Overlay + Modal 1-->
     <div class="overlay" id="modal1" aria-hidden="true">
       <div class="modal modal1" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <!-- Item 1 -->
+        <!-- Button to close -->
         <div class="btn-cont-clos">
           <button id="close" data-close="modal1" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
         </div>
-        <!-- Item 2 -->
+        <!-- Container -->
         <div class="grid-cont-mod">
+          <!-- Title and Subtitle -->
           <div class="modal-header">
             <Span class="m-cat-span">Structural Analysis</Span>
             <h2 class="modal-title">Dynamic Seismic Validation of a Diesel Engine Support Structure</h2>
           </div>
-          <div class="modal-content">
+          <!-- Introduction -->
+          <div class="modal-intr modal-secs">
+            <p>Hola soy una introducciòn</p>
+          </div>
+          <!-- Colum 1 -->
+          <div class="modal-col-fr modal-secs">
             <section class="content-section">
               <figure>
                   <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
@@ -288,6 +294,31 @@
                     Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
                 </p>
             </section>
+          </div>
+          <!-- Colum 2 -->
+          <div class="modal-col-sc modal-secs">
+            <section class="content-section">
+              <figure>
+                  <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
+                  <figcaption>Plano técnico de la estructura principal</figcaption>
+              </figure>
+              <p>
+                  Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
+              </p>
+            </section>
+            <section class="content-section">
+                <figure>
+                    <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
+                    <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
+                </figure>
+                <p>
+                    Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
+                </p>
+            </section>
+          </div>
+          <!-- Conclution -->
+          <div class="modal-concl modal-secs">
+            <p>Here goes the conclution </p>
           </div>
         </div>
       </div>
@@ -317,24 +348,28 @@
         <h2>Experience <span class="section-span">| My Carrer</span></h2>
       </div>
       <div class="timeline">
-        <div class="t-item card-experience">
+        <div class="t-item_HK card_experience">
               <div class="muted-item-left">
                 <h3 class="rolle">Project Engineer</h3>
                 <p class="company">Herrenknecht AG</p>
               </div>
               <div class="muted-item-right">
-                <p class="location"><li class="material-icons location">location_on</li> Schwanaw, Germany</p>
-                <p class="date">Jan 2025 - Jul 2025</p>
+                <div>
+                  <p class="muted-it-ri-location"><li class="material-icons location">location_on</li> Schwanaw, Germany</p>
+                </div>
+                <p class="muted-it-ri-date">Jan 2025 - Jul 2025</p>
               </div>
         </div>
-        <div class="t-item card">
+        <div class="t-item_CRTG card_experience">
           <div class="muted-item-left">
                 <h3 class="rolle">Mechanical Engineer</h3>
-                <p class="company">China Railway Tunnel Group Co.</p>
+                <p class="company">China Railway Tunnel Group Co. (CRTG)</p>
               </div>
               <div class="muted-item-right">
-                <p class="location"><li class="material-icons location">location_on</li> Panamà City, Panamà</p>
-                <p class="date">Aug 2024 - Jan 2025</p>
+                <div>
+                  <p class="location"><li class="material-icons location">location_on</li> Panamà City, Panamà</p>
+                </div>
+                <p class="muted-it-ri-date">Aug 2024 - Jan 2025</p>
               </div>
         </div>
       </div>
