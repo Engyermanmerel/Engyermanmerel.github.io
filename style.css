@@ -496,6 +496,10 @@ section .pro_cont-lead{
   font-weight: 400;
 }
 
+.modal-header > h2 {
+  line-height: 1.2;
+} 
+
 .modal-header {
   grid-area: header;
   margin-bottom: 28px;
