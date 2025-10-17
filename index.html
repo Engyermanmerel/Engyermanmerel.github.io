@@ -135,7 +135,7 @@
             <div class="ski-card-cont-main">
               <ul class="muted">
                 <li>3D modeling (Inventor, SolidWorks)</li>
-                <li>FEA Simulation</li>
+                <li>FEA Simulation (Ansys)</li>
                 <li>Material Selection</li>
                 <li>Failure mode prediction</li>
               </ul>
@@ -342,16 +342,69 @@
 
      <!--Modal 2-->
     <div class="overlay" id="modal2" >
-      <div class="modal">
-        <button id="close" data-close="modal2"><i class="material-icons close_icon">close</i></button>
-          <div class="modal-content">
-            <h2>Título del Proyecto</h2>
-            <p>
-              Aquí va la descripción completa del proyecto. Puedes añadir imágenes, texto detallado,
-              diagramas, videos embebidos, etc.
-            </p>
-            <img src="detalle.jpg" alt="Imagen del proyecto" style="width:100%; margin-top:1rem; border-radius:8px;">
+      <div class="modal modal2" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <!-- Button to close -->
+        <div class="btn-cont-clos">
+          <button id="close" data-close="modal2" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
+        </div>
+        <!-- Container -->
+        <div class="grid-cont-mod">
+          <!-- Title and Subtitle -->
+          <div class="modal-header">
+            <Span>Structural Analysis</Span>
+            <h2>Dynamic Seismic Validation of a Diesel Engine Support Structure</h2>
           </div>
+          <!-- Introduction -->
+          <div class="modal-intr modal-secs">
+            <p>Hola soy una introducciòn</p>
+          </div>
+          <!-- Colum 1 -->
+          <div class="modal-col-fr modal-secs">
+            <section class="content-section">
+              <figure>
+                  <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
+                  <figcaption>Plano técnico de la estructura principal</figcaption>
+              </figure>
+              <p>
+                  Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
+              </p>
+            </section>
+            <section class="content-section">
+                <figure>
+                    <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
+                    <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
+                </figure>
+                <p>
+                    Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
+                </p>
+            </section>
+          </div>
+          <!-- Colum 2 -->
+          <div class="modal-col-sc modal-secs">
+            <section class="content-section">
+              <figure>
+                  <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
+                  <figcaption>Plano técnico de la estructura principal</figcaption>
+              </figure>
+              <p>
+                  Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
+              </p>
+            </section>
+            <section class="content-section">
+                <figure>
+                    <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
+                    <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
+                </figure>
+                <p>
+                    Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
+                </p>
+            </section>
+          </div>
+          <!-- Conclution -->
+          <div class="modal-concl modal-secs">
+            <p>Here goes the conclution </p>
+          </div>
+        </div>
       </div>
     </div>
 
