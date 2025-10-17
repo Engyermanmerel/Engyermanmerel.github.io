@@ -53,7 +53,7 @@
               <a href="#skills">Skills</a>
               <a href="#education">Education</a>
               <a href="#experiencia">Experience</a>
-              <a href="#contacto">Contact</a>
+              <a href="#galery">Galery</a>
             </nav>
           </div>
       </header>
@@ -515,41 +515,28 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contacto" class="section_sh">
-    <div class="container fl-ly-sect-cont">
+  <!-- GALERY SECTION -->
+  <section id="galery" class="section_sh section_normal">
+    <div class="container fl-ly-sect">
+      <!-- Title of Galery -->
       <div class="ti-sect-lef">
-        <h2>Contact</h2>
+        <h2>Gallery <span class="section-span">| History</span></h2>
       </div>
-      <div class="grid" style="grid-template-columns:1.2fr .8fr">
-        <form class="form" name="contact" action="mailto:ymerel_02@outlook.com" method="post" enctype="text/plain" accept-charset="utf-8">
-          <!--Name input--> 
-          <div class="form-name form-input-item">
-            <label>Name</label>
-            <input type="text" name="name" required class="input-short">
-          </div>  
-          <!--Email-->
-          <div class="form-email form-input-item">
-            <label>Email</label>
-          <input type="email" name="email" placeholder="your@email.com" required class="input-short">
-          </div>
-          <!--Message-->
-          <div class="form-message form-input-item">
-            <label>Message</label>
-          <textarea name="message" rows="5" required class="input-long"></textarea>
-          </div>
-          <!--Call action in btn-->
-          <div class="">
-            <input type="submit" name="submit" class="btn primary">
-          </div>
-        </form>
-        <div class="left-content-contact">
-          <div>
-            <h2>Let’s talk</h2>
-            <p class="content-info">ask me anything or just say hi...</p>
-          </div>
-        </div>
+      <!-- Galery images container -->
+      <div class="galery-image-container">
+        <img id="mainImage" src="img1.png" alt="Presentación">
       </div>
+      <!-- Btn for update images-->
+      <div class="galery-buttons">
+        <button class="active galery-btn" onclick="changeImage(0)">University</button>
+        <button class="galery-btn" onclick="changeImage(2)">Conference of Science</button>
+        <button class="galery-btn" onclick="changeImage(1)">Herrenknecht AG</button>
+        <button class="galery-btn" onclick="changeImage(2)">CRTG</button>
+      </div>
+      <!-- Images description of eachone -->
+      <p class="galery-description">
+        It's a Description per imgs.
+      </p>
     </div>
   </section>
 

@@ -1,4 +1,11 @@
- // Año dinámico
+ //Input Const
+ const images = [
+  "img1.png", // Imagen 1
+  "img2.png", // Imagen 2
+  "img3.png"  // Imagen 3
+];
+
+// Año dinámico
 document.getElementById('year').textContent = new Date().getFullYear()
 
  // Scroll suave para anclas
@@ -110,3 +117,23 @@ class ModalManager {
 document.addEventListener('DOMContentLoaded', () => {
     new ModalManager();
 });
+
+//Galery logic
+function changeImage(index) {
+  const mainImage = document.getElementById("mainImage");
+  const buttons = document.querySelectorAll(".galery-btn");
+
+  // Cambia la imagen con transición
+  mainImage.style.opacity = 0;
+  setTimeout(() => {
+    mainImage.src = images[index];
+    mainImage.style.opacity = 1;
+  }, 300);
+
+  // Actualiza el estado de los botones
+  buttons.forEach(btn => btn.classList.remove("active"));
+  buttons[index].classList.add("active");
+
+  // Description Update
+  
+}
