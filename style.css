@@ -63,7 +63,7 @@ img{
 }
 
 .container{
-  max-width:1100px;
+  max-width:1268    px;
   margin:0 auto;
   padding: 0 24px 24px 24px;
   height: 100vh;
@@ -226,7 +226,7 @@ header .nav-inner{
   scroll-margin-top: 60px;
   height: 100vh;
   overflow: hidden;
-  margin: 96px 0;
+  margin: 160px 0;
 }
 
 .section_sh{
@@ -251,6 +251,8 @@ header .nav-inner{
 /* Sections */
 .section-span {
   color: var(--muted); 
+  font-size: 32px;
+  font-weight: bold;
 }
 
 section h2 {
@@ -270,20 +272,11 @@ section .pro_cont-lead{
   margin-bottom:24px
 }
 
-/* About */
-.card_about{
-  background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0));
-  border:1px solid var(--line);
-  border-radius:28px;
-  padding-top:28px;
-  padding-inline-start: 32px;
-  padding-inline-end: 76px;
-  padding-bottom: 52px;
-}
-
+/* About */ 
 .fl-ly-sect{
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .fl-ly-sect-cont{
@@ -293,8 +286,9 @@ section .pro_cont-lead{
 }
 
 .about{
-  grid-template-columns:1.1fr .9fr
+  grid-template-columns: 1fr .9fr
 }
+
 .grid_about{
   display:grid;
 }
@@ -336,19 +330,15 @@ section .pro_cont-lead{
   height: 90px;
 }
 
-.name-under {
-  font-size: 20px;
+.abt_ttl {
+  font-size: 58px;
   font-weight: bolder;
+  line-height: 1.04167;
 }
 
 .position {
   color: #88898a;
   font-weight: 500;
-}
-
-.card-title {
-  padding-bottom: 20px;
-  line-height: 1.5;
 }
 
 /* Skills - Experience */
@@ -733,10 +723,8 @@ section .pro_cont-lead{
 
 .ti-sect-ri{
   display: flex;
-  align-items: end;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 60px;  
   gap: 20px;
 }
 
