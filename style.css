@@ -63,7 +63,7 @@ img{
 }
 
 .container{
-  max-width:1268    px;
+  max-width:1268px;
   margin:0 auto;
   padding: 0 24px 24px 24px;
   height: 100vh;
@@ -251,7 +251,7 @@ header .nav-inner{
 /* Sections */
 .section-span {
   color: var(--muted); 
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
 }
 
@@ -273,6 +273,13 @@ section .pro_cont-lead{
 }
 
 /* About */ 
+.section_abt{
+  scroll-margin-top: 60px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
 .fl-ly-sect{
   display: flex;
   flex-direction: column;
@@ -306,15 +313,15 @@ section .pro_cont-lead{
 }
 
 .about_photo{
-  width: 310px;
-  height: 450px;
+  width: 340px;
+  height: 510px;
   max-width: 100%; /* Responsive */
   margin-left: 50px;
 }
 
 
 .cardAbout_description {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   letter-spacing: .011em;
   font-size: 16px;
 }
@@ -331,7 +338,7 @@ section .pro_cont-lead{
 }
 
 .abt_ttl {
-  font-size: 58px;
+  font-size: 48px;
   font-weight: bolder;
   line-height: 1.04167;
 }
@@ -342,6 +349,14 @@ section .pro_cont-lead{
 }
 
 /* Skills - Experience */
+.section_skl{
+  scroll-margin-top: 60px;
+  height: 100vh;
+  overflow: hidden;
+  margin-bottom: 160px;
+}
+
+
 .skills{
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 }
@@ -725,7 +740,7 @@ section .pro_cont-lead{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 
 /* Education */
