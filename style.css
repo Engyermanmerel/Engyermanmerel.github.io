@@ -277,6 +277,7 @@ section .pro_cont-lead{
   scroll-margin-top: 60px;
   height: 100vh;
   overflow: hidden;
+  margin: 40px 0  ;
 }
 
 
@@ -352,8 +353,18 @@ section .pro_cont-lead{
 .section_skl{
   scroll-margin-top: 60px;
   height: 100vh;
-  overflow: hidden;
-  margin-bottom: 160px;
+  overflow: hidden; 
+}
+
+.sk-sect-lef{
+  display: flex;
+  align-items: center;
+  flex-direction: start;
+}
+
+.skl-ly-sect{
+  display: flex;
+  flex-direction: column;
 }
 
 
