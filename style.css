@@ -353,44 +353,43 @@ section .pro_cont-lead{
 .section_skl{
   scroll-margin-top: 60px;
   height: 100vh;
-  overflow: hidden; 
+  overflow: hidden;
+  margin: 160px 0;
 }
 
-.sk-sect-lef{
-  display: flex;
-  align-items: center;
-  flex-direction: start;
+.skl-sect-lef{
+  position: relative;
 }
 
 .skl-ly-sect{
   display: flex;
   flex-direction: column;
+  background-image: url(./assets/Background_Home_Page/Skill_Resource/Redesign\ of\ Skill\ Section\ -\ Normal\ Status.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-
-.skills{
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+.skll-btn-fr{
+  top: 580px;
+  left: 306px;
 }
 
-.ski-card-cont {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.skll-btn-sc{
+  top: 808px;
+  left: 940px;
 }
 
-.skill-bar{
-  height:8px;
-  background:#0a0f1d;
-  border-radius:8px;
-  overflow:hidden;
-  border:1px solid var(--line)
+.skll-btn-tr{ 
+  top: 580px;
+  left: 1190px;
 }
 
-.skill-bar > span{
-  display:block;
-  height:100%;
-  background:linear-gradient(90deg,var(--brand),var(--brand-2))
-}
+/* Diagram Image */
+.diagram {
+  width: 100%;
+  height: auto;
+  display: block;
+}  
 
 /* Projects */
 .pro_cont-lead_slogan {
@@ -752,6 +751,7 @@ section .pro_cont-lead{
   justify-content: center;
   flex-direction: column;
   gap: 24px;
+  margin-bottom: 60px;
 }
 
 /* Education */

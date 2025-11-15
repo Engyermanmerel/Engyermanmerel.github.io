@@ -61,7 +61,11 @@ class ModalManager {
         document.getElementById('openModal1').addEventListener('click', () => this.openModal('modal1'));
         document.getElementById('openModal2').addEventListener('click', () => this.openModal('modal2'));
         document.getElementById('openModal3').addEventListener('click', () => this.openModal('modal3'));
-
+        document.getElementById('openModal4').addEventListener('click', () => this.openModal('modal4'));
+        document.getElementById('openModal5').addEventListener('click', () => this.openModal('modal5'));
+        document.getElementById('openModal6').addEventListener('click', () => this.openModal('modal6'));
+        document.getElementById('openModal7').addEventListener('click', () => this.openModal('modal7'));
+        
         // Event listeners para cerrar modales
         document.querySelectorAll('[data-close]').forEach(btn => {
             btn.addEventListener('click', (e) => {
