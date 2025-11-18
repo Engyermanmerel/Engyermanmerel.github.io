@@ -124,15 +124,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //Galery logic
 // Array of images (in the order of your gallery)
-const images = [
-  "",
-  "img/photo2.jpg",
-  "img/photo3.jpg",
-  "img/photo4.jpg"
+const imagesGalery = [
+  "assets/Gallery/CRTG/img2.jpg",
+  "assets/Gallery/Conference/img1.jpg",
+  "assets/Gallery/Herrenknecht/img1.png",
+  "assets/Gallery/CRTG/img1.jpg"
 ];
 
 // Array of descriptions (same order, same indexes)
-const descriptions = [
+const descriptionsGalery = [
   "This is the description for image 1",
   "Details for image 2 go here",
   "Explanation of image 3",
@@ -150,8 +150,8 @@ function changeImage(index) {
 
   setTimeout(() => {
     // Update the image and description based on array index
-    mainImage.src = images[index];
-    descriptionEl.textContent = descriptions[index];
+    mainImage.src = imagesGalery[index];
+    descriptionEl.textContent = descriptionsGalery[index];
 
     // Fade in
     mainImage.style.opacity = 1;
