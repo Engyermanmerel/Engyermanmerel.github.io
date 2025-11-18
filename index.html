@@ -81,7 +81,7 @@
           <img class="about_photo" src="/assets/Profile Photos/Home_Profile_Op2.png" alt="Photo About me">
         </div>
         <!--Item 2-->
-        <div class="ti-sect-ri">
+        <div class="abt-cont">
             <h2>
               <span class="section-span">Who am I</span>
             </h2>  
@@ -95,9 +95,15 @@
   <!-- SKILLS -->
   <section id="skills" class="section_skl">
     <div class="container skl-ly-sect">
+      <!-- Iten 1 - TITLE OF SECTION -->
       <div class="skl-sect-lef">
         <h2>Skills<span class="section-span"> | Hard & Soft</span></h2>
-        <!-- Add Button Fixed Over the Image - First -->
+      </div>
+
+      <!-- Iten 2 - Main Content of Skill Section and btns -->
+      <div class="skl-cont-img">
+        <img src="./assets/Background_Home_Page/Skill_Resource/Redesign of Skill Section - Normal Status.png" class="cont-img" alt="Product Development">
+        <!-- Btn Above of Background Image -->
         <button class="open-modal skll-btn-fr" id="openModal5">
           <i class="material-icons close_icon">add</i>
         </button>
@@ -109,9 +115,10 @@
         <button class="open-modal skll-btn-tr" id="openModal7">
           <i class="material-icons close_icon">add</i>
         </button>
-
-        <!-- Modal for Skills - Concept and Requirement-->
-        <div class="overlay" id="modal5" aria-hidden="true">
+      </div>
+    </div>
+    <!-- Modal for Skills - Concept and Requirement-->
+    <div class="overlay" id="modal5" aria-hidden="true">
           <div class="modal modal5" role="dialog" aria-modal="true" aria-labelledby="modal-title">
             <!-- Button to close -->
             <div class="btn-cont-clos">
@@ -172,10 +179,10 @@
               </div>
             </div>
           </div>
-        </div>
+    </div>
 
-        <!-- Modal for Skills - Design And Development-->
-        <div class="overlay" id="modal6" aria-hidden="true">
+    <!-- Modal for Skills - Design And Development-->
+    <div class="overlay" id="modal6" aria-hidden="true">
           <div class="modal modal6" role="dialog" aria-modal="true" aria-labelledby="modal-title">
             <!-- Button to close -->
             <div class="btn-cont-clos">
@@ -240,10 +247,10 @@
               </div>
             </div>
           </div>
-        </div>
+    </div>
 
-        <!-- Modal for Skills - Design Realization-->
-        <div class="overlay" id="modal7" aria-hidden="true">
+    <!-- Modal for Skills - Design Realization-->
+    <div class="overlay" id="modal7" aria-hidden="true">
           <div class="modal modal7" role="dialog" aria-modal="true" aria-labelledby="modal-title">
             <!-- Button to close -->
             <div class="btn-cont-clos">
@@ -308,8 +315,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -749,26 +754,28 @@
 
   <!-- GALERY SECTION -->
   <section id="galery" class="section_sh section_normal">
-    <div class="container fl-ly-sect">
+    <div class="container galery-container">
       <!-- Title of Galery -->
       <div class="ti-sect-lef">
         <h2>Gallery <span class="section-span">| History</span></h2>
       </div>
-      <!-- Galery images container -->
+    <!-- Galery images container -->
+    <div class="galery-cont-container">
       <div class="galery-image-container">
-        <img id="mainImage" src="img1.png" alt="Presentación">
+        <img id="mainImage" src="./assets/Experience/CRTG/WALLPAPER_CRTG.PNG" alt="Presentación">
       </div>
       <!-- Btn for update images-->
       <div class="galery-buttons">
-        <button class="active galery-btn" onclick="changeImage(0)">University</button>
+        <button class="galery-btn" onclick="changeImage(0)">University</button>
         <button class="galery-btn" onclick="changeImage(2)">Conference of Science</button>
         <button class="galery-btn" onclick="changeImage(1)">Herrenknecht AG</button>
         <button class="galery-btn" onclick="changeImage(2)">CRTG</button>
       </div>
       <!-- Images description of eachone -->
-      <p class="galery-description">
-        It's a Description per imgs.
-      </p>
+      <div class="galery-cont-info">
+        <p> It's a Description per imgs. </p>
+      </div>
+    </div>
     </div>
   </section>
 

@@ -123,21 +123,42 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //Galery logic
+// Array of images (in the order of your gallery)
+const images = [
+  "",
+  "img/photo2.jpg",
+  "img/photo3.jpg",
+  "img/photo4.jpg"
+];
+
+// Array of descriptions (same order, same indexes)
+const descriptions = [
+  "This is the description for image 1",
+  "Details for image 2 go here",
+  "Explanation of image 3",
+  "Information about image 4"
+];
+
 function changeImage(index) {
   const mainImage = document.getElementById("mainImage");
+  const descriptionEl = document.getElementById("imgDescription");
   const buttons = document.querySelectorAll(".galery-btn");
 
-  // Cambia la imagen con transición
+  // Fade out
   mainImage.style.opacity = 0;
+  descriptionEl.style.opacity = 0;
+
   setTimeout(() => {
+    // Update the image and description based on array index
     mainImage.src = images[index];
+    descriptionEl.textContent = descriptions[index];
+
+    // Fade in
     mainImage.style.opacity = 1;
+    descriptionEl.style.opacity = 1;
   }, 300);
 
-  // Actualiza el estado de los botones
+  // Update active button
   buttons.forEach(btn => btn.classList.remove("active"));
   buttons[index].classList.add("active");
-
-  // Description Update
-  
 }

@@ -55,17 +55,18 @@ img{
 }
 
 .hero-container{
-  max-width:1100px;
+  max-width:1200px;
   margin:0 auto;
-  padding: 0 0px 24px 24px;
+  padding: 0 20px;
   display: grid;
   height: 100%;
 }
 
 .container{
-  max-width:1268px;
+  max-width:1200px;
   margin:0 auto;
-  padding: 0 24px 24px 24px;
+  padding: 0 24px;
+  box-sizing: border-box;
   height: 100vh;
 }
 
@@ -226,7 +227,7 @@ header .nav-inner{
   scroll-margin-top: 60px;
   height: 100vh;
   overflow: hidden;
-  margin: 160px 0;
+  margin: 96px 0;
 }
 
 .section_sh{
@@ -274,17 +275,17 @@ section .pro_cont-lead{
 
 /* About */ 
 .section_abt{
-  scroll-margin-top: 60px;
   height: 100vh;
-  overflow: hidden;
-  margin: 40px 0  ;
+  width:100%;
+  padding: 60px 0;
+  display: block;
 }
 
 
 .fl-ly-sect{
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
 }
 
 .fl-ly-sect-cont{
@@ -318,6 +319,12 @@ section .pro_cont-lead{
   height: 510px;
   max-width: 100%; /* Responsive */
   margin-left: 50px;
+}
+
+.abt-cont{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 
@@ -357,32 +364,40 @@ section .pro_cont-lead{
   margin: 160px 0;
 }
 
-.skl-sect-lef{
+.skl-cont-img{
+  display: flex;
   position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont-img{
+  width: 840px;
+  height: auto;
+  max-width: 840px;
+}
+
+.skll-btn-fr{
+  top: 62.5%;
+  left: 32.5%;
+}
+
+
+.skll-btn-sc{
+  top: 87.5%;
+  left: 67%;
+}
+
+.skll-btn-tr{ 
+  top: 62.5%;
+  left: 80.5%;
 }
 
 .skl-ly-sect{
   display: flex;
   flex-direction: column;
-  background-image: url(./assets/Background_Home_Page/Skill_Resource/Redesign\ of\ Skill\ Section\ -\ Normal\ Status.png);
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
-.skll-btn-fr{
-  top: 580px;
-  left: 306px;
-}
-
-.skll-btn-sc{
-  top: 808px;
-  left: 940px;
-}
-
-.skll-btn-tr{ 
-  top: 580px;
-  left: 1190px;
-}
 
 /* Diagram Image */
 .diagram {
@@ -748,6 +763,7 @@ section .pro_cont-lead{
 
 .ti-sect-ri{
   display: flex;
+  align-items: end;
   justify-content: center;
   flex-direction: column;
   gap: 24px;
@@ -788,60 +804,73 @@ section .pro_cont-lead{
   justify-content: end;
 }
 
-/* Contact */
-form{
-  display:grid;
-  gap:18px
+/* Galery Section */
+.galery-cont-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.input-short {
-  width: 50%; /* ajusta el ancho del Name y Email */
+.galery-image-container {
+  width: 100%;
+  max-width: 640px;         /* optional limit */
+  aspect-ratio: 16 / 9;     /* controls height; change as needed */
+  overflow: hidden;
+  border-radius: 12px;      /* optional */
+  display: block;
+  margin: 0 auto;
 }
 
-.input-long {
-  width: 100%; /* textarea ocupa todo el card */
-  min-height: 120px;
+.galery-image-container > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* keeps proportions, fills container */
+  display: block;
+} 
+
+.galery-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-input,textarea{
-  background:#0b1020;
-  border:1px solid var(--line);
-  color:#fff;
-  border-radius:12px;
-  padding:12px 14px;
-  outline:none
+.galery-btn{
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink);
 }
 
- input:focus,textarea:focus{
-  border-color:var(--brand-2)
+.galery-btn::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
 }
 
-.left-content-contact{
+.galery-btn:hover::after {
+  background-color: #007BFF; /* Blue underline on hover */
+}
+
+.galery-btn.active::after {
+  background-color: #007BFF; /* Blue underline when active */
+}
+
+.galery-cont-info{
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.content-info{
-  margin-top: 16px;
-}
-
-.form {
-  padding-right: 60px;
-}
-
-.form-input-item {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.form-btn {
-  width: 50px;
-  cursor: pointer;
-}
-
-
 /* Footer */
 footer{
   color:var(--ink);
