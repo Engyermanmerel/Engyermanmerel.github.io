@@ -40,69 +40,60 @@
 <body>
   <!-- HERO & NAV -->
   <section id="home" class="hero">
-      <div class="hero-container">
-        <header class="nav" aria-label="Navegación principal">
-          <div class="nav-inner container">
-            <a class="brand" href="#home" aria-label="Ir al inicio">
-              <div class="logo" aria-hidden="true">
-                <img src="/assets/Logo/Logo_White.svg" alt="YM Logo" class="logo_home">
-              </div>
-            </a>
-            <nav class="nav-links" aria-label="Secciones">
-              <a href="#about">About Me</a>
-              <a href="#skills">Skills</a>
-              <a href="#education">Education</a>
-              <a href="#experiencia">Experience</a>
-              <a href="#galery">Galery</a>
-            </nav>
+    <div class="temp-lyt-sect container">
+      <header class="hero__nav" aria-label="Main Navbar">
+        <a class="hero__brand" href="#home" aria-label="Ir al inicio">
+          <div class="hero__logo" aria-hidden="true">
+            <img src="/assets/Logo/Logo_White.svg" alt="YM Logo">
           </div>
+        </a>
+        <nav class="hero__nav-links" aria-label="Sections">
+          <a href="#about">About Me</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#experiencia">Experience</a>
+          <a href="#galery">Galery</a>
+        </nav>
       </header>
-      <div>
-        <span class="tag" aria-label="Etiqueta de rol">Mechanical Design Engineer</span>
+      <div class="hero__content">
+        <span class="hero__content-tag" aria-label="Profession">Mechanical Engineer</span>
         <h1>Hello I'm</h1>
-        <h1 class="name_title">Yerman<span style="background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent"> Merel</span></h1>
-        <div class="cta">
+        <h1 class="hero__content-name">Yerman Merel</h1>
+        <div class="hero__content-btn">
           <a class="btn primary" href="#pro">Projects</a>
           <a class="btn" href="/assets/CV/Yerman Merel CV.pdf" download>Download CV</a>
         </div>
-        <div class="scrollme">
-          <i class="material-icons down-arrow">stat_minus_1</i>
-        </div>
       </div>
-    </div>  
+    </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section_abt">
-    <div class="fl-ly-sect container">
-      <div class="grid_about about"> 
+  <section id="about" class="about">
+    <div class="temp-lyt-sect container about__container">
+      <div class="about__content"> 
         <!--Item 1-->
-        <div class="contabout_photo">
-          <img class="about_photo" src="/assets/Profile Photos/Home_Profile_Op2.png" alt="Photo About me">
+        <div class="about__content-photo">
+          <img src="/assets/Profile Photos/Home_Profile_Op2.png" alt="Photo About me">
         </div>
         <!--Item 2-->
-        <div class="abt-cont">
-            <h2>
-              <span class="section-span">Who am I</span>
-            </h2>  
-            <p class="abt_ttl"> I stand for science,</br> striving to reduce uncertainty</br> by following the fundamental laws </p>
-            <p class="cardAbout_description">  Engineering is not just a discipline it is a calling to understand, create, and serve. Through study and innovation, I aim to build knowledge that lasts, solutions that empower, and ideas that inspire. That is why I am an engineer. </p>
+        <div class="about__bio">
+            <span class="section-span">Who am I</span>
+            <p class="about__title">I stand for science,</br> striving to reduce uncertainty</br> by following the fundamental laws </p>
+            <p class="about__description">Engineering is not just a discipline it is a calling to understand, create, and serve. Through study and innovation, I aim to build knowledge that lasts, solutions that empower, and ideas that inspire. That is why I am an engineer. </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section_skl">
-    <div class="container skl-ly-sect">
+  <section id="skills" class="skills">
+    <div class="container temp-lyt-sect">
       <!-- Iten 1 - TITLE OF SECTION -->
-      <div class="skl-sect-lef">
-        <h2>Skills<span class="section-span"> | Hard & Soft</span></h2>
-      </div>
+      <h2>Skills<span class="section-span"> | Hard & Soft</span></h2>
 
       <!-- Iten 2 - Main Content of Skill Section and btns -->
-      <div class="skl-cont-img">
-        <img src="./assets/Background_Home_Page/Skill_Resource/Redesign of Skill Section - Normal Status.png" class="cont-img" alt="Product Development">
+      <div class="skills__content">
+        <img src="./assets/Background_Home_Page/Skill_Resource/Redesign of Skill Section - Normal Status.png" alt="Product Development">
         <!-- Btn Above of Background Image -->
         <button class="open-modal skll-btn-fr" id="openModal5">
           <i class="material-icons close_icon">add</i>
@@ -117,6 +108,7 @@
         </button>
       </div>
     </div>
+
     <!-- Modal for Skills - Concept and Requirement-->
     <div class="overlay" id="modal5" aria-hidden="true">
           <div class="modal modal5" role="dialog" aria-modal="true" aria-labelledby="modal-title">
@@ -683,7 +675,7 @@
   </section>
 
   <!-- EDUCATION -->
-  <section id="education" class="section_normal">
+  <section id="education" class="section_galery">
     <div class="container fl-ly-sect">
       <div class="ti-sect-ri">
         <h2>Education <span class="section-span">| Academic</span></h2>
@@ -785,10 +777,13 @@
       <div class="footer_logo">
         <img src="./assets/Logo/PERSONAL_LOGO_GRADIENT.png" alt="Yerman Merel Logo">
       </div>
-      <div>Copyright © <span id="year"></span> Yerrman Merel. All rights reserved.</div>
-      <div>v1.0.1</div>
+      <div class="footer_cont">
+        <p> Copyright © <span id="year"></span> Yerrman Merel. All rights reserved.</p>
+        <p>Build & Design by Yerman Merel (since 2023)</p>
+        <p>v1.0.1</p>
+      </div>
       <div class="footer_list_socialmedia">
-        <a href="https://www.linkedin.com/in/yermanmerel/" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/yermanmerel/" target="_blank" >LinkedIn</a>
         <a href="mailto:ymerel_02@outlook.com" target="_blank">Mail</a>
         <a href="https://github.com/Engyermanmerel" target="_blank">GitHub</a>
       </div>

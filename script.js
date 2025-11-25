@@ -127,8 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
 const imagesGalery = [
   "assets/Gallery/CRTG/img2.jpg",
   "assets/Gallery/Conference/img1.jpg",
-  "assets/Gallery/Herrenknecht/img1.png",
-  "assets/Gallery/CRTG/img1.jpg"
+  "assets/Gallery/Herrenknecht/img5.jpg",
+  "assets/Gallery/CRTG/img3.jpg"
 ];
 
 // Array of descriptions (same order, same indexes)
