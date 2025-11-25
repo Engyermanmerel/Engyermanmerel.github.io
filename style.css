@@ -121,10 +121,28 @@ h3{
   font-size: 20px;
 }
 
+/* Flexbox Template for Container*/
 .temp-lyt-sect{
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+/* Title format */
+.ti-sect-lef{
+  display: flex;
+  align-items: center;
+  flex-direction: start;
+  margin-bottom: 60px;
+}
+
+.ti-sect-ri{
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 60px;
 }
 
 /* ------ HOME-SECTION ------ */
@@ -219,7 +237,7 @@ h3{
 
 .about__content{
   display: grid;
-  grid-template-columns: 1fr .9fr;
+  grid-template-columns: 1fr 1.4fr;
   column-gap: 6%;
 }
 
@@ -279,31 +297,48 @@ h3{
   max-width: 840px;
 }
 
-.skll-btn-fr{
-  top: 62.5%;
-  left: 30.5%;
+/* Btn location */
+.skill__btn-fr{
+  top: 60.5%;
+  left: 28.5%;
 }
 
-
-.skll-btn-sc{
-  top: 87.5%;
-  left: 69%;
+.skill__btn-sc{
+  top: 81.5%;
+  left: 69.5%;
 }
 
-.skll-btn-tr{ 
-  top: 62.5%;
-  left: 84.5%;
+.skill__btn-tr{ 
+  top: 60.5%;
+  left: 85.5%;
 }
 
-/* Diagram Image */
-.diagram {
+/* Modal per Skill */
+.skill__modal {
+  background: white; /* tono beige/rosa claro */
+  color: var(--bg); /* Font color */
+  padding: 2rem;
+  border-radius: var(--border-radius-cards);
+  width: 816px;
+  overflow: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  /* Limita la altura del contenido a un porcentaje de la ventana */
+  overflow-y: auto; /* Permite el scroll vertical si el contenido excede la altura */
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* ------ Projects ------ */
+.pro__carousel {
+  position: relative;
   width: 100%;
-  height: auto;
-  display: block;
-}  
+  max-width: 1000px;
+  margin: 2rem 0;
+}
 
-/* Projects */
-.pro_cont-lead_slogan {
+.pro__slogan {
   font-size: 1rem;
 }
 
@@ -315,17 +350,6 @@ h3{
 
 .pername {
   font-size: 18px;
-}
-.pro_cont{
-  max-width:1100px;
-  margin:0 auto;
-}
-
-.carousel-container {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  margin: 2rem 0;
 }
 
 .carousel {
@@ -457,9 +481,6 @@ h3{
 .controls {
   display: flex;
   justify-content: flex-end;
-  margin:0 auto;
-  max-width: 1100px;
-  padding:0 24px 0 24px;
   gap: 1rem;
 }
 
@@ -647,23 +668,6 @@ h3{
 
 .location {
   font-size: 16px;
-}
-
-/* Title format */
-.ti-sect-lef{
-  display: flex;
-  align-items: center;
-  flex-direction: start;
-  margin-bottom: 60px;
-}
-
-.ti-sect-ri{
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  flex-direction: column;
-  gap: 24px;
-  margin-bottom: 60px;
 }
 
 /* Education */
