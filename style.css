@@ -412,6 +412,12 @@ h3{
   background-position: center;
   position: relative;
   border-radius: var(--border-radius-cards);
+  transform: scale(1.0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.proj__carrusel-card:hover {
+  transform: scale(1.02);
 }
 
 .proj__card-fi {

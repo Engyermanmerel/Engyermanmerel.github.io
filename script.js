@@ -35,7 +35,6 @@ const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 let index = 0;
 const totalCards = document.querySelectorAll('.proj__carrusel-card').length;
-console.log(totalCards)
 
 function updateCarousel() {
     carousel.style.transform = `translateX(${-index * 20}%)`;
@@ -43,13 +42,11 @@ function updateCarousel() {
 
 prev.addEventListener('click', () => {
     index = (index > 0) ? index - 1 : totalCards - 1;
-    console.log(index);
     updateCarousel();
 });
 
 next.addEventListener('click', () => {
     index = (index < totalCards - 1) ? index + 1 : 0;
-    console.log(index);
     updateCarousel();
 });
 
