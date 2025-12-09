@@ -133,10 +133,10 @@ const imagesGalery = [
 
 // Array of descriptions (same order, same indexes)
 const descriptionsGalery = [
-  "This is the description for image 1",
-  "Details for image 2 go here",
-  "Explanation of image 3",
-  "Information about image 4"
+  "Understanding the different operational parameters of a Mixshield Tunnel Boring Machine by Herrenknecht.",
+  "Initial round of the National Science Conference with my colleague.",
+  "Behind me, the largest EPB manufacturer today.",
+  "Commissioning of the grouting pump and verifying the values."
 ];
 
 function changeImage(index) {
