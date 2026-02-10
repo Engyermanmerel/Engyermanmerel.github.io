@@ -162,3 +162,6 @@ function changeImage(index) {
   buttons.forEach(btn => btn.classList.remove("active"));
   buttons[index].classList.add("active");
 }
+
+/*Footer Year */
+document.getElementById("year").textContent = new Date().getFullYear();

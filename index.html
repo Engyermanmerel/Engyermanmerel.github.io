@@ -770,50 +770,104 @@
   </section>
 
   <!-- GALERY SECTION -->
-  <section id="galery" class="section_sh section_normal">
-    <div class="container galery-container">
-      <!-- Title of Galery -->
-      <div class="ti-sect-lef">
-        <h2>Gallery <span class="section-span">| History</span></h2>
-      </div>
-    <!-- Galery images container -->
-    <div class="galery-cont-container">
-      <div class="galery-image-container">
-        <img id="mainImage" src="assets/Gallery/CRTG/img2.jpg" alt="Galery">
-      </div>
-      <!-- Btn for update images-->
-      <div class="galery-buttons">
-        <button class="active galery-btn" onclick="changeImage(0)">TBM</button>
-        <button class="galery-btn" onclick="changeImage(1)">Conference of Science</button>
-        <button class="galery-btn" onclick="changeImage(2)">Herrenknecht AG</button>
-        <button class="galery-btn" onclick="changeImage(3)">CRTG</button>
-      </div>
-      <!-- Images description of eachone -->
-      <div class="galery-cont-info" id="imgDescription">
-        <p>Understanding the different operational parameters of a Mixshield Tunnel Boring Machine by Herrenknecht.</p>
-      </div>
-    </div>
-    </div>
-  </section>
+<section id="gallery" class="section_sh section_normal">
+  <div class="container galery-container">
 
-  <!-- FOOTER SECTION -->
-  <footer>
-    <div class="footer_container_sect">
-      <div class="footer_logo">
-        <img src="./assets/Logo/PERSONAL_LOGO_GRADIENT.png" alt="Yerman Merel Logo">
-      </div>
-      <div class="footer_cont">
-        <p> Copyright © <span id="year"></span> Yerrman Merel. All rights reserved.</p>
-        <p>Build & Design by Yerman Merel (since 2023)</p>
-        <p>v1.0.1</p>
-      </div>
-      <div class="footer_list_socialmedia">
-        <a href="https://www.linkedin.com/in/yermanmerel/" target="_blank" >LinkedIn</a>
-        <a href="mailto:ymerel_02@outlook.com" target="_blank">Mail</a>
-        <a href="https://github.com/Engyermanmerel" target="_blank">GitHub</a>
-      </div>
+    <!-- Title of Gallery -->
+    <div class="ti-sect-lef">
+      <h2>Gallery <span class="section-span">| History</span></h2>
+      <p class="gallery-subtitle">
+        A collection of my academic, engineering, and professional experiences.
+      </p>
     </div>
-  </footer>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid">
+
+      <!-- Card 1 -->
+      <article class="gallery-card">
+        <img src="assets/Gallery/CRTG/img2.jpg" alt="TBM Project">
+        <div class="gallery-info">
+          <h3>TBM</h3>
+          <p>Understanding the operational parameters of a Mixshield Tunnel Boring Machine.</p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="gallery-card">
+        <img src="assets/Gallery/CRTG/img3.jpg" alt="Conference of Science">
+        <div class="gallery-info">
+          <h3>Conference of Science</h3>
+          <p>Participating and presenting research in an academic environment.</p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="gallery-card">
+        <img src="assets/Gallery/CRTG/img4.jpg" alt="Herrenknecht AG Visit">
+        <div class="gallery-info">
+          <h3>Herrenknecht AG</h3>
+          <p>Engineering experience and learning from one of the biggest TBM manufacturers.</p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="gallery-card">
+        <img src="assets/Gallery/CRTG/img5.jpg" alt="CRTG Experience">
+        <div class="gallery-info">
+          <h3>CRTG</h3>
+          <p>Hands-on experience in tunneling operations, mechanical systems and inspection.</p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FOOTER SECTION -->
+<footer class="footer">
+  <div class="footer_container_sect">
+
+    <!-- Logo -->
+    <div class="footer_logo">
+      <a href="#home" aria-label="Go to homepage">
+        <img src="./assets/Logo/PERSONAL_LOGO_GRADIENT.png" alt="Yerman Merel Logo">
+      </a>
+    </div>
+
+    <!-- Copyright / Info -->
+    <div class="footer_cont">
+      <p>
+        © <span id="year"></span> <strong>Yerman Merel</strong>. All rights reserved.
+      </p>
+      <p>
+        Build & Design by <strong>Yerman Merel</strong> (since 2023)
+      </p>
+      <p class="footer_version">
+        Version <span>v1.0.1</span>
+      </p>
+    </div>
+
+    <!-- Social Links -->
+    <nav class="footer_list_socialmedia" aria-label="Social media links">
+      <a href="https://www.linkedin.com/in/yermanmerel/" target="_blank" rel="noopener noreferrer">
+        LinkedIn
+      </a>
+
+      <a href="mailto:ymerel_02@outlook.com">
+        Email
+      </a>
+
+      <a href="https://github.com/Engyermanmerel" target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+    </nav>
+
+  </div>
+</footer>
+
 
   <!-- JAVASCRIPT SECTION -->
   <script src="script.js"></script>
