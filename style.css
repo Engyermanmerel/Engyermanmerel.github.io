@@ -48,7 +48,7 @@ img{
 }
 
 .container{
-  max-width:1024px;
+  max-width:1200px;
   margin:0 auto;
   box-sizing: border-box;
   height: 100vh;
@@ -146,8 +146,8 @@ h3{
 /* Title format */
 .ti-sect-lef{
   display: flex;
-  align-items: center;
-  flex-direction: start;
+  align-items: start;
+  flex-direction: column;
   margin-bottom: 60px;
 }
 
@@ -775,7 +775,7 @@ h3{
 }
 
 .gallery-subtitle {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.7);
   max-width: 600px;
