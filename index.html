@@ -1,875 +1,950 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yerman Merel</title>
-  <meta name="description" content="Portafolio profesional de Yerman, Mechanical Design Engineer: diseño CAD, FEA, vibraciones, manufactura y validación de prototipos." />
-  <meta name="theme-color" content="#0b1a3a" />
-  <meta property="og:title" content="Yerman – Mechanical Engineer" />
-  <meta property="og:description" content="Mechanical Engineer with international experience in large scale infrastructure projects. 
-                                          I've contributed to key tunneling projects in Panama, Peru and USA, combining technical design 
-                                          with hands-on field execution from static analysis to FAT protocols and lifting strategies." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/preview.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
-  <link rel="icon" type="image/png" href="/assets/Logo/Logo_White.svg">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Yerman Merel",
-      "jobTitle": "Mechanical Design Engineer",
-      "url": "https://engyermanmerel.github.io/",
-      "sameAs": [
-        "https://www.linkedin.com/in/yermanmerel/",
-        "https://github.com/tu-usuario"
-      ],
-      "knowsAbout": ["CAD", "FEA", "Dynamic Analysis", "Control", "CFD"],
-      "worksFor": {
-        "@type": "Freelancer",
-        "name": "Mechanical Design Project"
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yerman Merel</title>
+    <!-- Meta Tag: Information about me when someone share my porfolio -->
+    <meta name="description" content="Professional portfolio of Yerman Merel, Mechanical Engineer with experience as Field Engineer, Project Engineer and Systems Engineer in tunneling and large-scale infrastructure projects." />
+    <meta name="theme-color" content="#0b1a3a" />
+    <meta property="og:title" content="Yerman Merel | Mechanical Engineer & Project Engineer" />
+    <meta property="og:description" content="Mechanical Engineer with international experience as Field Engineer, Project Engineer and Systems Engineer in large-scale tunneling and infrastructure projects. Focused on technical execution, design validation, FAT protocols and lifting strategies." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://engyermanmerel.github.io/assets/preview.jpg" />
+    <!-- Material Icon API -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font API (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Link Style -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/Logo/Logo_White.svg">
+    <!-- SEO posicionamiento -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yerman Merel",
+        "url": "https://engyermanmerel.github.io/",
+        "email": "mailto:ymerel_02@outlook.com",
+        "jobTitle": [
+          "Project Engineer",
+          "Field Engineer",
+          "Systems Engineer",
+          "Mechanical Engineer"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Panamá City",
+          "addressCountry": "Panamá"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidad Tecnológica de Panamá",
+          "sameAs": "https://utp.ac.pa/"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/yermanmerel/",
+          "https://github.com/Engyermanmerel"
+        ],
+        "knowsAbout": [
+          "Mechanical Engineering",
+          "Project Engineering",
+          "Field Engineering",
+          "Systems Engineering",
+          "Mechanical Design",
+          "Industrial Piping Design",
+          "CAD Modeling",
+          "3D Design",
+          "Engineering Documentation",
+          "Technical Reporting",
+          "Design Validation",
+          "Industrial Projects",
+          "Tunnel Construction Engineering"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance / Engineering Projects"
+        }
       }
-    }
-  </script>
-</head>
-<body>
-  <!-- HERO & NAV -->
-  <section id="home" class="hero">
-    <div class="temp-lyt-sect container">
-      <header class="hero__nav" aria-label="Main Navbar">
-        <a class="hero__brand" href="#home" aria-label="Ir al inicio">
-          <div class="hero__logo" aria-hidden="true">
-            <img src="/assets/Logo/Logo_White.svg" alt="YM Logo">
+    </script>
+  </head>
+
+  <body>
+    <!-- HERO & NAV -->
+    <section id="home" class="hero">
+        <!-- Nav Bar -->
+        <header class="container hero__nav" aria-label="Main Navbar">
+          <a class="hero__brand" href="#home" aria-label="Ir al inicio">
+            <div class="hero__logo" aria-hidden="true">
+              <img src="/assets/Logo/Logo_White.svg" alt="YM Logo">
+            </div>
+          </a>
+          <nav class="hero__nav-links" aria-label="Sections">
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#galery">Gallery</a>
+          </nav>
+          <!-- Btn of Change them and Language -->
+          <div class="hero__actions">
+            <button id="lang-toggle" class="btn-icon" title="Change Language">EN</button>
+            <button id="theme-toggle" class="btn-icon" title="Toggle Theme">
+              <span class="material-icons">light_mode</span>
+            </button>
           </div>
-        </a>
-        <nav class="hero__nav-links" aria-label="Sections">
-          <a href="#about">About Me</a>
-          <a href="#skills">Skills</a>
-          <a href="#education">Education</a>
-          <a href="#experiencia">Experience</a>
-          <a href="#galery">Galery</a>
-        </nav>
-      </header>
-      <div class="hero__content">
-        <span class="hero__content-tag" aria-label="Profession">Mechanical & Systems Engineer</span>
-        <h1>Hello I'm</h1>
-        <h1 class="hero__content-name">Yerman Merel</h1>
-        <div class="hero__content-btn">
-          <a class="btn primary" href="#pro">Projects</a>
-          <a class="btn" href="/assets/CV/ENGLISH/Project Engineer and Maintence Specialist/Yerman_Merel_PA2025_v1.3.pdf" download>Download CV</a>
+        </header>
+        <!-- Content of Hero -->
+        <div class="container hero__display">
+          <div class="hero__content">
+            <span class="hero__content-tag">Mechanical & Systems Engineer</span>
+            <h2 class="hero__greeting">Hello I'm</h2>
+            <h1 class="hero__content-name">Yerman Merel</h1>
+            <!-- CV Collection -->
+            <div class="cv-dropdown">
+              <button class="btn-cv-primary">
+                <span class="material-symbols-outlined">Download CV</span>
+              </button>
+
+              <div class="cv-options">
+                <div class="cv-group">
+                  <span>Project Engineer</span>
+                  <a href="./assets/CVs/ENGLISH/PROJECT MANAGER/20260214_Yerman-Merel_CV_ENG_v2.1_APR.pdf" download class="cv-download-link" data-type="Project Engineer" data-lang="EN">English (EN)</a>
+                  <a href="./assets/CVs/ESPAÑOL/INGENIERO DE PROYECTOS/20260214_Yerman-Merel_CV_ESP_v2.0_APR.pdf" download class="cv-download-link" data-type="Project Engineer" data-lang="ES">Español (ES)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about section-padding">
+      <div class="container about__wrapper">
+        
+        <div class="about__grid">
+          <div class="about__visual">
+            <div class="about__image-canvas">
+              <img src="/assets/Profile Photos/Home_Profile_Op2.webp" alt="Yerman Merel - Project Engineer" class="about__img">
+              <div class="about__blob"></div>
+            </div>
+          </div>
+
+          <article class="about__text">
+            <header class="about__header">
+              <span class="about__badge">Who am I</span>
+              <h2 class="about__headline">
+                I stand for science, <span class="highlight">reducing uncertainty</span> through fundamental laws.
+              </h2>
+            </header>
+            
+            <div class="about__body">
+              <p class="about__paragraph">
+                Through study and innovation, I aim to build knowledge that lasts, solutions that empower, and ideas that inspire. That is why I am an engineer.
+              </p>
+            </div>
+
+            <div class="about__footer">
+              <a href="#experience" class="btn-link">
+                <span class="btn-link__text">See Career</span>
+                <span class="material-icons btn-link__icon">arrow_forward</span>
+              </a>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <div class="temp-lyt-sect container about__container">
-      <div class="about__content"> 
-        <!--Item 1-->
-        <div class="about__content-photo">
-          <img src="/assets/Profile Photos/Home_Profile_Op2.png" alt="Photo About me">
-        </div>
-        <!--Item 2-->
-        <div class="about__bio">
-            <span class="section-span">Who am I</span>
-            <p class="about__title">I stand for science,</br> striving to reduce uncertainty</br> by following the fundamental laws </p>
-            <p class="about__description">Engineering is not just a discipline it is a calling to understand, create, and serve. Through study and innovation, I aim to build knowledge that lasts, solutions that empower, and ideas that inspire. That is why I am an engineer. </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- SKILLS -->
+    <section id="skills" class="section_normal">
+      <div class="container">
+        <header class="ti-sect ti-sect--left">
+          <span class="section-span">Engineering Stack</span>
+          <h2>Product Development Lifecycle</h2>
+        </header>
 
-  <!-- SKILLS -->
-  <section id="skills" class="skills">
-    <div class="container temp-lyt-sect">
-      <!-- Iten 1 - TITLE OF SECTION -->
-      <h2>Skills<span class="section-span"> | Hard & Soft</span></h2>
+        <div class="skills__visual-container">
+          <img src="./assets/Background_Home_Page/Skill_Resource/Redesign of Skill Section - Normal Status.png" 
+              alt="Product Development Lifecycle Diagram" 
+              class="skills__diagram">
 
-      <!-- Iten 2 - Main Content of Skill Section and btns -->
-      <div class="skills__content">
-        <img src="./assets/Background_Home_Page/Skill_Resource/Redesign of Skill Section - Normal Status.png" alt="Product Development">
-        <!-- Btn Above of Background Image -->
-        <button class="open-modal skill__btn-fr" id="openModal5">
-          <i class="material-icons close_icon">add</i>
-        </button>
-        <!-- Add Button Fixed Over the Image - Second -->
-        <button class="open-modal skill__btn-sc" id="openModal6">
-          <i class="material-icons close_icon">add</i>
-        </button>
-        <!-- Add Button Fixed Over the Image - Third -->
-        <button class="open-modal skill__btn-tr" id="openModal7">
-          <i class="material-icons close_icon">add</i>
-        </button>
-      </div>
-    </div>
+          <div class="skills__hotspots">
+            <button class="hotspot hotspot--1 open-modal" id="open-Modal5" aria-label="Ver Phase 1">
+              <span class="hotspot__pulse"></span>
+              <span class="material-icons">add</span>
+              <span class="hotspot__label">Concept</span>
+            </button>
 
-    <!-- Modal for Skills - Concept and Requirement-->
-    <div class="overlay" id="modal5" aria-hidden="true">
-      <div class="skill__modal modal5" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <!-- Button to close -->
-        <div class="btn-cont-clos">
-          <button id="close" data-close="modal5" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
-        </div>
-        <!-- Container -->
-        <div class="grid-cont-mod skill__modal-cont__grid-space ">
-          <!-- Title and Subtitle -->
-          <div class="modal-header">
-            <Span>Phase 1</Span>
-            <h2>Concept and Requirement</h2>
-          </div>
-          <!-- Colum 1 -->
-          <div class="modal-col-fr modal-secs temp-lyt-sect skills__modal-cont">
-            <h3>Hard Skills</h3>
-            <section class="content-section">
-              <ul class="skills__modal-cont__list">
-                <li>Requirement breakdown</li>
-                <li>System architecture fundamentals</li>
-                <li>DFMEA methodology (academic level)</li>
-                <li>CAD for concept evaluation</li>
-                <li>Engineering trade-off analysis</li>
-                <li>Mechanical system modeling (theoretical)</li>
-              </ul>
-            </section>
-          </div>
-          <!-- Colum 2 -->
-          <div class="modal-col-sc modal-secs temp-lyt-sect skills__modal-cont">
-            <h3>Soft Skills</h3>
-            <section class="content-section">
-              <ul class="skills__modal-cont__list">
-                <li>Analytical thinking</li>
-                <li>Curiosity and proactive learning</li>
-                <li>Communication and documentation</li>
-                <li>Collaboration in multidisciplinary teams</li>
-                <li>Creative problem-solving</li>
-                <li>Adaptability and willingness to learn</li>
-              </ul>
-            </section>
-          </div>
-          <div class="modal-concl skills__cont-soft">
-            <p><strong>Experience Associate:</strong> Herrenknecht Tunneling Service Panama Corp., Theoretical Knowledge</p>
-            <p><strong>Tools:</strong> Notion (Requirements), MATLAB Simulink (System Architecture), Excel (DFMEA - PFMEA), Fusion 360 & Inventor (Concept Design), SAP Business Suite</p>
+            <button class="hotspot hotspot--2" id="skillopen" aria-label="Ver Phase 2">
+              <span class="hotspot__pulse"></span>
+              <span class="material-icons">add</span>
+              <span class="hotspot__label">Development</span>
+            </button>
+
+            <button class="hotspot hotspot--3" id="skillopen" aria-label="Ver Phase 3">
+              <span class="hotspot__pulse"></span>
+              <span class="material-icons">add</span>
+              <span class="hotspot__label">Realization</span>
+            </button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Modal for Skills - Design And Development-->
-    <div class="overlay" id="modal6" aria-hidden="true">
-      <div class="skill__modal modal6" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <!-- Button to close -->
-        <div class="btn-cont-clos">
-          <button id="close" data-close="modal6" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
+    <!-- PROJECTS -->
+    <section id="pro">
+      <div class="proj__container temp-lyt-sect">
+        <header class="ti-sect ti-sect--right">
+          <span class="section-span">Project Portfolio</span>
+          <h2>Systems Engineering & Technical Implementations</h2>
+        </header>
+
+        <!--Carrusel Container -->
+        <div class="proj__carrusel" id="carousel">
+          <!-- Card 1 -->
+          <div class="proj__carrusel-card proj__card-fi">
+              <div class="proj__carrusel-card__info">
+                <h3>Dynamic Seismic Validation of a Diesel Engine Support Structure</h3>
+                <button class="open-modal" id="openModal1">
+                  <i class="material-icons close_icon">add</i>
+                </button>
+              </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="proj__carrusel-card proj__card-sc">
+                <div class="proj__carrusel-card__info">
+                  <h3>Design and Development of a RoboCup Small Size League Division B Robot </h3>
+                  <button class="open-modal" id="openModal2"><i class="material-icons close_icon">add</i></button>
+                </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="proj__carrusel-card proj__card-tr">
+                <div class="proj__carrusel-card__info">
+                  <h3>Dynamic Model of Vortex-induced-Vibration Wind Turbine</h3>
+                  <button class="open-modal" id="openModal3"><i class="material-icons close_icon">add</i></button>
+                </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="proj__carrusel-card proj__card-fr">
+                <div class="proj__carrusel-card__info">
+                  <h3>Engineering Interfaces with Code</h3>
+                  <button class="open-modal" id="openModal4"><i class="material-icons close_icon">add</i></button>
+                </div>
+          </div>
         </div>
-        <!-- Container -->
-          <div class="grid-cont-mod skill__modal-cont__grid-space ">
+
+          <!--Controls of Carrusel-->
+          <div class="proj__controls">
+            <button id="prev"><i class="material-icons">chevron_left</i></button>
+            <button id="next"><i class="material-icons">chevron_right</i></button>
+          </div>
+      </div>
+
+      <!--Overlay + Modal 1-->
+      <div class="overlay" id="modal1" aria-hidden="true">
+        <div class="modal modal1" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+          <!-- Button to close -->
+          <div class="btn-cont-clos">
+            <button id="close" data-close="modal1" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
+          </div>
+          <!-- Container -->
+          <div class="grid-cont-mod proj__card-grid-gap">
             <!-- Title and Subtitle -->
             <div class="modal-header">
-              <Span>Phase 2</Span>
-              <h2>Design And Development</h2>
+              <Span>Dynamic Analysis</Span>
+              <h2>Dynamic Seismic Validation of a Diesel Engine Support Structure</h2>
+            </div>
+            <!-- Introduction -->
+            <div class="modal-intr modal-secs content-section">
+              <h3>Introduction</h3>
+              <p>
+                This Dynamic analysis is part of the design of the structural steel support system with a reinforced slab to support more than two industrial motors by Caterpillar. 
+                These motors are responsible for generating electricity for an industrial plant in the province of Veraguas, Panama. 
+                The purpose is to evaluate the integrity of the structure under vibrations induced by a natural phenomenon such as an earthquake 
+                with a magnitude of 8 on the Richter scale, since that region has been affected more than once over the years by earthquakes of this magnitude. 
+                The growing concern is to protect the investment and ensure the reliability for the client. As engineers, it is our duty to carry out these goals.
+              </p>
             </div>
             <!-- Colum 1 -->
-            <div class="modal-col-fr modal-secs temp-lyt-sect skills__modal-cont">
-              <h3>Hard Skills</h3>
+            <div class="modal-col-fr modal-secs">
               <section class="content-section">
-                <ul class="skills__modal-cont__list">
-                  <li><strong>Design & Modeling:</strong> 3D modeling and CAD proficiency</li>
-                  <li><strong>Simulation & Analysis</strong> Structural analysis (FEA), Vibration analysis (Academic Experience)</li>
-                  <li><strong>Manufacturing Knowledge:</strong> Designing for manufacturability (DFM)</li>
-                  <li><strong>Prototyping: </strong>Use of 3D printers, Basic machining or fabrication (Academic Experience)</li>
-                  <li><strong>Technical Documentation: </strong> Familiar with GD&T, Bill of materials (BOM) creation</li>
-                  <li><strong>PLM / Data Management Tools:</strong> Windchill and Fusion Manage</li>
-                </ul>
+                <h3>Problem Statement</h3>
+                <p>
+                  During the design phase of a structural steel support system with a reinforced slab in the province of Veraguas, Panama, the team identified a concern related to the region’s seismic activity. 
+                  Earthquakes can generate strong inertia forces, uneven deformations, and high stresses that may compromise the performance of the structure. 
+                  To address this risk, the system requires a detailed analysis to validate its capacity and confirm that it can safely withstand seismic conditions.
+                </p>
+                <figure>
+                    <img src="./assets/Projects/Wallpaper/Sismic/EstructuraRevit_Sismic.png" alt="Revit render of overall strcutre">
+                    <figcaption class="img__caption">3D view of Structural Steel Support System with a Reinforced Slab</figcaption>
+                </figure>
+                <h3>Objetives</h3>
+                <p>
+                    To perform a modal analysis of the steel structure under free vibration conditions to determine its theoretical vibration modes and validate 
+                    them through computational simulation in Autodesk Inventor. Furthermore, to evaluate the dynamic response of the structure under seismic excitation 
+                    represented by earthquake ground motion amplitudes in order to assess its preliminary structural integrity and reliability.
+                </p>
+              </section>
+              <section class="content-section">
+                  <ul class="modal__list-robot">
+                    <li>Perform a modal analysis</li>
+                    <li>Validate the theoretical vibration modes</li>
+                    <li>Simulate seismic excitation scenarios</li>
+                    <li>Quantify displacement, acceleration, and stress responses</li>
+                    <li>Compare theoretical predictions with simulation outcomes</li>
+                  </ul>
+                  <figure>
+                      <img src="./assets/Projects/Wallpaper/Sismic/PlanoDeConstrucciònEstructura1.png" alt="2D drawing of overall strcutre">
+                      <figcaption class="img__caption">2D view of Structural Steel Support System with a Reinforced Slab</figcaption>
+                  </figure>
+                  <h3>Results: Modal Analysis</h3>
+                <p>
+                  1. Determine the mass of the System
+                </p>
+                <figure>
+                    <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/3.jpg" alt="Phase 1 of the modal analysis">
+                    <figcaption class="img__caption">Phase 1</figcaption>
+                </figure>
               </section>
             </div>
             <!-- Colum 2 -->
-            <div class="modal-col-sc modal-secs temp-lyt-sect skills__modal-cont">
-              <h3>Soft Skills</h3>
+            <div class="modal-col-sc modal-secs">
               <section class="content-section">
-                <ul class="skills__modal-cont__list">
-                  <li>Problem-Solving</li>
-                  <li>Communication</li>
-                  <li>Teamwork</li>
-                  <li>Creativity & Innovation</li>
-                  <li>Adaptability</li>
-                  <li>Curiosity and motivation</li>
-                </ul>
+                <p>
+                  2. Simplify the complex of structure. <strong>(Important Phase)</strong>
+                </p>
+                <p>
+                  The structure shown in the provided drawing contains features that complicate the computational evaluation 
+                  and may lead to inaccurate results due to poor constraint relationships within the model. This requires us 
+                  to introduce geometric and modeling simplifications, allowing us to focus on the primary structural components 
+                  that significantly influence the solution. By reducing unnecessary details, we improve mesh quality, 
+                  avoid over-constraining the system, and ensure a more stable and reliable finite-element analysis.</p>
+                <figure>
+                    <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/5.jpg" alt="Phase 2 reduce the complex of system">
+                    <figcaption class="img__caption">Phase 2</figcaption>
+                </figure>
+                <p>
+                  3. Determine of the system rigid
+                </p>
+                <figure>
+                    <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/7.jpg" alt="Phase 3 Determine of the system rigid">
+                    <figcaption class="img__caption">Phase 3</figcaption>
+                </figure>
+                <p>
+                  4. Determine the natural frecuency of the system
+                </p>
+                <figure>
+                    <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/8.jpg" alt="Phase 3 Determine of the natural frequency">
+                    <figcaption class="img__caption">Phase 4</figcaption>
+                </figure>
+              </section>
+              <section class="content-section">
+                <h3>Results: Simulate seismic excitation scenarios</h3>
+                <p>
+                  1. Procesing data with fourier transform in Python for determine the dominante frequency and maximun amplitud of the different earthquakers
+                </p>
+                  <figure>
+                      <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/9.jpg" alt="Duhamel’s Integral for Undamped System">
+                      <figcaption class="img__caption">Data Processing in Python</figcaption>
+                  </figure>
+                  <p>
+                    2. Duhamel’s Integral for Undamped System
+                  </p>
+                  <figure>
+                    <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/10.jpg" alt="Duhamel’s Integral for Undamped System">
+                    <figcaption class="img__caption">Duhamel’s Integral for Undamped System</figcaption>
+                  </figure>
               </section>
             </div>
-            <div class="modal-concl skills__cont-soft">
-              <p><strong>Experience Associate:</strong> China Railway Tunnel Group, Academic Projects.</p>
-              <p><strong>Tools:</strong> Creo & Autodesk Fusion 360 (3D Modeling), Autodesk AutoCAD (2D Drawing), ANSYS & Autodesk Inventor (Simulation & Analysis)</p>
+            <!-- Conclution -->
+            <div class="modal-concl modal-secs">
+              <h3>Conclusion</h3>
+              <p>
+                the results provide a comprehensive understanding of the structural dynamic behavior under 
+                both theoretical and simulated conditions. By simulating seismic excitation scenarios, it was possible to observe how the structure responds to real-world 
+                dynamic loads, making it clear how displacement, acceleration, and stress distributions evolve during such events. 
+                The comparison between analytical expectations and numerical simulations demonstrated strong agreement, confirming 
+                the reliability of the modeling approach and the assumptions used.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Modal for Skills - Design Realization-->
-    <div class="overlay" id="modal7" aria-hidden="true">
-      <div class="skill__modal modal7" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <!-- Button to close -->
-        <div class="btn-cont-clos">
-          <button id="close" data-close="modal7" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
-        </div>
-        <!-- Container -->
-        <div class="grid-cont-mod skill__modal-cont__grid-space ">
-          <!-- Title and Subtitle -->
-          <div class="modal-header">
-            <Span>Phase 3</Span>
-            <h2>Design Realization</h2>
+      <!--Modal 2-->
+      <div class="overlay" id="modal2" >
+        <div class="modal modal2" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+          <!-- Button to close -->
+          <div class="btn-cont-clos">
+            <button id="close" data-close="modal2" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
           </div>
-          <!-- Colum 1 -->
-          <div class="modal-col-fr modal-secs temp-lyt-sect skills__modal-cont">
-            <h3>Hard Skills</h3>
-            <section class="content-section">
-              <ul class="skills__modal-cont__list">
-                <li>Knowledge of mechanical components and failure modes</li>
-                <li>Basic reliability engineering</li>
-                <li>Quality standards knowledge (Europe & American Standards)</li>
-                <li>Instrument and measurement knowledge</li>
-                <li>Experience reading service reports</li>
-                <li>Basic electrical or control system familiarity (theoretical)</li>
-              </ul>
-            </section>
-          </div>
-          <!-- Colum 2 -->
-          <div class="modal-col-sc modal-secs temp-lyt-sect skills__modal-cont">
-            <h3>Soft Skills</h3>
-            <section class="content-section">
-              <ul class="skills__modal-cont__list">
-                <li>Communication</li>
-                <li>Teamwork</li>
-                <li>Adaptability</li>
-                <li>Attention to detail</li>
-                <li>Time management</li>
-                <li>Continuous improvement mindset</li>
-                <li>Empathy for users and service technicians</li>
-              </ul>
-            </section>
-          </div>
-          <div class="modal-concl skills__cont-soft">
-            <p><strong>Experience Associate:</strong> Herrenknecht Tunneling Service Panama Corp., China Railway Tunnel Group</p>
-            <p><strong>Tools:</strong> Notion, MATLAB, Excel, SAP Business Suite</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="pro">
-    <div class="proj__container temp-lyt-sect">
-      <div class="ti-sect-ri">
-        <h2>Porfolio <span class="section-span">| Projects</span></h2>
-        <p class="pro__slogan">"Creativity solves, <strong>Analysis</strong> confirms, <span class="accent-word">PROOF</span> proves." <span>-Yerman M.</span></p>
-      </div>
-
-      <!--Carrusel Container -->
-      <div class="proj__carrusel" id="carousel">
-        <!-- Card 1 -->
-        <div class="proj__carrusel-card proj__card-fi">
-            <div class="proj__carrusel-card__info">
-              <h3>Dynamic Seismic Validation of a Diesel Engine Support Structure</h3>
-              <button class="open-modal" id="openModal1">
-                <i class="material-icons close_icon">add</i>
-              </button>
+          <!-- Container -->
+          <div class="grid-cont-mod proj__card-grid-gap">
+            <!-- Title and Subtitle -->
+            <div class="modal-header">
+              <Span>Mechatronics</Span>
+              <h2>Design and Development of a RoboCup <br>Small Size League - Division B Robot</h2>
             </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="proj__carrusel-card proj__card-sc">
-              <div class="proj__carrusel-card__info">
-                <h3>Design and Development of a RoboCup Small Size League Division B Robot </h3>
-                <button class="open-modal" id="openModal2"><i class="material-icons close_icon">add</i></button>
-              </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="proj__carrusel-card proj__card-tr">
-              <div class="proj__carrusel-card__info">
-                <h3>Dynamic Model of Vortex-induced-Vibration Wind Turbine</h3>
-                <button class="open-modal" id="openModal3"><i class="material-icons close_icon">add</i></button>
-              </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="proj__carrusel-card proj__card-fr">
-              <div class="proj__carrusel-card__info">
-                <h3>Engineering Interfaces with Code</h3>
-                <button class="open-modal" id="openModal4"><i class="material-icons close_icon">add</i></button>
-              </div>
-        </div>
-      </div>
-
-        <!--Controls of Carrusel-->
-        <div class="proj__controls">
-          <button id="prev"><i class="material-icons">chevron_left</i></button>
-          <button id="next"><i class="material-icons">chevron_right</i></button>
-        </div>
-    </div>
-
-    <!--Overlay + Modal 1-->
-    <div class="overlay" id="modal1" aria-hidden="true">
-      <div class="modal modal1" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <!-- Button to close -->
-        <div class="btn-cont-clos">
-          <button id="close" data-close="modal1" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
-        </div>
-        <!-- Container -->
-        <div class="grid-cont-mod proj__card-grid-gap">
-          <!-- Title and Subtitle -->
-          <div class="modal-header">
-            <Span>Dynamic Analysis</Span>
-            <h2>Dynamic Seismic Validation of a Diesel Engine Support Structure</h2>
-          </div>
-          <!-- Introduction -->
-          <div class="modal-intr modal-secs content-section">
-            <h3>Introduction</h3>
-            <p>
-              This Dynamic analysis is part of the design of the structural steel support system with a reinforced slab to support more than two industrial motors by Caterpillar. 
-              These motors are responsible for generating electricity for an industrial plant in the province of Veraguas, Panama. 
-              The purpose is to evaluate the integrity of the structure under vibrations induced by a natural phenomenon such as an earthquake 
-              with a magnitude of 8 on the Richter scale, since that region has been affected more than once over the years by earthquakes of this magnitude. 
-              The growing concern is to protect the investment and ensure the reliability for the client. As engineers, it is our duty to carry out these goals.
-            </p>
-          </div>
-          <!-- Colum 1 -->
-          <div class="modal-col-fr modal-secs">
-            <section class="content-section">
-              <h3>Problem Statement</h3>
-              <p>
-                During the design phase of a structural steel support system with a reinforced slab in the province of Veraguas, Panama, the team identified a concern related to the region’s seismic activity. 
-                Earthquakes can generate strong inertia forces, uneven deformations, and high stresses that may compromise the performance of the structure. 
-                To address this risk, the system requires a detailed analysis to validate its capacity and confirm that it can safely withstand seismic conditions.
+            <!-- Introduction -->
+            <div class="modal-intr modal-secs content-section">
+              <h3>Introduction</h3>
+              <p>Within the framework of the development of technologies applied to robotics and artificial intelligence, the challenge arises 
+                to design and build a robot capable of competing in the Small Size League Division B, a category that is part of the robotic soccer 
+                competitions organized by RoboCup. The main objective of this project is to combine mechanical design, programming, and electronics skills to create an efficient, 
+                fast, and strategically intelligent robot capable of interacting with a team and performing in a competitive environment.
               </p>
-              <figure>
-                  <img src="./assets/Projects/Wallpaper/Sismic/EstructuraRevit_Sismic.png" alt="Revit render of overall strcutre">
-                  <figcaption class="img__caption">3D view of Structural Steel Support System with a Reinforced Slab</figcaption>
-              </figure>
-              <h3>Objetives</h3>
-              <p>
-                  To perform a modal analysis of the steel structure under free vibration conditions to determine its theoretical vibration modes and validate 
-                  them through computational simulation in Autodesk Inventor. Furthermore, to evaluate the dynamic response of the structure under seismic excitation 
-                  represented by earthquake ground motion amplitudes in order to assess its preliminary structural integrity and reliability.
-              </p>
-            </section>
-            <section class="content-section">
+            </div>
+            <!-- Colum 1 -->
+            <div class="modal-col-fr modal-secs">
+              <section class="content-section">
+                <h3>Problem</h3>
+                <P>
+                  The SSL Robocup features the competition format of 11v11 football matches with an orange golf ball referred 
+                  to as the A division, while the 6v6 matches refer to its B division. Teams build robots based on a set of defined 
+                  constraints and rules.
+                  <br>
+                  Division B was chosen according to its own criteria of design and the resources available at that time. 
+                  <br>
+                  The principal constraints of Division B were defined by the Rules of the RoboCup Small Size League document.
+                </P>
+                <figure>
+                    <img src="./assets/Projects/Robot/Field_Dimension.png" alt="Field Dimension for Division B">
+                    <figcaption class="img__caption">Field dimensions and markings for division B</figcaption>
+                </figure>
+              </section>
+              <section class="content-section">
+                <h3>Objetives</h3>
+                <h4>General</h4>
+                <p>
+                  The purpose of this project is to apply engineering knowledge across programming, mechanical, and electronic fields 
+                  to the development of an autonomous robot capable of executing movements and actions characteristic of football.
+                </p>
+                <h4>Specific</h4>
                 <ul class="modal__list-robot">
-                  <li>Perform a modal analysis</li>
-                  <li>Validate the theoretical vibration modes</li>
-                  <li>Simulate seismic excitation scenarios</li>
-                  <li>Quantify displacement, acceleration, and stress responses</li>
-                  <li>Compare theoretical predictions with simulation outcomes</li>
+                  <li>Design each of the actuator elements to perform kicking, dribbling and movement.</li>
+                  <li>Mathematical approaches for the prediction of spherics and trajectory planning.</li>
+                  <li>Apply image processing techniques for spherical, distance, and velocity detection of moving objects.</li>
+                  <li>Design electronic systems for dribbler activation, kick actuators and motion activation.</li>
+                  <li>Implement additive manufacturing techniques for the manufacture of parts.</li>
+                  <li>Design logical and mathematical programming processes using ROS1 for communication to implement algorithms in parallel.</li>
+                  <li>Use of Raspberry Pi 4 controller to communicate actuators and programming algorithms.</li>
                 </ul>
                 <figure>
-                    <img src="./assets/Projects/Wallpaper/Sismic/PlanoDeConstrucciònEstructura1.png" alt="2D drawing of overall strcutre">
-                    <figcaption class="img__caption">2D view of Structural Steel Support System with a Reinforced Slab</figcaption>
+                    <img src="./assets/Projects/Robot/AsemblieRobot.png" alt="Mounting Parts of Robot">
+                    <figcaption class="img__caption">Mounting the dribble, wheels and batteries to the base of the robot</figcaption>
                 </figure>
-                <h3>Results: Modal Analysis</h3>
-              <p>
-                1. Determine the mass of the System
-              </p>
-              <figure>
-                  <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/3.jpg" alt="Phase 1 of the modal analysis">
-                  <figcaption class="img__caption">Phase 1</figcaption>
-              </figure>
-            </section>
-          </div>
-          <!-- Colum 2 -->
-          <div class="modal-col-sc modal-secs">
-            <section class="content-section">
-              <p>
-                2. Simplify the complex of structure. <strong>(Important Phase)</strong>
-              </p>
-              <p>
-                The structure shown in the provided drawing contains features that complicate the computational evaluation 
-                and may lead to inaccurate results due to poor constraint relationships within the model. This requires us 
-                to introduce geometric and modeling simplifications, allowing us to focus on the primary structural components 
-                that significantly influence the solution. By reducing unnecessary details, we improve mesh quality, 
-                avoid over-constraining the system, and ensure a more stable and reliable finite-element analysis.</p>
-              <figure>
-                  <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/5.jpg" alt="Phase 2 reduce the complex of system">
-                  <figcaption class="img__caption">Phase 2</figcaption>
-              </figure>
-              <p>
-                3. Determine of the system rigid
-              </p>
-              <figure>
-                  <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/7.jpg" alt="Phase 3 Determine of the system rigid">
-                  <figcaption class="img__caption">Phase 3</figcaption>
-              </figure>
-              <p>
-                4. Determine the natural frecuency of the system
-              </p>
-              <figure>
-                  <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/8.jpg" alt="Phase 3 Determine of the natural frequency">
-                  <figcaption class="img__caption">Phase 4</figcaption>
-              </figure>
-            </section>
-            <section class="content-section">
-              <h3>Results: Simulate seismic excitation scenarios</h3>
-              <p>
-                1. Procesing data with fourier transform in Python for determine the dominante frequency and maximun amplitud of the different earthquakers
-              </p>
-                <figure>
-                    <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/9.jpg" alt="Duhamel’s Integral for Undamped System">
-                    <figcaption class="img__caption">Data Processing in Python</figcaption>
-                </figure>
-                <p>
-                  2. Duhamel’s Integral for Undamped System
-                </p>
-                <figure>
-                  <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/10.jpg" alt="Duhamel’s Integral for Undamped System">
-                  <figcaption class="img__caption">Duhamel’s Integral for Undamped System</figcaption>
-                </figure>
-            </section>
-          </div>
-          <!-- Conclution -->
-          <div class="modal-concl modal-secs">
-            <h3>Conclusion</h3>
-            <p>
-              the results provide a comprehensive understanding of the structural dynamic behavior under 
-              both theoretical and simulated conditions. By simulating seismic excitation scenarios, it was possible to observe how the structure responds to real-world 
-              dynamic loads, making it clear how displacement, acceleration, and stress distributions evolve during such events. 
-              The comparison between analytical expectations and numerical simulations demonstrated strong agreement, confirming 
-              the reliability of the modeling approach and the assumptions used.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--Modal 2-->
-    <div class="overlay" id="modal2" >
-      <div class="modal modal2" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <!-- Button to close -->
-        <div class="btn-cont-clos">
-          <button id="close" data-close="modal2" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
-        </div>
-        <!-- Container -->
-        <div class="grid-cont-mod proj__card-grid-gap">
-          <!-- Title and Subtitle -->
-          <div class="modal-header">
-            <Span>Mechatronics</Span>
-            <h2>Design and Development of a RoboCup <br>Small Size League - Division B Robot</h2>
-          </div>
-          <!-- Introduction -->
-          <div class="modal-intr modal-secs content-section">
-            <h3>Introduction</h3>
-            <p>Within the framework of the development of technologies applied to robotics and artificial intelligence, the challenge arises 
-              to design and build a robot capable of competing in the Small Size League Division B, a category that is part of the robotic soccer 
-              competitions organized by RoboCup. The main objective of this project is to combine mechanical design, programming, and electronics skills to create an efficient, 
-              fast, and strategically intelligent robot capable of interacting with a team and performing in a competitive environment.
-            </p>
-          </div>
-          <!-- Colum 1 -->
-          <div class="modal-col-fr modal-secs">
-            <section class="content-section">
-              <h3>Problem</h3>
-              <P>
-                The SSL Robocup features the competition format of 11v11 football matches with an orange golf ball referred 
-                to as the A division, while the 6v6 matches refer to its B division. Teams build robots based on a set of defined 
-                constraints and rules.
-                <br>
-                Division B was chosen according to its own criteria of design and the resources available at that time. 
-                <br>
-                The principal constraints of Division B were defined by the Rules of the RoboCup Small Size League document.
-              </P>
-              <figure>
-                  <img src="./assets/Projects/Robot/Field_Dimension.png" alt="Field Dimension for Division B">
-                  <figcaption class="img__caption">Field dimensions and markings for division B</figcaption>
-              </figure>
-            </section>
-            <section class="content-section">
-              <h3>Objetives</h3>
-              <h4>General</h4>
-              <p>
-                The purpose of this project is to apply engineering knowledge across programming, mechanical, and electronic fields 
-                to the development of an autonomous robot capable of executing movements and actions characteristic of football.
-              </p>
-              <h4>Specific</h4>
-              <ul class="modal__list-robot">
-                <li>Design each of the actuator elements to perform kicking, dribbling and movement.</li>
-                <li>Mathematical approaches for the prediction of spherics and trajectory planning.</li>
-                <li>Apply image processing techniques for spherical, distance, and velocity detection of moving objects.</li>
-                <li>Design electronic systems for dribbler activation, kick actuators and motion activation.</li>
-                <li>Implement additive manufacturing techniques for the manufacture of parts.</li>
-                <li>Design logical and mathematical programming processes using ROS1 for communication to implement algorithms in parallel.</li>
-                <li>Use of Raspberry Pi 4 controller to communicate actuators and programming algorithms.</li>
-              </ul>
-              <figure>
-                  <img src="./assets/Projects/Robot/AsemblieRobot.png" alt="Mounting Parts of Robot">
-                  <figcaption class="img__caption">Mounting the dribble, wheels and batteries to the base of the robot</figcaption>
-              </figure>
-            </section>
-          </div>
-          <!-- Colum 2 -->
-          <div class="modal-col-sc modal-secs">
-            <section class="content-section">
-              <h3>Approach</h3>
-              <p></p>
-              <figure>
-                  <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
-                  <figcaption class="img__caption">Plano técnico de la estructura principal</figcaption>
-              </figure>
-              <h3>Results</h3>
-              <p>
-                  Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
-              </p>
-            </section>
-            <section class="content-section">
-                <figure>
-                    <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
-                    <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
-                </figure>
-                <p>
-                    Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
-                </p>
-            </section>
-          </div>
-          <!-- Conclution -->
-          <div class="modal-concl modal-secs">
-            <h3>Conclusion</h3>
-            <p>Here goes the conclution </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--Modal 3-->
-    <div class="overlay" id="modal3" >
-      <div class="modal modal3" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <!-- Button to close -->
-        <div class="btn-cont-clos">
-          <button id="close" data-close="modal3" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
-        </div>
-        <!-- Container -->
-        <div class="grid-cont-mod proj__card-grid-gap">
-          <!-- Title and Subtitle -->
-          <div class="modal-header">
-            <Span>Research</Span>
-            <h2>Dynamic Model of Vortex-induced-Vibration Wind Turbine</h2>
-          </div>
-          <!-- Introduction -->
-          <div class="modal-intr modal-secs">
-            <p>Hola soy una introducciòn</p>
-          </div>
-          <!-- Colum 1 -->
-          <div class="modal-col-fr modal-secs">
-            <section class="content-section">
-              <figure>
-                  <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
-                  <figcaption>Plano técnico de la estructura principal</figcaption>
-              </figure>
-              <p>
-                  Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
-              </p>
-            </section>
-            <section class="content-section">
-                <figure>
-                    <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
-                    <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
-                </figure>
-                <p>
-                    Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
-                </p>
-            </section>
-          </div>
-          <!-- Colum 2 -->
-          <div class="modal-col-sc modal-secs">
-            <section class="content-section">
-              <figure>
-                  <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
-                  <figcaption>Plano técnico de la estructura principal</figcaption>
-              </figure>
-              <p>
-                  Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
-              </p>
-            </section>
-            <section class="content-section">
-                <figure>
-                    <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
-                    <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
-                </figure>
-                <p>
-                    Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
-                </p>
-            </section>
-          </div>
-          <!-- Conclution -->
-          <div class="modal-concl modal-secs">
-            <h3>Conclusion</h3>
-            <p>Here goes the conclution </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--Modal 4-->
-    <div class="overlay" id="modal4" >
-      <div class="modal modal4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <!-- Button to close -->
-        <div class="btn-cont-clos">
-          <button id="close" data-close="modal4" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
-        </div>
-        <!-- Container -->
-        <div class="grid-cont-mod proj__card-grid-gap">
-          <!-- Title and Subtitle -->
-          <div class="modal-header">
-            <Span>Software</Span>
-            <h2>Engineering Interfaces with Code</h2>
-          </div>
-          <!-- Introduction -->
-          <div class="modal-intr modal-secs">
-            <p>Hola soy una introducciòn</p>
-          </div>
-          <!-- Colum 1 -->
-          <div class="modal-col-fr modal-secs">
-            <section class="content-section">
-              <figure>
-                  <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
-                  <figcaption>Plano técnico de la estructura principal</figcaption>
-              </figure>
-              <p>
-                  Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
-              </p>
-            </section>
-            <section class="content-section">
-                <figure>
-                    <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
-                    <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
-                </figure>
-                <p>
-                    Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
-                </p>
-            </section>
-          </div>
-          <!-- Colum 2 -->
-          <div class="modal-col-sc modal-secs">
-            <section class="content-section">
-              <figure>
-                  <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
-                  <figcaption>Plano técnico de la estructura principal</figcaption>
-              </figure>
-              <p>
-                  Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
-              </p>
-            </section>
-            <section class="content-section">
-                <figure>
-                    <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
-                    <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
-                </figure>
-                <p>
-                    Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
-                </p>
-            </section>
-          </div>
-          <!-- Conclution -->
-          <div class="modal-concl modal-secs">
-            <p>Here goes the conclution </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- PROFESSIONAL EXPERIENCE -->
-  <section id="experiencia" class="section_normal">
-    <div class="skill-container fl-ly-sect">
-      <div class="ti-sect-lef">
-        <h2>Experience <span class="section-span">| My Carrer</span></h2>
-      </div>
-      <div class="timeline">
-        <div class="t-item_HK card_experience">
-              <div class="muted-item-left">
-                <h3 class="rolle">Project Engineer</h3>
-                <p class="company">Herrenknecht AG</p>
-              </div>
-              <div class="muted-item-right">
-                <div>
-                  <p class="muted-it-ri-location"><li class="material-icons location">location_on</li> Schwanaw, Germany</p>
-                </div>
-                <p class="muted-it-ri-date">Jan 2025 - Jul 2025</p>
-              </div>
-        </div>
-        <div class="t-item_CRTG card_experience">
-          <div class="muted-item-left">
-                <h3 class="rolle">Design of Industrial Piping Systems (Intern)</h3>
-                <p class="company">China Railway Tunnel Group Co. (CRTG)</p>
-              </div>
-              <div class="muted-item-right">
-                <div>
-                  <p class="location"><li class="material-icons location">location_on</li> Panamà City, Panamà</p>
-                </div>
-                <p class="muted-it-ri-date">Aug 2024 - Jan 2025</p>
-              </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education" class="section_galery">
-    <div class="container fl-ly-sect">
-      <div class="ti-sect-ri">
-        <h2>Education <span class="section-span">| Academic</span></h2>
-      </div>
-      <div class="grid edu-temp-grid">
-        <div class="card utp">
-          <div class="edu-card-grid">
-            <div class="edu-card-log">
-              <img src="./assets/Logo/UTP.png" class="utp-logo" alt="Technology University of Panama">
+              </section>
             </div>
-            <!-- content item -->
-            <div class="edu-card-cont">
-              <strong>Bachelor of Science (B.Sc.), Mechanical Engineering</strong>
-              <div class="muted">Technology University of Panama</div>
-              <p class="muted"><em>With a minor in Dynamic Systems and Automation.</em></p>
+            <!-- Colum 2 -->
+            <div class="modal-col-sc modal-secs">
+              <section class="content-section">
+                <h3>Approach</h3>
+                <p></p>
+                <figure>
+                    <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
+                    <figcaption class="img__caption">Plano técnico de la estructura principal</figcaption>
+                </figure>
+                <h3>Results</h3>
+                <p>
+                    Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
+                </p>
+              </section>
+              <section class="content-section">
+                  <figure>
+                      <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
+                      <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
+                  </figure>
+                  <p>
+                      Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
+                  </p>
+              </section>
             </div>
-            <!-- Date -->
-             <div class="edu-card-date">
-              <p>Jan 2018 - Dec 2024</p>
-             </div>
+            <!-- Conclution -->
+            <div class="modal-concl modal-secs">
+              <h3>Conclusion</h3>
+              <p>Here goes the conclution </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Modal 3-->
+      <div class="overlay" id="modal3" >
+        <div class="modal modal3" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+          <!-- Button to close -->
+          <div class="btn-cont-clos">
+            <button id="close" data-close="modal3" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
+          </div>
+          <!-- Container -->
+          <div class="grid-cont-mod proj__card-grid-gap">
+            <!-- Title and Subtitle -->
+            <div class="modal-header">
+              <Span>Research</Span>
+              <h2>Dynamic Model of Vortex-induced-Vibration Wind Turbine</h2>
+            </div>
+            <!-- Introduction -->
+            <div class="modal-intr modal-secs">
+              <p>Hola soy una introducciòn</p>
+            </div>
+            <!-- Colum 1 -->
+            <div class="modal-col-fr modal-secs">
+              <section class="content-section">
+                <figure>
+                    <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
+                    <figcaption>Plano técnico de la estructura principal</figcaption>
+                </figure>
+                <p>
+                    Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
+                </p>
+              </section>
+              <section class="content-section">
+                  <figure>
+                      <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
+                      <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
+                  </figure>
+                  <p>
+                      Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
+                  </p>
+              </section>
+            </div>
+            <!-- Colum 2 -->
+            <div class="modal-col-sc modal-secs">
+              <section class="content-section">
+                <figure>
+                    <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
+                    <figcaption>Plano técnico de la estructura principal</figcaption>
+                </figure>
+                <p>
+                    Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
+                </p>
+              </section>
+              <section class="content-section">
+                  <figure>
+                      <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
+                      <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
+                  </figure>
+                  <p>
+                      Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
+                  </p>
+              </section>
+            </div>
+            <!-- Conclution -->
+            <div class="modal-concl modal-secs">
+              <h3>Conclusion</h3>
+              <p>Here goes the conclution </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Modal 4-->
+      <div class="overlay" id="modal4" >
+        <div class="modal modal4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+          <!-- Button to close -->
+          <div class="btn-cont-clos">
+            <button id="close" data-close="modal4" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
+          </div>
+          <!-- Container -->
+          <div class="grid-cont-mod proj__card-grid-gap">
+            <!-- Title and Subtitle -->
+            <div class="modal-header">
+              <Span>Software</Span>
+              <h2>Engineering Interfaces with Code</h2>
+            </div>
+            <!-- Introduction -->
+            <div class="modal-intr modal-secs">
+              <p>Hola soy una introducciòn</p>
+            </div>
+            <!-- Colum 1 -->
+            <div class="modal-col-fr modal-secs">
+              <section class="content-section">
+                <figure>
+                    <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
+                    <figcaption>Plano técnico de la estructura principal</figcaption>
+                </figure>
+                <p>
+                    Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
+                </p>
+              </section>
+              <section class="content-section">
+                  <figure>
+                      <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
+                      <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
+                  </figure>
+                  <p>
+                      Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
+                  </p>
+              </section>
+            </div>
+            <!-- Colum 2 -->
+            <div class="modal-col-sc modal-secs">
+              <section class="content-section">
+                <figure>
+                    <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
+                    <figcaption>Plano técnico de la estructura principal</figcaption>
+                </figure>
+                <p>
+                    Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
+                </p>
+              </section>
+              <section class="content-section">
+                  <figure>
+                      <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
+                      <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
+                  </figure>
+                  <p>
+                      Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
+                  </p>
+              </section>
+            </div>
+            <!-- Conclution -->
+            <div class="modal-concl modal-secs">
+              <p>Here goes the conclution </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PROFESIONAL EXPERIENCE --> 
+    <section id="experience" class="section_normal">
+    <div class="container">
+      <header class="ti-sect ti-sect--left">
+          <span class="section-span">Experience</span>
+          <h2>Professional Journey</h2>
+      </header>
+
+      <div class="experience-timeline">
+
+        <!-- EXPERIENCE ITEM -->
+        <article class="experience-item" data-exp-id="hk">
+          <div class="experience-dot"></div>
+
+          <div class="experience-card">
+            <div class="experience-top">
+              <div>
+                <h3 class="experience-role">Project Engineer</h3>
+                <p class="experience-company">Herrenknecht AG</p>
+              </div>
+
+              <div class="experience-date">
+                <span>Jan 2025</span> - <span>Jul 2025</span>
+              </div>
+            </div>
+
+            <div class="experience-meta">
+              <span class="experience-location">
+                <i class="material-icons">location_on</i>
+                Schwanau, Germany
+              </span>
+
+              <span class="experience-type">Full-Time</span>
+            </div>
+
+            <p class="experience-summary">
+              Developed engineering documentation, technical reports, and design validations
+              for tunneling machine projects under international standards.
+            </p>
+
+            <div class="experience-tags">
+              <span>SolidWorks</span>
+              <span>FEA</span>
+              <span>Project Management</span>
+              <span>Technical Reporting</span>
+            </div>
+
+            <div class="experience-actions">
+              <button class="btn-view btn-details-trigger">
+                View Details
+              </button>
+              <a href="experience/herrenknecht.html" class="btn-link">
+                Full Case Study →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- EXPERIENCE ITEM -->
+        <article class="experience-item" data-exp-id="crtg">
+          <div class="experience-dot"></div>
+
+          <div class="experience-card">
+            <div class="experience-top">
+              <div>
+                <h3 class="experience-role">Industrial Piping Design (Intern)</h3>
+                <p class="experience-company">China Railway Tunnel Group (CRTG)</p>
+              </div>
+
+              <div class="experience-date">
+                <span>Aug 2024</span> - <span>Jan 2025</span>
+              </div>
+            </div>
+
+            <div class="experience-meta">
+              <span class="experience-location">
+                <i class="material-icons">location_on</i>
+                Panamá City, Panamá
+              </span>
+
+              <span class="experience-type">Internship</span>
+            </div>
+
+            <p class="experience-summary">
+              Supported industrial piping layout design, coordination with engineering teams,
+              and technical documentation for tunneling construction projects.
+            </p>
+
+            <div class="experience-tags">
+              <span>AutoCAD</span>
+              <span>Piping Design</span>
+              <span>3D Modeling</span>
+              <span>Technical Drafting</span>
+            </div>
+
+            <div class="experience-actions">
+              <button class="btn-view btn-details-trigger">
+                View Details
+              </button>
+              <a href="experience/crtg.html" class="btn-link">
+                Full Case Study →
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+    </section>
+
+    <!-- MODAL PANEL -->
+    <div class="experience-modal" id="expModal">
+    <div class="experience-modal-content">
+      <button class="modal-close-btn" id="closeExpModal">&times;</button>
+
+      <div class="modal-header">
+        <h2 id="modalTitle"></h2>
+        <p id="modalCompany"></p>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-gallery" id="modalImages"></div>
+
+        <div class="modal-info">
+          <h4>Overview</h4>
+          <p id="modalDesc"></p>
+
+          <h4>Key Contributions</h4>
+          <ul id="modalTasks"></ul>
+
+          <h4>Tools & Technologies</h4>
+          <div class="modal-tags" id="modalTools"></div>
+
+          <a id="modalLink" href="#" class="modal-btn">
+            View Full Project →
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section_normal">
+      <div class="container fl-ly-sect">
+        <header class="ti-sect ti-sect--right">
+          <span class="section-span">Education</span>
+          <h2>Academic</h2>
+        </header>
+
+        <div class="grid edu-temp-grid">
+          <div class="card utp">
+            <div class="edu-card-grid">
+              <div class="edu-card-log">
+                <img src="./assets/Logo/UTP.png" class="utp-logo" alt="Technology University of Panama">
+              </div>
+              <!-- content item -->
+              <div class="edu-card-cont">
+                <strong>Bachelor of Science (B.Sc.), Mechanical Engineering</strong>
+                <div class="muted">Technology University of Panama</div>
+                <p class="muted"><em>With a minor in Dynamic Systems and Automation.</em></p>
+              </div>
+              <!-- Date -->
+              <div class="edu-card-date">
+                <p>Jan 2018 - Dec 2024</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- L&T EduTech -->
+          <div class="card utp">
+            <div class="edu-card-grid">
+              <div class="edu-card-log">
+                <img src="./assets/Logo/L_and_T_EduTech.png" class="utp-logo" alt="L&T EduTech">
+              </div>
+              <!-- content item -->
+              <div class="edu-card-cont">
+                <strong>Specialization: Design of Industrial Piping Systems</strong>
+                <div class="muted">L&T EduTech</div>
+                <div class="edu-card-cont-ach">
+                  <p class="muted">
+                    <em>
+                      Design the piping system to comply with global codes standards, 
+                      Stress analysis using industry-accepted stress analysis software, 
+                      Modify the pipe routing along with supports, Material specification sheet, 
+                      Optimization of pipe routing.
+                    </em>
+                  </p>
+                </div>
+              </div>
+              <!-- Date -->
+              <div class="edu-card-date">
+                <p>Expected - Dec 2026</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERY SECTION -->
+    <section id="gallery" class="section_normal">
+    <div class="container galery-container">
+
+      <!-- Title of Gallery -->
+      <header class="ti-sect ti-sect--left">
+          <span class="section-span">Gallery</span>
+          <h2>A collection of my academic, engineering, and professional experiences.</h2>
+      </header>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+
+        <!-- Card 1 -->
+        <article class="gallery-card">
+          <img src="assets/Gallery/CRTG/img2.jpg" alt="TBM Project">
+          <div class="gallery-info">
+            <h3>TBM</h3>
+            <p>Understanding the operational parameters of a Mixshield Tunnel Boring Machine.</p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="gallery-card">
+          <img src="assets/Gallery/Conference/img1.jpg" alt="Conference of Science">
+          <div class="gallery-info">
+            <h3>Conference of Science</h3>
+            <p>Participating and presenting research in an academic environment.</p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="gallery-card">
+          <img src="assets/Gallery/Herrenknecht/img5.jpg" alt="Herrenknecht AG Visit">
+          <div class="gallery-info">
+            <h3>Herrenknecht AG</h3>
+            <p>Engineering experience and learning from one of the biggest TBM manufacturers.</p>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="gallery-card">
+          <img src="assets/Gallery/CRTG/img7.jpg" alt="CRTG Experience">
+          <div class="gallery-info">
+            <h3>CRTG</h3>
+            <p>Hands-on experience in tunneling operations, mechanical systems and inspection.</p>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+    </section>
+
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+    <div class="footer_container_sect">
+
+      <!-- Logo -->
+      <div class="footer_logo">
+        <a href="#home" aria-label="Go to homepage">
+          <img src="./assets/Logo/PERSONAL_LOGO_GRADIENT.png" alt="Yerman Merel Logo">
+        </a>
+      </div>
+
+      <!-- Copyright / Info -->
+      <div class="footer_cont">
+        <p>
+          © <span id="year"></span> <strong>Yerman Merel</strong>. All rights reserved.
+        </p>
+        <p>
+          Build & Design by <strong>Yerman Merel</strong> (since 2023)
+        </p>
+        <p class="footer_version">
+          Version <span>v2.0.0</span>
+        </p>
+      </div>
+
+      <!-- Social Links -->
+      <nav class="footer_list_socialmedia" aria-label="Social media links">
+        <a href="https://www.linkedin.com/in/yermanmerel/" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+
+        <a href="mailto:ymerel_02@outlook.com">
+          Email
+        </a>
+
+        <a href="https://github.com/Engyermanmerel" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+      </nav>
+
+    </div>
+    </footer>
+
+
+    <!-- JAVASCRIPT SECTION -->
+    <script src="script.js"></script>
+
+    <!-- MODAL OF SKILLS -->
+    <div class="overlay" id="modal5" aria-hidden="true">
+      <div class="modal modal5" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="btn-close" data-close="modal5">
+          <span class="material-icons">close</span>
+        </button>
+        
+        <div class="modal-header">
+          <span>PHASE 01</span>
+          <h2>Concept & Requirements</h2>
+        </div>
+
+        <div class="modal-grid">
+          <div class="modal-column">
+            <h3><span class="material-icons">settings</span> Hard Skills</h3>
+            <ul>
+              <li>Requirement breakdown & analysis</li>
+              <li>System architecture fundamentals</li>
+              <li>CAD for concept evaluation</li>
+            </ul>
+          </div>
+          <div class="modal-column">
+            <h3><span class="material-icons">psychology</span> Soft Skills</h3>
+            <ul>
+              <li>Analytical thinking</li>
+              <li>Creative problem-solving</li>
+              <li>Technical documentation</li>
+            </ul>
           </div>
         </div>
         
-        <!-- L&T EduTech -->
-        <div class="card utp">
-          <div class="edu-card-grid">
-            <div class="edu-card-log">
-              <img src="./assets/Logo/L_and_T_EduTech.png" class="utp-logo" alt="L&T EduTech">
-            </div>
-            <!-- content item -->
-            <div class="edu-card-cont">
-              <strong>Specialization: Design of Industrial Piping Systems</strong>
-              <div class="muted">L&T EduTech</div>
-              <div class="edu-card-cont-ach">
-                <p class="muted">
-                  <em>
-                    Design the piping system to comply with global codes standards, 
-                    Stress analysis using industry-accepted stress analysis software, 
-                    Modify the pipe routing along with supports, Material specification sheet, 
-                    Optimization of pipe routing.
-                  </em>
-                </p>
-              </div>
-            </div>
-            <!-- Date -->
-            <div class="edu-card-date">
-              <p>Expected - Dec 2026</p>
-            </div>
-          </div>
+        <div class="modal-footer">
+          <p><strong>Tools:</strong> Notion, MATLAB, Fusion 360</p>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- GALERY SECTION -->
-<section id="gallery" class="section_sh section_normal">
-  <div class="container galery-container">
-
-    <!-- Title of Gallery -->
-    <div class="ti-sect-lef">
-      <h2>Gallery <span class="section-span">| History</span></h2>
-      <p class="gallery-subtitle">
-        A collection of my academic, engineering, and professional experiences.
-      </p>
-    </div>
-
-    <!-- Gallery Grid -->
-    <div class="gallery-grid">
-
-      <!-- Card 1 -->
-      <article class="gallery-card">
-        <img src="assets/Gallery/CRTG/img2.jpg" alt="TBM Project">
-        <div class="gallery-info">
-          <h3>TBM</h3>
-          <p>Understanding the operational parameters of a Mixshield Tunnel Boring Machine.</p>
-        </div>
-      </article>
-
-      <!-- Card 2 -->
-      <article class="gallery-card">
-        <img src="assets/Gallery/Conference/img1.jpg" alt="Conference of Science">
-        <div class="gallery-info">
-          <h3>Conference of Science</h3>
-          <p>Participating and presenting research in an academic environment.</p>
-        </div>
-      </article>
-
-      <!-- Card 3 -->
-      <article class="gallery-card">
-        <img src="assets/Gallery/Herrenknecht/img5.jpg" alt="Herrenknecht AG Visit">
-        <div class="gallery-info">
-          <h3>Herrenknecht AG</h3>
-          <p>Engineering experience and learning from one of the biggest TBM manufacturers.</p>
-        </div>
-      </article>
-
-      <!-- Card 4 -->
-      <article class="gallery-card">
-        <img src="assets/Gallery/CRTG/img6.jpg" alt="CRTG Experience">
-        <div class="gallery-info">
-          <h3>CRTG</h3>
-          <p>Hands-on experience in tunneling operations, mechanical systems and inspection.</p>
-        </div>
-      </article>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- FOOTER SECTION -->
-<footer class="footer">
-  <div class="footer_container_sect">
-
-    <!-- Logo -->
-    <div class="footer_logo">
-      <a href="#home" aria-label="Go to homepage">
-        <img src="./assets/Logo/PERSONAL_LOGO_GRADIENT.png" alt="Yerman Merel Logo">
-      </a>
-    </div>
-
-    <!-- Copyright / Info -->
-    <div class="footer_cont">
-      <p>
-        © <span id="year"></span> <strong>Yerman Merel</strong>. All rights reserved.
-      </p>
-      <p>
-        Build & Design by <strong>Yerman Merel</strong> (since 2023)
-      </p>
-      <p class="footer_version">
-        Version <span>v1.0.1</span>
-      </p>
-    </div>
-
-    <!-- Social Links -->
-    <nav class="footer_list_socialmedia" aria-label="Social media links">
-      <a href="https://www.linkedin.com/in/yermanmerel/" target="_blank" rel="noopener noreferrer">
-        LinkedIn
-      </a>
-
-      <a href="mailto:ymerel_02@outlook.com">
-        Email
-      </a>
-
-      <a href="https://github.com/Engyermanmerel" target="_blank" rel="noopener noreferrer">
-        GitHub
-      </a>
-    </nav>
-
-  </div>
-</footer>
-
-
-  <!-- JAVASCRIPT SECTION -->
-  <script src="script.js"></script>
-</body>
+  </body>
 </html>

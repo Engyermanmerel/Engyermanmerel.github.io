@@ -8,13 +8,44 @@
 // Año dinámico
 document.getElementById('year').textContent = new Date().getFullYear()
 
- // Scroll suave para anclas
- document.querySelectorAll('a[href^="#"]').forEach(a=>{
+// Scroll suave para anclas
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click',e=>{
         const id = a.getAttribute('href')
         if(id.length>1){ e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'}) }
     })
-})
+});
+
+// 1. Lógica de Cambio de Tema (Dark/Light) / Nav Bar
+const themeBtn = document.getElementById('theme-toggle');
+const themeIcon = themeBtn.querySelector('span');
+
+themeBtn.addEventListener('click', () => {
+  // Alterna la clase en el body
+  document.body.classList.toggle('light-theme');
+  
+  // Cambia el icono dependiendo del modo
+  if (document.body.classList.contains('light-theme')) {
+    themeIcon.textContent = 'dark_mode'; // Icono de luna
+  } else {
+    themeIcon.textContent = 'light_mode'; // Icono de sol
+  }
+});
+
+// 2. Lógica de Cambio de Idioma (Básico)
+const langBtn = document.getElementById('lang-toggle');
+
+langBtn.addEventListener('click', () => {
+  // Alterna el texto del botón entre EN y ES
+  if (langBtn.textContent === 'EN') {
+    langBtn.textContent = 'ES';
+    // Aquí llamarías a una función para cambiar los textos de tu página
+    console.log("Cambiando a Español...");
+  } else {
+    langBtn.textContent = 'EN';
+    console.log("Switching to English...");
+  }
+});
 
 // Intersection Observer para revelar tarjetas
 const observer = new IntersectionObserver((entries)=>{
@@ -50,32 +81,39 @@ next.addEventListener('click', () => {
     updateCarousel();
 });
 
-//Modal Manager  
+//==== Abrir Modal de Proyectos ====
 class ModalManager {
     constructor() {
+        // Seleccionamos elementos una sola vez para mejorar rendimiento
+        this.overlays = document.querySelectorAll('.overlay');
         this.init();
     }
 
     init() {
-        // Event listeners para abrir modales
-        document.getElementById('openModal1').addEventListener('click', () => this.openModal('modal1'));
-        document.getElementById('openModal2').addEventListener('click', () => this.openModal('modal2'));
-        document.getElementById('openModal3').addEventListener('click', () => this.openModal('modal3'));
-        document.getElementById('openModal4').addEventListener('click', () => this.openModal('modal4'));
-        document.getElementById('openModal5').addEventListener('click', () => this.openModal('modal5'));
-        document.getElementById('openModal6').addEventListener('click', () => this.openModal('modal6'));
-        document.getElementById('openModal7').addEventListener('click', () => this.openModal('modal7'));
-        
-        // Event listeners para cerrar modales
-        document.querySelectorAll('[data-close]').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const modalId = e.target.getAttribute('data-close');
-                this.closeModal(modalId);
-            });
+        // 1. Abrir modales de forma dinámica
+        // Buscamos cualquier botón que tenga la clase 'open-modal'
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('.open-modal');
+            if (btn) {
+                // Asumimos que el ID del modal está en un data-attribute o se deriva del ID del botón
+                // Ejemplo: botón id="openModal5" -> busca "modal5"
+                const modalId = btn.id.replace('openModal', 'modal');
+                console.log("Se presiono el boton de Skill 1");
+                this.openModal(modalId);
+            }
         });
 
-        // Cerrar modal al hacer click en el overlay
-        document.querySelectorAll('.overlay').forEach(overlay => {
+        // 2. Cerrar modales (Delegación de eventos para el botón X)
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('[data-close]');
+            if (btn) {
+                const modalId = btn.getAttribute('data-close');
+                this.closeModal(modalId);
+            }
+        });
+
+        // 3. Cerrar al hacer clic en el overlay
+        this.overlays.forEach(overlay => {
             overlay.addEventListener('click', (e) => {
                 if (e.target === overlay) {
                     this.closeModal(overlay.id);
@@ -83,11 +121,9 @@ class ModalManager {
             });
         });
 
-        // Cerrar modal con la tecla Escape
+        // 4. Tecla Escape
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                this.closeAllModals();
-            }
+            if (e.key === 'Escape') this.closeAllModals();
         });
     }
 
@@ -95,7 +131,7 @@ class ModalManager {
         const modal = document.getElementById(modalId);
         if (modal) {
             modal.classList.add('active');
-            // Prevenir scroll del body cuando el modal está abierto
+            modal.setAttribute('aria-hidden', 'false'); // A11y
             document.body.style.overflow = 'hidden';
         }
     }
@@ -104,64 +140,91 @@ class ModalManager {
         const modal = document.getElementById(modalId);
         if (modal) {
             modal.classList.remove('active');
-            // Restaurar scroll del body
+            modal.setAttribute('aria-hidden', 'true'); // A11y
             document.body.style.overflow = '';
         }
     }
 
     closeAllModals() {
-        document.querySelectorAll('.overlay.active').forEach(modal => {
-            modal.classList.remove('active');
-        });
-        document.body.style.overflow = '';
+        const activeModal = document.querySelector('.overlay.active');
+        if (activeModal) {
+            this.closeModal(activeModal.id);
+        }
     }
 }
 
-// Inicializar el gestor de modales cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', () => {
-    new ModalManager();
-});
+// Inicialización
+const modals = new ModalManager();
 
-//Galery logic
-// Array of images (in the order of your gallery)
-const imagesGalery = [
-  "assets/Gallery/CRTG/img2.jpg",
-  "assets/Gallery/Conference/img1.jpg",
-  "assets/Gallery/Herrenknecht/img5.jpg",
-  "assets/Gallery/CRTG/img3.jpg"
-];
+// ---- Modal for Professional Experience
+const modal = document.getElementById("expModal");
+const closeBtn = document.getElementById("closeExpModal");
 
-// Array of descriptions (same order, same indexes)
-const descriptionsGalery = [
-  "Understanding the different operational parameters of a Mixshield Tunnel Boring Machine by Herrenknecht.",
-  "Initial round of the National Science Conference with my colleague.",
-  "Behind me, the largest EPB manufacturer today.",
-  "Commissioning of the grouting pump and verifying the values."
-];
+  const expData = {
+    hk: {
+      title: "Project Engineer",
+      company: "Herrenknecht AG",
+      desc: "Worked on engineering projects for tunneling systems, preparing technical documentation, coordinating design validations, and supporting multidisciplinary teams.",
+      tasks: [
+        "Generated technical reports and project documentation.",
+        "Supported mechanical design validation and review processes.",
+        "Collaborated with international engineering teams.",
+        "Assisted with engineering planning and technical coordination."
+      ],
+      tools: ["SolidWorks", "FEA", "MS Project", "Engineering Reports"],
+      link: "experience/herrenknecht.html"
+    },
+    crtg: {
+      title: "Industrial Piping Design (Intern)",
+      company: "China Railway Tunnel Group (CRTG)",
+      desc: "Supported industrial piping design, layouts, and engineering documentation for tunneling infrastructure projects in Panamá.",
+      tasks: [
+        "Created piping layouts and technical drawings.",
+        "Supported drafting and documentation processes.",
+        "Assisted engineers with design coordination.",
+        "Worked with technical teams on construction planning."
+      ],
+      tools: ["AutoCAD", "Piping Drafting", "3D Layout", "Technical Documentation"],
+      link: "experience/crtg.html"
+    }
+  };
 
-function changeImage(index) {
-  const mainImage = document.getElementById("mainImage");
-  const descriptionEl = document.getElementById("imgDescription");
-  const buttons = document.querySelectorAll(".galery-btn");
+  document.querySelectorAll(".btn-details-trigger").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const card = e.target.closest(".experience-item");
+      const id = card.dataset.expId;
+      const data = expData[id];
 
-  // Fade out
-  mainImage.style.opacity = 0;
-  descriptionEl.style.opacity = 0;
+      document.getElementById("modalTitle").textContent = data.title;
+      document.getElementById("modalCompany").textContent = data.company;
+      document.getElementById("modalDesc").textContent = data.desc;
 
-  setTimeout(() => {
-    // Update the image and description based on array index
-    mainImage.src = imagesGalery[index];
-    descriptionEl.textContent = descriptionsGalery[index];
+      const tasksEl = document.getElementById("modalTasks");
+      tasksEl.innerHTML = "";
+      data.tasks.forEach(task => {
+        const li = document.createElement("li");
+        li.textContent = task;
+        tasksEl.appendChild(li);
+      });
 
-    // Fade in
-    mainImage.style.opacity = 1;
-    descriptionEl.style.opacity = 1;
-  }, 300);
+      const toolsEl = document.getElementById("modalTools");
+      toolsEl.innerHTML = "";
+      data.tools.forEach(tool => {
+        const span = document.createElement("span");
+        span.textContent = tool;
+        toolsEl.appendChild(span);
+      });
 
-  // Update active button
-  buttons.forEach(btn => btn.classList.remove("active"));
-  buttons[index].classList.add("active");
-}
+      document.getElementById("modalLink").href = data.link;
 
-/*Footer Year */
-document.getElementById("year").textContent = new Date().getFullYear();
+      modal.classList.add("active");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.classList.remove("active");
+  });
