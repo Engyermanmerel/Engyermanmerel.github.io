@@ -1,0 +1,161 @@
+/* ===================================
+   SKILL SECTION
+   =================================== */
+
+.skills__visual-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.skills__diagram {
+  width: 100%;
+  display: block;
+  filter: brightness(0.8); /* Oscurecemos un poco para que resalten los botones */
+  transition: filter 0.3s ease;
+}
+
+.skills__visual-container:hover .skills__diagram {
+  filter: brightness(1);
+}
+
+/* Estilo de los Hotspots (Botones con pulso) */
+.hotspot {
+  position: absolute;
+  background: #0f4ccf;
+  color: white;
+  border: none;
+  width: clamp(36px, 4vw, 48px);
+  height: clamp(36px, 4vw, 48px);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hotspot:hover {
+  transform: scale(1.2);
+  background: #002e94;
+}
+
+/* Animación de pulso técnica */
+.hotspot__pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(15, 76, 207, 0.5);
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* Posicionamiento lógico (Ajusta estos % según tu imagen) */
+.hotspot--1 { top: 28%; left: 12%; }
+.hotspot--2 { top: 50%; left: 60%; }
+.hotspot--3 { top: 64%; right: 12%; }
+
+/* Etiqueta flotante del botón */
+.hotspot__label {
+  position: absolute;
+  top: 110%;
+  background: rgba(0,0,0,0.7);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.hotspot:hover .hotspot__label {
+  opacity: 1;
+}
+
+.grid-cont-mod {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  padding: 40px;
+}
+
+/* ================= SKILLS MODAL SYSTEM ================= */
+
+.skills-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 2000;
+}
+
+.skills-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.skills-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(5px);
+}
+
+.skills-modal__content {
+  position: relative;
+  background: #111;
+  color: #fff;
+  width: 90%;
+  max-width: 520px;
+  padding: 40px;
+  border-radius: 18px;
+  z-index: 10;
+  transform: translateY(50px);
+  transition: 0.3s ease;
+}
+
+.skills-modal.is-open .skills-modal__content {
+  transform: translateY(0);
+}
+
+.skills-modal__close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.skills-modal__close:hover {
+  opacity: 0.7;
+}
+
+.skills-modal__list {
+  margin-top: 25px;
+  padding-left: 20px;
+}
+
+.skills-modal__list li {
+  margin-bottom: 12px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}

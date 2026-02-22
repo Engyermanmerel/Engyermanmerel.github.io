@@ -1,0 +1,416 @@
+<section id="pro">
+    <div class="proj__container temp-lyt-sect">
+        <header class="ti-sect ti-sect--right">
+            <span class="section-span">Project Portfolio</span>
+            <h2>Systems Engineering & Technical Implementations</h2>
+        </header>
+
+        <!--Carrusel Container -->
+        <div class="proj__carrusel" id="carousel">
+            <!-- Card 1 -->
+            <div class="proj__carrusel-card proj__card-fi">
+                <div class="proj__carrusel-card__info">
+                <h3>Dynamic Seismic Validation of a Diesel Engine Support Structure</h3>
+                <button class="open-modal" id="openModal1">
+                    <i class="material-icons close_icon">add</i>
+                </button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="proj__carrusel-card proj__card-sc">
+                <div class="proj__carrusel-card__info">
+                    <h3>Design and Development of a RoboCup Small Size League Division B Robot </h3>
+                    <button class="open-modal" id="openModal2"><i class="material-icons close_icon">add</i></button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="proj__carrusel-card proj__card-tr">
+                <div class="proj__carrusel-card__info">
+                    <h3>Dynamic Model of Vortex-induced-Vibration Wind Turbine</h3>
+                    <button class="open-modal" id="openModal3"><i class="material-icons close_icon">add</i></button>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="proj__carrusel-card proj__card-fr">
+                <div class="proj__carrusel-card__info">
+                    <h3>Engineering Interfaces with Code</h3>
+                    <button class="open-modal" id="openModal4"><i class="material-icons close_icon">add</i></button>
+                </div>
+            </div>
+        </div>
+
+        <!--Controls of Carrusel-->
+        <div class="proj__controls">
+            <button id="prev"><i class="material-icons">chevron_left</i></button>
+            <button id="next"><i class="material-icons">chevron_right</i></button>
+        </div>
+    </div>
+</section>
+
+<!--Overlay + Modal 1 (Project Section - Project 1)-->
+    <div class="overlay" id="modal1" aria-hidden="true">
+      <div class="modal modal1" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <!-- Button to close -->
+        <div class="btn-cont-clos">
+          <button id="close" data-close="modal1" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
+        </div>
+        <!-- Container -->
+        <div class="grid-cont-mod proj__card-grid-gap">
+          <!-- Title and Subtitle -->
+          <div class="modal-header">
+            <Span>Dynamic Analysis</Span>
+            <h2>Dynamic Seismic Validation of a Diesel Engine Support Structure</h2>
+          </div>
+          <!-- Introduction -->
+          <div class="modal-intr modal-secs content-section">
+            <h3>Introduction</h3>
+            <p>
+              This Dynamic analysis is part of the design of the structural steel support system with a reinforced slab to support more than two industrial motors by Caterpillar. 
+              These motors are responsible for generating electricity for an industrial plant in the province of Veraguas, Panama. 
+              The purpose is to evaluate the integrity of the structure under vibrations induced by a natural phenomenon such as an earthquake 
+              with a magnitude of 8 on the Richter scale, since that region has been affected more than once over the years by earthquakes of this magnitude. 
+              The growing concern is to protect the investment and ensure the reliability for the client. As engineers, it is our duty to carry out these goals.
+            </p>
+          </div>
+          <!-- Colum 1 -->
+          <div class="modal-col-fr modal-secs">
+            <section class="content-section">
+              <h3>Problem Statement</h3>
+              <p>
+                During the design phase of a structural steel support system with a reinforced slab in the province of Veraguas, Panama, the team identified a concern related to the region’s seismic activity. 
+                Earthquakes can generate strong inertia forces, uneven deformations, and high stresses that may compromise the performance of the structure. 
+                To address this risk, the system requires a detailed analysis to validate its capacity and confirm that it can safely withstand seismic conditions.
+              </p>
+              <figure>
+                  <img src="./assets/Projects/Wallpaper/Sismic/EstructuraRevit_Sismic.png" alt="Revit render of overall strcutre">
+                  <figcaption class="img__caption">3D view of Structural Steel Support System with a Reinforced Slab</figcaption>
+              </figure>
+              <h3>Objetives</h3>
+              <p>
+                  To perform a modal analysis of the steel structure under free vibration conditions to determine its theoretical vibration modes and validate 
+                  them through computational simulation in Autodesk Inventor. Furthermore, to evaluate the dynamic response of the structure under seismic excitation 
+                  represented by earthquake ground motion amplitudes in order to assess its preliminary structural integrity and reliability.
+              </p>
+            </section>
+            <section class="content-section">
+                <ul class="modal__list-robot">
+                  <li>Perform a modal analysis</li>
+                  <li>Validate the theoretical vibration modes</li>
+                  <li>Simulate seismic excitation scenarios</li>
+                  <li>Quantify displacement, acceleration, and stress responses</li>
+                  <li>Compare theoretical predictions with simulation outcomes</li>
+                </ul>
+                <figure>
+                    <img src="./assets/Projects/Wallpaper/Sismic/PlanoDeConstrucciònEstructura1.png" alt="2D drawing of overall strcutre">
+                    <figcaption class="img__caption">2D view of Structural Steel Support System with a Reinforced Slab</figcaption>
+                </figure>
+                <h3>Results: Modal Analysis</h3>
+              <p>
+                1. Determine the mass of the System
+              </p>
+              <figure>
+                  <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/3.jpg" alt="Phase 1 of the modal analysis">
+                  <figcaption class="img__caption">Phase 1</figcaption>
+              </figure>
+            </section>
+          </div>
+          <!-- Colum 2 -->
+          <div class="modal-col-sc modal-secs">
+            <section class="content-section">
+              <p>
+                2. Simplify the complex of structure. <strong>(Important Phase)</strong>
+              </p>
+              <p>
+                The structure shown in the provided drawing contains features that complicate the computational evaluation 
+                and may lead to inaccurate results due to poor constraint relationships within the model. This requires us 
+                to introduce geometric and modeling simplifications, allowing us to focus on the primary structural components 
+                that significantly influence the solution. By reducing unnecessary details, we improve mesh quality, 
+                avoid over-constraining the system, and ensure a more stable and reliable finite-element analysis.</p>
+              <figure>
+                  <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/5.jpg" alt="Phase 2 reduce the complex of system">
+                  <figcaption class="img__caption">Phase 2</figcaption>
+              </figure>
+              <p>
+                3. Determine of the system rigid
+              </p>
+              <figure>
+                  <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/7.jpg" alt="Phase 3 Determine of the system rigid">
+                  <figcaption class="img__caption">Phase 3</figcaption>
+              </figure>
+              <p>
+                4. Determine the natural frecuency of the system
+              </p>
+              <figure>
+                  <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/8.jpg" alt="Phase 3 Determine of the natural frequency">
+                  <figcaption class="img__caption">Phase 4</figcaption>
+              </figure>
+            </section>
+            <section class="content-section">
+              <h3>Results: Simulate seismic excitation scenarios</h3>
+              <p>
+                1. Procesing data with fourier transform in Python for determine the dominante frequency and maximun amplitud of the different earthquakers
+              </p>
+                <figure>
+                    <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/9.jpg" alt="Duhamel’s Integral for Undamped System">
+                    <figcaption class="img__caption">Data Processing in Python</figcaption>
+                </figure>
+                <p>
+                  2. Duhamel’s Integral for Undamped System
+                </p>
+                <figure>
+                  <img src="./assets/Projects/Wallpaper/Sismic/Phase_of_Approach/10.jpg" alt="Duhamel’s Integral for Undamped System">
+                  <figcaption class="img__caption">Duhamel’s Integral for Undamped System</figcaption>
+                </figure>
+            </section>
+          </div>
+          <!-- Conclution -->
+          <div class="modal-concl modal-secs">
+            <h3>Conclusion</h3>
+            <p>
+              the results provide a comprehensive understanding of the structural dynamic behavior under 
+              both theoretical and simulated conditions. By simulating seismic excitation scenarios, it was possible to observe how the structure responds to real-world 
+              dynamic loads, making it clear how displacement, acceleration, and stress distributions evolve during such events. 
+              The comparison between analytical expectations and numerical simulations demonstrated strong agreement, confirming 
+              the reliability of the modeling approach and the assumptions used.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Overlay + Modal 2 (Project Section - Project 2)-->
+    <div class="overlay" id="modal2" >
+      <div class="modal modal2" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <!-- Button to close -->
+        <div class="btn-cont-clos">
+          <button id="close" data-close="modal2" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
+        </div>
+        <!-- Container -->
+        <div class="grid-cont-mod proj__card-grid-gap">
+          <!-- Title and Subtitle -->
+          <div class="modal-header">
+            <Span>Mechatronics</Span>
+            <h2>Design and Development of a RoboCup <br>Small Size League - Division B Robot</h2>
+          </div>
+          <!-- Introduction -->
+          <div class="modal-intr modal-secs content-section">
+            <h3>Introduction</h3>
+            <p>Within the framework of the development of technologies applied to robotics and artificial intelligence, the challenge arises 
+              to design and build a robot capable of competing in the Small Size League Division B, a category that is part of the robotic soccer 
+              competitions organized by RoboCup. The main objective of this project is to combine mechanical design, programming, and electronics skills to create an efficient, 
+              fast, and strategically intelligent robot capable of interacting with a team and performing in a competitive environment.
+            </p>
+          </div>
+          <!-- Colum 1 -->
+          <div class="modal-col-fr modal-secs">
+            <section class="content-section">
+              <h3>Problem</h3>
+              <P>
+                The SSL Robocup features the competition format of 11v11 football matches with an orange golf ball referred 
+                to as the A division, while the 6v6 matches refer to its B division. Teams build robots based on a set of defined 
+                constraints and rules.
+                <br>
+                Division B was chosen according to its own criteria of design and the resources available at that time. 
+                <br>
+                The principal constraints of Division B were defined by the Rules of the RoboCup Small Size League document.
+              </P>
+              <figure>
+                  <img src="./assets/Projects/Robot/Field_Dimension.png" alt="Field Dimension for Division B">
+                  <figcaption class="img__caption">Field dimensions and markings for division B</figcaption>
+              </figure>
+            </section>
+            <section class="content-section">
+              <h3>Objetives</h3>
+              <h4>General</h4>
+              <p>
+                The purpose of this project is to apply engineering knowledge across programming, mechanical, and electronic fields 
+                to the development of an autonomous robot capable of executing movements and actions characteristic of football.
+              </p>
+              <h4>Specific</h4>
+              <ul class="modal__list-robot">
+                <li>Design each of the actuator elements to perform kicking, dribbling and movement.</li>
+                <li>Mathematical approaches for the prediction of spherics and trajectory planning.</li>
+                <li>Apply image processing techniques for spherical, distance, and velocity detection of moving objects.</li>
+                <li>Design electronic systems for dribbler activation, kick actuators and motion activation.</li>
+                <li>Implement additive manufacturing techniques for the manufacture of parts.</li>
+                <li>Design logical and mathematical programming processes using ROS1 for communication to implement algorithms in parallel.</li>
+                <li>Use of Raspberry Pi 4 controller to communicate actuators and programming algorithms.</li>
+              </ul>
+              <figure>
+                  <img src="./assets/Projects/Robot/AsemblieRobot.png" alt="Mounting Parts of Robot">
+                  <figcaption class="img__caption">Mounting the dribble, wheels and batteries to the base of the robot</figcaption>
+              </figure>
+            </section>
+          </div>
+          <!-- Colum 2 -->
+          <div class="modal-col-sc modal-secs">
+            <section class="content-section">
+              <h3>Approach</h3>
+              <p></p>
+              <figure>
+                  <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
+                  <figcaption class="img__caption">Plano técnico de la estructura principal</figcaption>
+              </figure>
+              <h3>Results</h3>
+              <p>
+                  Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
+              </p>
+            </section>
+            <section class="content-section">
+                <figure>
+                    <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
+                    <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
+                </figure>
+                <p>
+                    Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
+                </p>
+            </section>
+          </div>
+          <!-- Conclution -->
+          <div class="modal-concl modal-secs">
+            <h3>Conclusion</h3>
+            <p>Here goes the conclution </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--Overlay + Modal 3 (Project Section - Project 3)-->
+    <div class="overlay" id="modal3" >
+      <div class="modal modal3" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <!-- Button to close -->
+        <div class="btn-cont-clos">
+          <button id="close" data-close="modal3" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
+        </div>
+        <!-- Container -->
+        <div class="grid-cont-mod proj__card-grid-gap">
+          <!-- Title and Subtitle -->
+          <div class="modal-header">
+            <Span>Research</Span>
+            <h2>Dynamic Model of Vortex-induced-Vibration Wind Turbine</h2>
+          </div>
+          <!-- Introduction -->
+          <div class="modal-intr modal-secs">
+            <p>Hola soy una introducciòn</p>
+          </div>
+          <!-- Colum 1 -->
+          <div class="modal-col-fr modal-secs">
+            <section class="content-section">
+              <figure>
+                  <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
+                  <figcaption>Plano técnico de la estructura principal</figcaption>
+              </figure>
+              <p>
+                  Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
+              </p>
+            </section>
+            <section class="content-section">
+                <figure>
+                    <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
+                    <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
+                </figure>
+                <p>
+                    Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
+                </p>
+            </section>
+          </div>
+          <!-- Colum 2 -->
+          <div class="modal-col-sc modal-secs">
+            <section class="content-section">
+              <figure>
+                  <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
+                  <figcaption>Plano técnico de la estructura principal</figcaption>
+              </figure>
+              <p>
+                  Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
+              </p>
+            </section>
+            <section class="content-section">
+                <figure>
+                    <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
+                    <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
+                </figure>
+                <p>
+                    Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
+                </p>
+            </section>
+          </div>
+          <!-- Conclution -->
+          <div class="modal-concl modal-secs">
+            <h3>Conclusion</h3>
+            <p>Here goes the conclution </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Overlay + Modal 4 (Project Section - Project 4)-->
+    <div class="overlay" id="modal4" >
+      <div class="modal modal4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <!-- Button to close -->
+        <div class="btn-cont-clos">
+          <button id="close" data-close="modal4" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
+        </div>
+        <!-- Container -->
+        <div class="grid-cont-mod proj__card-grid-gap">
+          <!-- Title and Subtitle -->
+          <div class="modal-header">
+            <Span>Software</Span>
+            <h2>Engineering Interfaces with Code</h2>
+          </div>
+          <!-- Introduction -->
+          <div class="modal-intr modal-secs">
+            <p>Hola soy una introducciòn</p>
+          </div>
+          <!-- Colum 1 -->
+          <div class="modal-col-fr modal-secs">
+            <section class="content-section">
+              <figure>
+                  <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
+                  <figcaption>Plano técnico de la estructura principal</figcaption>
+              </figure>
+              <p>
+                  Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
+              </p>
+            </section>
+            <section class="content-section">
+                <figure>
+                    <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
+                    <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
+                </figure>
+                <p>
+                    Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
+                </p>
+            </section>
+          </div>
+          <!-- Colum 2 -->
+          <div class="modal-col-sc modal-secs">
+            <section class="content-section">
+              <figure>
+                  <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
+                  <figcaption>Plano técnico de la estructura principal</figcaption>
+              </figure>
+              <p>
+                  Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
+              </p>
+            </section>
+            <section class="content-section">
+                <figure>
+                    <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
+                    <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
+                </figure>
+                <p>
+                    Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
+                </p>
+            </section>
+          </div>
+          <!-- Conclution -->
+          <div class="modal-concl modal-secs">
+            <p>Here goes the conclution </p>
+          </div>
+        </div>
+      </div>
+    </div>

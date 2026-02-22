@@ -1,0 +1,251 @@
+/* ===================================
+   PROJECT SECTION
+   =================================== */
+.proj__container{
+  max-width:1024px;
+  margin:0 auto;
+  box-sizing: border-box;
+}
+
+.proj__carrusel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px;
+}
+
+.proj__carrusel-card {
+  flex: 0 0 34%;
+  height: 580px;
+  background-position: center;
+  position: relative;
+  border-radius: var(--border-radius-cards);
+  transform: scale(1.0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.proj__carrusel-card:hover {
+  transform: scale(1.02);
+}
+
+.proj__card-fi {
+  background-image: url('./assets/Projects/Wallpaper/Sismic/EstructuraRevit_Sismic.png');
+  background-size: cover;
+}
+
+.proj__card-sc {
+  background-image: url('./assets/Projects/Robot/AsemblieRobot.png');
+  background-size: cover;
+}
+.proj__card-tr {
+  background-image: url('./assets/Projects/Vortex/VortexVibrationWallpaper2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.proj__card-fr {
+  background-image: url('./assets/Projects/Web/Wallpaper_Web_Project.png');
+  background-size: cover;
+  background-position: 80%;
+}
+
+.proj__carrusel-card__info {
+  position: relative;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, .9) 100%);
+  padding: 2.5rem;
+  z-index: 2;
+  height: 100%;
+  border-radius: var(--border-radius-cards);
+}
+
+.proj__carrusel-card__info > h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.proj__carrusel-card__info > p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Layout + style of modal content */
+.grid-cont-mod {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "Intro Intro"
+    "colum-fr colum-sc"
+    "concl concl";
+  grid-template-columns: 1fr 1fr;
+  padding: 28px;
+}
+
+.proj__card-grid-gap {
+  gap: 20px;
+}
+
+.modal-secs {
+  background-color: rgb(245, 245, 247);
+  border-radius: var(--border-radius-cards);
+  padding: 28px;
+}
+
+.modal-header > span {
+  color: var(--brand-2-btn);
+  font-weight: 400;
+}
+
+.modal-header > h2 {
+  line-height: 1.2;
+  font-family: "Montserrat", sans-serif;
+} 
+
+.modal-header {
+  grid-area: header;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-intr {
+  grid-area: Intro;
+}
+
+.modal-col-fr {
+  grid-area: colum-fr;
+}
+
+.modal-col-sc {
+  grid-area: colum-sc;
+}
+
+.modal-concl {
+  grid-area: concl;
+}
+
+/* Carrusel Controls */
+.proj__controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 48px;
+}
+
+.proj__controls button {
+  background: #222;
+  color: white;
+  border: none;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background 0.3s;
+}
+
+.proj__controls button:hover {
+  background: #444;
+}
+
+/* ==== Overlay + Modal ==== */
+.overlay {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 1000;
+  /* Inicialmente oculto */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  overflow: auto;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background: white; /* tono beige/rosa claro */
+  color: var(--bg); /* Font color */
+  padding: 2rem;
+  border-radius: var(--border-radius-cards);
+  width: 846px;
+  overflow: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  transform: scale(0.7) translateY(-50px);
+  transition: all 0.3s ease;
+  /* Limita la altura del contenido a un porcentaje de la ventana */
+  overflow-y: auto; /* Permite el scroll vertical si el contenido excede la altura */
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.overlay.active .modal {
+  transform: scale(1) translateY(0);
+}
+
+.modal-content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.m-cat-span {
+  color: var(--muted);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Botón cerrar modal */
+#close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#close:hover {
+  transform: rotate(90deg);
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Modal: Robot */
+.modal__list-robot{
+  list-style-position: inside;
+  padding-left: 8px;
+}
+
+.img__caption{
+  text-align: center;
+  font-style: italic;
+  font-size: 9px;
+}

@@ -1,0 +1,33 @@
+/* Education */
+.edu-card-grid {
+  display: grid;
+  grid-template-areas:
+    "logo"
+    "content";
+  grid-template-columns: 1fr 5fr 2fr; 
+}
+
+.edu-card-log {
+  width: 50%; /* Ocupa la mitad del ancho del padre */
+  max-width: 400px; /* Pero nunca más de 600px */
+  margin: 0 auto; /* Centrar el contenedor */
+} 
+
+.utp-logo {
+  max-width: 100%; /* La imagen nunca excede el ancho del contenedor */
+  height: auto; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edu-card-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.edu-card-date {
+  display: flex;
+  justify-content: end;
+}

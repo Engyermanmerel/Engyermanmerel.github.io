@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg:#0b0f1a;         /* negro azulado */
+  --ink:#e6e9ef;        /* texto principal */
+  --muted:#9aa7b3;      /* texto secundario */
+  --brand:#0d2a7a;      /* azul marino */
+  --brand-2:#0f4ccf;    /* azul acento */
+  --card:#0f1422;       /* fondo tarjetas */
+  --line:#1e2638;       /* bordes sutiles */
+  --brand-2-btn:#0f4ccfa6;    /* azul acento para btn */
+  --success:#21c07a;
+  --warn:#ffb020;
+  --danger:#ef476f;
+  --border-radius-cards: 22px;
+  --font-primary: "Montserrat", sans-serif;
+  --font-secundary: "Roboto", sans-serif;
+  /* Escala para calculos responsive */
+  --fluid-min-width: 320px;
+  --fluid-max-width: 1200px;
+}
+
+html,body{
+  margin:0;
+  padding:0;
+  height: 100%;
+  overflow-x: hidden;
+  line-height: 1.5rem;
+  font-style: normal;
+  box-sizing: border-box;
+  background:var(--bg);
+  color:var(--ink);
+  font-size: 12px;
+  font-family: var(--font-secundary);
+  overflow-x: hidden;
+}
+
+/* REUSABLE COMPONENT OF STYLE */
+h1{
+  font-family: var(--font-primary);
+  /* Escala entre 2.5rem y 4rem */
+  font-size: clamp(2.5rem, 8vw, 4rem);
+}
+
+a{
+  color:var(--ink);
+  text-decoration:none
+}
+
+img{
+  max-width:100%;
+  height:auto;
+  display:block
+}
+
+.container{
+  max-width: var(--fluid-max-width);
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 5vw; /* Margen interno lateral que crece con la pantalla */
+}
+
+.grid{
+  display:grid;
+  gap:24px;
+}
+
+.section-span {
+  color: var(--muted);
+  font-family: var(--font-primary); 
+  /* Entre 18px y 26px */
+  font-size: clamp(1.125rem, 2vw, 1.625rem); 
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  /* Padding interno fluido */
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  transition: all 0.4s ease;
+}
+
+.card:hover{
+  border-color:#27324a
+}
+
+.section_normal{
+  scroll-margin-top: 80px;
+  min-height: 100vh;
+  /* El margen vertical se ajusta: mínimo 40px, óptimo 8vh, máximo 120px */
+  padding: clamp(40px, 8vh, 120px) 0; 
+  overflow: hidden;
+}
+
+.muted{
+  color:var(--muted)
+}
+
+section h2 {
+  /* Entre 24px y 40px */
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-family: var(--font-primary);
+  font-weight: 600;
+  letter-spacing: -0.015em; 
+  line-height: 1.1;
+}
+
+h3{
+  font-family: var(--font-primary);
+  /* Entre 20px y 24px */
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  line-height: 1.2;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.pro__slogan {
+  font-size: 1rem;
+}
+
+/* Flexbox Template for Container (Global Title of Section) */
+.temp-lyt-sect{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* CLASE BASE: Define lo que ambos comparten */
+.ti-sect {
+  display: flex;
+  flex-direction: column;
+  /* Margen inferior fluido: min 40px, max 80px */
+  margin-bottom: clamp(2.5rem, 6vh, 5rem); 
+  width: 100%;
+  gap: 12px; /* Espacio consistente entre el span y el h2 */
+}
+
+/* MODIFICADORES: Solo cambian la alineación */
+.ti-sect--left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.ti-sect--right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* OPCIONAL: Un modificador para centrar (muy común en Hero o Skills) */
+.ti-sect--center {
+  align-items: center;
+  text-align: center;
+}
+
+/* Open and Close Modal */
+.open-modal {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: var(--brand-2-btn);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;           
+  align-items: center;     
+  justify-content: center; 
+}
+
+.close_icon {
+  transition: transform 0.3s ease;
+  font-size: 20px;
+  pointer-events: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close_icon:hover {
+  transform: rotate(90deg);
+}
+
+
+/* Animation Frame */
+@keyframes scrollme-animation {
+  0% {
+    opacity: 1;
+    transform: translateY(-35px);
+  }
+  
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px){
+    .about{grid-template-columns:1fr}
+}

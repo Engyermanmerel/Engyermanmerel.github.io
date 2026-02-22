@@ -1,0 +1,257 @@
+/* ===================================
+   HOME SECTION
+   =================================== */
+
+.hero{
+  background-image: 
+    linear-gradient(270deg, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, .9) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, 0) 95%), 
+    url(/assets/Background_Home_Page/Background_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70% 75%;
+  scroll-margin-top: 0 !important;
+  z-index: 1;
+  height: 100vh;
+}
+
+/* HOME__NAVE */
+.hero__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;  /* Aumentado ligeramente para mejor balance visual (Regla de oro) */
+  background: transparent; /* O un glassmorphism sutil si prefieres */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* BRANDING (LOGO + TEXTO) */
+.hero__brand {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Espaciado más generoso y moderno */
+  transition: opacity 0.3s ease;
+}
+
+.hero__brand:hover {
+  opacity: 0.8; /* Feedback sutil al usuario */
+}
+
+/* LOGO REFINEMENT */
+.hero__logo > img {
+  height: 32px; /* Altura fija para evitar saltos de layout */
+  width: auto;
+  display: block;
+  object-fit: contain;
+  /* Filtro sutil para que el logo se sienta integrado */
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+}
+
+/* LINKS & ACTIONS (GLASSMORPHISM) */
+/* 1. Base compartida para Links y Botones de Acción */
+.hero__nav-links a, 
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 0.875rem; /* 14px consistente */
+  font-family: var(--font-primary);
+  font-weight: 600;
+  color: var(--ink); /* Usa tu variable de color de texto */
+  text-decoration: none;
+  
+  /* Efecto Glassmorphism */
+  background: rgba(15, 76, 207, 0.08); 
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(15, 76, 207, 0.15); /* Borde acorde al azul */
+  
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 2. Contenedores */
+.hero__nav-links,
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Gap consistente para equilibrio visual */
+}
+
+.hero__actions {
+  margin-left: 20px;
+}
+
+/* 3. Ajustes específicos para Botones de Acción */
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.btn-icon span {
+  font-size: 1.25rem;
+}
+
+/* 4. Estados Interactivos (Hover) */
+.hero__nav-links a:hover, 
+.btn-icon:hover {
+  background: rgba(15, 76, 207, 0.2);
+  border-color: rgba(15, 76, 207, 0.4);
+  transform: translateY(-2px);
+  color: var(--ink);
+  box-shadow: 0 4px 15px rgba(15, 76, 207, 0.15);
+}
+
+/* 5. Estado Activo (Página actual) */
+.hero__nav-links a.active {
+  background: rgba(15, 76, 207, 0.5);
+  border-color: #0f4ccf;
+  color: #ffffff;
+}
+
+/* 6. Soporte para Light/Dark Theme en Body */
+body.light-theme .btn-icon {
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Home Content Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Este contenedor ocupa el espacio restante y centra todo */
+.hero__display {
+  flex: 1; /* Toma todo el espacio debajo del Nav */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centro vertical */
+  align-items: start;     /* Centro horizontal */
+  text-align: start;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: clamp(1rem, 2vh, 2rem); /* Espaciado fluido entre elementos */
+}
+
+.hero__content-tag {
+  font-family: var(--font-primary);
+  color: var(--brand-2);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+.hero__content-name {
+  font-size: clamp(3rem, 10vw, 6rem); /* Grande y elegante */
+  line-height: 1;
+  margin: 0;
+  background: linear-gradient(to bottom, #fff, #b8c2d8);
+  -webkit-background-clip: text;
+  background-clip: text;  
+  -webkit-text-fill-color: transparent;
+} 
+
+.hero__content-btn{
+  margin-top:20px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap
+}
+
+/*---- Style Btn Download CV ----*/
+.cv-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-cv-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--brand-2-btn);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-family: var(--font-secundary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cv-options {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  min-width: 220px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(15, 76, 207, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+  padding: 12px;
+}
+
+.cv-dropdown:hover .cv-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.cv-group span {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--brand-2-btn);
+  font-family: var(--font-secundary);
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.cv-group a {
+  display: block;
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.cv-group a:hover {
+  background: rgba(15, 76, 207, 0.05);
+  color: var(--brand-2-btn);
+}
+
+/* RESPONSIVIDAD BÁSICA for Nav Items */
+@media (max-width: 768px) {
+  .hero__nav {
+    padding: 0 20px;
+    height: 54px; /* Más compacto en móvil */
+  }
+  
+  .hero__nav-links {
+    gap: 16px;
+    font-size: 0.8rem;
+  }
+}
