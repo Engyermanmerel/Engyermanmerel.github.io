@@ -1,4 +1,4 @@
- //Input Const
+//Input Const
  const images = [
   "img1.png", // Imagen 1
   "img2.png", // Imagen 2
@@ -59,3 +59,4 @@ const observer = new IntersectionObserver((entries)=>{
 })},{threshold:0.1})
 
 document.querySelectorAll('.card, .project-thumb').forEach(el=>observer.observe(el))
+

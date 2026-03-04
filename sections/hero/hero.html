@@ -1,46 +1,46 @@
 <section id="home" class="hero">
-    <!-- Nav Bar -->
-    <header class="container hero__nav" aria-label="Main Navbar">
-        <a class="hero__brand" href="#home" aria-label="Ir al inicio">
-        <div class="hero__logo" aria-hidden="true">
-            <img src="/assets/Logo/Logo_White.svg" alt="YM Logo">
-        </div>
-        </a>
-        <nav class="hero__nav-links" aria-label="Sections">
-        <a href="#about">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#galery">Gallery</a>
-        </nav>
-        <!-- Btn of Change them and Language -->
-        <div class="hero__actions">
-        <button id="lang-toggle" class="btn-icon" title="Change Language">EN</button>
-        <button id="theme-toggle" class="btn-icon" title="Toggle Theme">
-            <span class="material-icons">light_mode</span>
+    <header class="container hero__nav">
+        <a class="hero__brand" href="#home"><img src="/assets/Logo/Logo_White.svg" alt="YM" class="hero__logo"></a>
+        
+        <button class="menu-button" id="openMenu">
+            <span class="material-icons">menu</span>
         </button>
+
+        <!-- Overlay -->
+        <div class="menu-overlay" id="menuOverlay"></div>
+
+        <!-- Menú lateral -->
+        <nav class="hero__nav-links" id="mobileMenu">
+            <button class="menu-close" id="closeMenu">✕</button>
+
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#galery">Gallery</a>
+        </nav>
+
+        <div class="hero__actions">
+            <button class="btn-icon">ES</button>
+            <button class="btn-icon"><span class="material-icons">light_mode</span></button>
         </div>
     </header>
-    <!-- Content of Hero -->
-    <div class="container hero__display">
-        <div class="hero__content">
-        <span class="hero__content-tag">Mechanical & Systems Engineer</span>
-        <h2 class="hero__greeting">Hello I'm</h2>
-        <h1 class="hero__content-name">Yerman Merel</h1>
-        <!-- CV Collection -->
-        <div class="cv-dropdown">
-            <button class="btn-cv-primary">
-            <span class="material-symbols-outlined">Download CV</span>
-            </button>
 
-            <div class="cv-options">
-            <div class="cv-group">
-                <span>Project Engineer</span>
-                <a href="./assets/CVs/ENGLISH/PROJECT MANAGER/20260214_Yerman-Merel_CV_ENG_v2.1_APR.pdf" download class="cv-download-link" data-type="Project Engineer" data-lang="EN">English (EN)</a>
-                <a href="./assets/CVs/ESPAÑOL/INGENIERO DE PROYECTOS/20260214_Yerman-Merel_CV_ESP_v2.0_APR.pdf" download class="cv-download-link" data-type="Project Engineer" data-lang="ES">Español (ES)</a>
+    <div class="container hero__display">
+        <article class="hero__content">
+            <span class="hero__content-tag">Mechanical & Systems Engineer</span>
+            <h1 class="hero__content-name">Yerman Merel</h1>
+            <div class="cv-dropdown">
+                <button class="btn-cv-primary">
+                    <span class="material-icons">download</span>
+                    <span class="btn-cv-text">Resume</span>
+                </button>
+                <div class="cv-options">
+                    <span>CV</span>
+                    <a href="/assets/CVs/ENGLISH/PROJECT MANAGER/20260214_Yerman-Merel_CV_ENG_v2.1_APR.pdf" download>English (EN)</a>
+                    <a href="/assets/CVs/ESPAÑOL/DISEÑADOR DE SYSTEMAS MECANICOS/Yerman-Merel_CV_ESP_v2.0_IMD.pdf" download>Español (ES)</a>
+                </div>
             </div>
-            </div>
-        </div>
-        </div>
+        </article>
     </div>
 </section>
