@@ -22,7 +22,7 @@ async function loadHero() {
     function closeMenu() {
         mobileMenu.classList.remove("active");
         overlay.classList.remove("active");
-        document.body.style.overflow = "hidden";
+        document.body.style.overflowX= "hidden";
     }
 
     openBtn.addEventListener("click", openMenu);
