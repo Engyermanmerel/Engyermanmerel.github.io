@@ -6,6 +6,12 @@ async function loadHero() {
     // Aquí puedes inicializar eventos de esta sección
     console.log(`Hola, el Hero ha cargado.`);
 
+    // --- AQUÍ CONECTAS AMBOS ---
+    // Si i18n es un objeto global, lo llamas así:
+    if (window.i18n) {
+        window.i18n.updatePage(); 
+    }
+
     //Abrir y Cerrar el menu de la versión mobile
     const openBtn = document.getElementById("openMenu");
     const closeBtn = document.getElementById("closeMenu");
