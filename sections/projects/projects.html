@@ -11,7 +11,7 @@
             <div class="proj__carrusel-card proj__card-fi">
                 <div class="proj__carrusel-card__info">
                 <h3>Dynamic Seismic Validation of a Diesel Engine Support Structure</h3>
-                <button class="open-modal" id="openModal1">
+                <button class="open-modal" id="openModal1" data-modal-open="sismic-modal">
                     <i class="material-icons close_icon">add</i>
                 </button>
                 </div>
@@ -51,11 +51,11 @@
 </section>
 
 <!--Overlay + Modal 1 (Project Section - Project 1)-->
-    <div class="overlay" id="modal1" aria-hidden="true">
-      <div class="modal modal1" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal" id="sismic-modal" aria-hidden="true">
+      <div class="modal__content modal1" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
         <!-- Button to close -->
         <div class="btn-cont-clos">
-          <button id="close" data-close="modal1" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
+          <button id="close" data-close="modal1" aria-label="Close modal"><i class="material-icons modal__close-btn" data-modal-close aria-label="Cerrar modal">close</i></button>
         </div>
         <!-- Container -->
         <div class="grid-cont-mod proj__card-grid-gap">

@@ -236,7 +236,9 @@ h3{
 .modal__content {
   background: var(--modal-content-bg);
   width: 92%;
-  max-width: 550px;
+  max-width: 800px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   color: var(--bg);
   max-height: 90vh; /* Evita que el modal sea más alto que la pantalla */
   overflow-y: auto; /* Scroll interno si el contenido es largo */
