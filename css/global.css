@@ -249,7 +249,7 @@ h3{
   color: var(--bg);
   max-height: 90vh; /* Evita que el modal sea más alto que la pantalla */
   overflow-y: auto; /* Scroll interno si el contenido es largo */
-  padding: 2.5rem 1.5rem;
+  padding: 3.5rem 3rem;
   border-radius: 16px;
   position: relative;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);

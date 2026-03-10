@@ -167,7 +167,7 @@
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-size: 0.85rem;
-  color: var(--text-secondary);
+  color: var(--brand-2);
   font-weight: 600;
   margin-bottom: 8px;
 }

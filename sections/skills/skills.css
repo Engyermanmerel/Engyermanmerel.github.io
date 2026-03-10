@@ -124,6 +124,125 @@
   padding: 40px;
 }
 
+/* ---- Modal ---- */
+/* --- Variables de Diseño Tesla-inspired --- */
+:root {
+  --bg-modal: #ffffff;          /* Fondo blanco puro */
+  --bg-body-dark: #171a20;      /* El negro característico de Tesla */
+  --text-main: #171a20;
+  --text-secondary: #5c5e62;   /* Gris para descripciones */
+  --text-on-dark: #ffffff;
+  --border-radius: 8px;         /* Bordes suaves pero definidos */
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --line-color: #e2e2e2;
+  --mono-font: 'Roboto Mono', monospace; /* Para detalles técnicos */
+}
+
+/* --- Estilos Base del Modal --- */
+
+/* --- Estructura Interna (Industrial-Minimalista) --- */
+.modal-stage-header {
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--line-color);
+  padding-bottom: 25px;
+}
+
+.stage-label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal__content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* --- Grid de Habilidades --- */
+.modal-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.skill-category {
+  margin-bottom: 30px;
+}
+
+.skill-category-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.skill-category-title h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0;
+}
+
+/* El punto técnico de Tesla */
+.skill-category-title::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #171a20; /* Negro o un acento si prefieres */
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+/* Lista de Habilidades Mono-espaciada */
+.modal__content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal__content li {
+  font-family: var(--mono-font); /* Fuente técnica tipo código */
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+  padding-left: 18px;
+}
+
+.modal__content li::before {
+  content: '>'; /* Símbolo técnico */
+  position: absolute;
+  left: 0;
+  color: #171a20;
+  font-weight: bold;
+}
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+  .modal__content {
+    padding: 30px;
+  }
+  .modal__content h3 {
+    font-size: 1.8rem;
+  }
+  .modal-skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 
 /* ===================================
    MOBILE OPTIMIZATION
