@@ -1,33 +1,137 @@
-/* Education */
+:root {
+  --tesla-accent: #393c41; /* Gris oscuro Tesla */
+  --line-color: #e2e3e3;    /* Color de línea técnica */
+  --text-main: #171a20;
+  --text-muted: #5c5e62;
+}
+
+/* Contenedor sin cajas */
+.edu-temp-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Eliminamos el gap de las cajas */
+  max-width: 900px;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* La línea vertical de ingeniería */
+.edu-temp-grid::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--line-color);
+}
+
+.card.utp {
+  background: transparent; /* Quitamos el fondo de la card */
+  border: none;            /* Quitamos bordes */
+  border-radius: 0;
+  padding: 40px 0 40px 40px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* El punto de conexión en la línea */
+.card.utp::after {
+  content: '';
+  position: absolute;
+  left: -4px; /* Centrado sobre la línea de 1px */
+  top: 48px;
+  width: 9px;
+  height: 9px;
+  background-color: var(--text-main);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.card.utp:hover::after {
+  transform: scale(1.5);
+  background-color: #cc0000; /* Un pequeño acento de color si deseas, o mantén negro */
+}
+
+/* Layout Interno */
 .edu-card-grid {
   display: grid;
-  grid-template-areas:
-    "logo"
-    "content";
-  grid-template-columns: 1fr 5fr 2fr; 
+  grid-template-columns: 60px 1fr; /* Logo pequeño y texto */
+  grid-template-areas: 
+    "logo content"
+    "logo date";
+  column-gap: 30px;
+  align-items: center;
 }
 
 .edu-card-log {
-  width: 50%; /* Ocupa la mitad del ancho del padre */
-  max-width: 400px; /* Pero nunca más de 600px */
-  margin: 0 auto; /* Centrar el contenedor */
-} 
+  grid-area: logo;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
 
 .utp-logo {
-  max-width: 100%; /* La imagen nunca excede el ancho del contenedor */
-  height: auto; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  filter: grayscale(100%); /* Minimalismo puro */
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.card.utp:hover .utp-logo {
+  filter: grayscale(0%);
+  opacity: 1;
 }
 
 .edu-card-cont {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  grid-area: content;
+}
+
+.edu-card-cont strong {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ink);
 }
 
 .edu-card-date {
-  display: flex;
-  justify-content: end;
+  grid-area: date;
+  margin-top: 5px;
+}
+
+.edu-card-date p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Detalles de logros (Achievments) */
+.edu-card-cont-ach {
+  margin-top: 15px;
+  padding-left: 0;
+}
+
+.edu-card-cont-ach p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 700px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .edu-card-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "date"
+      "content"
+      "logo";
+    gap: 15px;
+  }
+  .edu-card-log {
+    width: 40px;
+  }
 }
