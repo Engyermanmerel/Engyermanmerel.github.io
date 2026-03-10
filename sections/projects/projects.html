@@ -10,10 +10,10 @@
             <!-- Card 1 -->
             <div class="proj__carrusel-card proj__card-fi">
                 <div class="proj__carrusel-card__info">
-                <h3>Dynamic Seismic Validation of a Diesel Engine Support Structure</h3>
-                <button class="open-modal" id="openModal1" data-modal-open="sismic-modal">
-                    <i class="material-icons close_icon">add</i>
-                </button>
+                  <h3>Dynamic Seismic Validation of a Diesel Engine Support Structure</h3>
+                  <button class="open-modal" data-modal-open="sismic-modal">
+                      <i class="material-icons close_icon">add</i>
+                  </button>
                 </div>
             </div>
 
@@ -21,7 +21,9 @@
             <div class="proj__carrusel-card proj__card-sc">
                 <div class="proj__carrusel-card__info">
                     <h3>Design and Development of a RoboCup Small Size League Division B Robot </h3>
-                    <button class="open-modal" id="openModal2"><i class="material-icons close_icon">add</i></button>
+                    <button class="open-modal" data-modal-open="robocup-modal" type="button">
+                      <i class="material-icons close_icon">add</i>
+                    </button>
                 </div>
             </div>
 
@@ -29,7 +31,9 @@
             <div class="proj__carrusel-card proj__card-tr">
                 <div class="proj__carrusel-card__info">
                     <h3>Dynamic Model of Vortex-induced-Vibration Wind Turbine</h3>
-                    <button class="open-modal" id="openModal3"><i class="material-icons close_icon">add</i></button>
+                    <button class="open-modal" data-modal-open="vibration-modal" type="button">
+                      <i class="material-icons close_icon">add</i>
+                    </button>
                 </div>
             </div>
 
@@ -182,11 +186,13 @@
     </div>
 
     <!--Overlay + Modal 2 (Project Section - Project 2)-->
-    <div class="overlay" id="modal2" >
-      <div class="modal modal2" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal" id="robocup-modal" aria-hidden="true">
+      <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
         <!-- Button to close -->
         <div class="btn-cont-clos">
-          <button id="close" data-close="modal2" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
+          <button id="close" data-close="modal1" aria-label="Close modal">
+            <i class="material-icons modal__close-btn" data-modal-close aria-label="Cerrar modal">close</i>
+          </button>
         </div>
         <!-- Container -->
         <div class="grid-cont-mod proj__card-grid-gap">
@@ -279,11 +285,13 @@
     </div>
     
     <!--Overlay + Modal 3 (Project Section - Project 3)-->
-    <div class="overlay" id="modal3" >
-      <div class="modal modal3" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal" id="vibration-modal" aria-hidden="true">
+      <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
         <!-- Button to close -->
         <div class="btn-cont-clos">
-          <button id="close" data-close="modal3" aria-label="Close modal"><i class="material-icons close_icon">close</i></button>
+          <button id="close" data-close="modal1" aria-label="Close modal">
+            <i class="material-icons modal__close-btn" data-modal-close aria-label="Cerrar modal">close</i>
+          </button>
         </div>
         <!-- Container -->
         <div class="grid-cont-mod proj__card-grid-gap">

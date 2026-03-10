@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* --- Variables de Diseño Tesla-inspired --- */
 :root{
   --bg:#0b0f1a;         /* negro azulado */
   --ink:#e6e9ef;        /* texto principal */
@@ -13,6 +14,11 @@
   --card:#0f1422;       /* fondo tarjetas */
   --line:#1e2638;       /* bordes sutiles */
   --brand-2-btn:#0f4ccfa6;    /* azul acento para btn */
+  --accent: #393c41;
+  --bg-modal: #ffffff;
+  --bg-section: #f4f4f4; /* Gris ultra claro */
+  --text-main: #171a20;   /* El negro característico de Tesla */
+  --text-secondary: #5c5e62;
   --success:#21c07a;
   --warn:#ffb020;
   --danger:#ef476f;
@@ -22,6 +28,7 @@
   /* Escala para calculos responsive */
   --fluid-min-width: 320px;
   --fluid-max-width: 1200px;
+  --transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 html,body{
