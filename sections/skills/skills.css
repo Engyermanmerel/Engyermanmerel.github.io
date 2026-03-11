@@ -149,7 +149,6 @@
 
 .stage-label {
   text-transform: uppercase;
-  letter-spacing: 2px;
   font-size: 0.8rem;
   color: var(--text-secondary);
   font-weight: 600;
@@ -188,7 +187,6 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
   font-weight: 600;
   color: var(--text-main);
   margin: 0;
@@ -212,7 +210,6 @@
 }
 
 .modal__content li {
-  font-family: var(--mono-font); /* Fuente técnica tipo código */
   font-size: 0.9rem;
   color: var(--text-secondary);
   padding: 10px 0;

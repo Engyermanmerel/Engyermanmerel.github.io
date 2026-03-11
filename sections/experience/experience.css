@@ -30,17 +30,6 @@
   flex-direction: column;
   gap: 2rem;
   position: relative;
-  padding-left: 2rem;
-}
-
-.experience-timeline::before {
-  content: "";
-  position: absolute;
-  left: 9px;
-  top: 0;
-  width: 2px;
-  height: 100%;
-  background: rgba(15, 76, 207, 0.25);
 }
 
 /* ITEM */
@@ -101,7 +90,6 @@
   color: rgba(255, 255, 255, 0.85);
   padding: 0.4rem 0.9rem;
   border-radius: 999px;
-  background: rgba(94, 234, 212, 0.08);
   border: 1px solid rgba(94, 234, 212, 0.15);
 }
 
@@ -154,9 +142,7 @@
   font-size: 0.85rem;
   padding: 0.4rem 0.85rem;
   border-radius: 999px;
-  background: rgba(94, 234, 212, 0.08);
   border: 1px solid rgba(94, 234, 212, 0.12);
-  color: #d9fff8;
 }
 
 /* ACTIONS */
