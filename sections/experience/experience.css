@@ -183,136 +183,198 @@
 }
 
 /* MODAL */
-.experience-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem;
-  z-index: 9999;
+:root {
+  --tesla-white: #ffffff;
+  --tesla-grey: #f4f4f4;
+  --tesla-dark: #171a20;
+  --tesla-accent: #3d3e44;
+  --font-main: 'Montserrat', sans-serif;
+  --font-mono: 'Roboto Mono', monospace; /* O cualquier fuente Mono */
 }
 
-.experience-modal.active {
-  display: flex;
-}
-
+/* Content Container */
 .experience-modal-content {
-  max-width: 1000px;
-  width: 100%;
-  background: #0f172a;
-  border-radius: 18px;
-  padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--tesla-white);
+  width: 95%;
+  max-width: 1200px;
+  height: 90vh;
   position: relative;
-  animation: fadeUp 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.05);
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.modal-close-btn {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  border: none;
-  background: transparent;
-  font-size: 2rem;
-  color: rgba(255, 255, 255, 0.85);
-  cursor: pointer;
-}
-
-.modal-header h2 {
-  font-size: 1.9rem;
-  font-weight: 700;
-}
-
-.modal-header p {
-  margin-top: 0.4rem;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.modal-body {
+.modal-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: 1fr 1fr; /* Split screen */
+  height: 100%;
 }
 
-.modal-gallery {
-  min-height: 260px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Lado Visual */
+.modal-visuals {
+  background: var(--tesla-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
-.modal-info h4 {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  color: #5eead4;
+.modal-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
 }
 
-.modal-info p {
-  margin-top: 0.6rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.85);
+/* Lado de Información */
+.modal-info-container {
+  padding: 60px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.modal-info ul {
-  margin-top: 0.8rem;
-  padding-left: 1.2rem;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.6;
+.modal-label {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--tesla-accent);
+  margin-bottom: 8px;
 }
 
+#modalTitle {
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--tesla-dark);
+  margin-bottom: 4px;
+}
+
+.company-name {
+  font-family: var(--font-main);
+  font-size: 18px;
+  color: var(--tesla-accent);
+  margin-bottom: 40px;
+}
+
+/* Typography & Sections */
+h4 {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+  color: #8e8e8e;
+}
+
+.modal-section {
+  margin-bottom: 35px;
+}
+
+#modalDesc {
+  font-family: var(--font-main);
+  line-height: 1.8;
+  color: var(--tesla-accent);
+  font-size: 15px;
+}
+
+.custom-list {
+  list-style: none;
+  padding: 0;
+}
+
+.custom-list li {
+  font-family: var(--font-main);
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+  font-size: 14px;
+}
+
+.custom-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 1px;
+  background: var(--tesla-dark);
+}
+
+/* Tags / Tools */
 .modal-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 0.8rem;
+  gap: 10px;
 }
 
 .modal-tags span {
-  padding: 0.4rem 0.9rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.15);
-  color: #d6f4ff;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 6px 12px;
+  background: var(--tesla-grey);
+  border-radius: 4px;
+  color: var(--tesla-dark);
 }
 
-.modal-btn {
+/* Button */
+.modal-btn-primary {
   display: inline-block;
-  margin-top: 1.8rem;
-  padding: 0.9rem 1.4rem;
-  border-radius: 12px;
-  background: linear-gradient(90deg, #5eead4, #38bdf8);
-  color: #061019;
-  font-weight: 700;
+  padding: 15px 40px;
+  border: 1.5px solid var(--tesla-dark);
+  color: var(--tesla-dark);
   text-decoration: none;
+  font-family: var(--font-main);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 850px) {
-  .modal-body {
+.modal-btn-primary:hover {
+  background: var(--tesla-dark);
+  color: var(--tesla-white);
+}
+
+/* Close Button */
+.modal-close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .modal-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: 300px 1fr;
+  }
+  
+  .modal-info-container {
+    padding: 40px 30px;
   }
 
-  .experience-title {
-    font-size: 2.1rem;
+  .experience-modal-content {
+    height: 95vh;
+  }
+}
+
+@media (max-width: 480px) {
+  #modalTitle {
+    font-size: 24px;
+  }
+  
+  .modal-visuals {
+    display: none; /* En móviles muy pequeños, priorizamos el texto */
   }
 
-  .experience-timeline {
-    padding-left: 1.5rem;
+  .modal-grid {
+    grid-template-rows: 1fr;
   }
 }

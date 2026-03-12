@@ -7,8 +7,53 @@
       </header>
 
       <div class="experience-timeline">
+        <!-- EXPERIENCE ITEM MONCAN -->
+        <article class="experience-item" data-exp-id="moncan">
+          <div class="experience-card">
+            <div class="experience-top">
+              <div>
+                <h3 class="experience-role">Co-founder & Chief System Officer</h3>
+                <p class="experience-company">MONCAN</p>
+              </div>
 
-        <!-- EXPERIENCE ITEM -->
+              <div class="experience-date">
+                <span>Aug 2025</span> - <span>Present</span>
+              </div>
+            </div>
+
+            <div class="experience-meta">
+              <span class="experience-location">
+                <i class="material-icons">location_on</i>
+                Schwanau, Germany
+              </span>
+
+              <span class="experience-type">Full-Time</span>
+            </div>
+
+            <p class="experience-summary">
+              Developed engineering documentation, technical reports, and design validations
+              for tunneling machine projects under international standards.
+            </p>
+
+            <div class="experience-tags">
+              <span>SolidWorks</span>
+              <span>FEA</span>
+              <span>Project Management</span>
+              <span>Technical Reporting</span>
+            </div>
+
+            <div class="experience-actions">
+              <button class="btn-view btn-details-trigger" data-modal-open="moncan-modal" type="button">
+                View Details
+              </button>
+              <!-- <a href="experience/herrenknecht.html" class="btn-link">
+                Full Case Study →
+              </a> -->
+            </div>
+          </div>
+        </article>
+
+        <!-- EXPERIENCE ITEM HK -->
         <article class="experience-item" data-exp-id="hk">
           <div class="experience-card">
             <div class="experience-top">
@@ -47,14 +92,14 @@
               <button class="btn-view btn-details-trigger" data-modal-open="hk-modal" type="button">
                 View Details
               </button>
-              <a href="experience/herrenknecht.html" class="btn-link">
+              <!-- <a href="experience/herrenknecht.html" class="btn-link">
                 Full Case Study →
-              </a>
+              </a> -->
             </div>
           </div>
         </article>
 
-        <!-- EXPERIENCE ITEM -->
+        <!-- EXPERIENCE ITEM CRTG -->
         <article class="experience-item" data-exp-id="crtg">
           <div class="experience-card">
             <div class="experience-top">
@@ -93,9 +138,9 @@
               <button class="btn-view btn-details-trigger" data-modal-open="crtg-modal" type="button">
                 View Details
               </button>
-              <a href="experience/crtg.html" class="btn-link">
+              <!-- <a href="experience/crtg.html" class="btn-link">
                 Full Case Study →
-              </a>
+              </a> -->
             </div>
           </div>
         </article>
@@ -104,36 +149,195 @@
     </div>
 </section>
 
+<!-- Modal Para Cada Experiencia Profesional -->
+<!-- MONCAN Experience -->
+<div class="modal" id="moncan-modal" aria-hidden="true">
+  <div class="modal__content">
+    <button id="close" class="modal-close-btn" data-modal-close aria-label="Cerrar modal">
+      <span class="material-icons">close</span>
+    </button>
 
-<!-- MODAL PANEL / Professional Experience -->
-    <div class="modal" id="hk-modal" aria-hidden="true">
-      <div class="experience-modal-content">
-        <button id="close" aria-label="Close modal">
-          <i class="material-icons modal__close-btn" data-modal-close aria-label="Cerrar modal">close</i>
-        </button>
-
-        <div class="modal-header">
-          <h2 id="modalTitle"></h2>
-          <p id="modalCompany"></p>
+    <div class="modal-grid">
+      <div class="modal-visuals">
+        <div class="modal-gallery" id="modalImages">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1000" alt="Industrial Engineering Project">
         </div>
+      </div>
+
+      <div class="modal-info-container">
+        <header class="modal-header">
+          <p class="modal-label">Featured Project • MBSE & Digital Twin</p>
+          <h2 id="modalTitle">Optimización de Sistemas de Bombeo Axial</h2>
+          <p id="modalCompany" class="company-name">MONCAN Engineering Services</p>
+        </header>
 
         <div class="modal-body">
-          <div class="modal-gallery" id="modalImages"></div>
-
-          <div class="modal-info">
+          <section class="modal-section">
             <h4>Overview</h4>
-            <p id="modalDesc"></p>
+            <p id="modalDesc">
+              Desarrollo de un <strong>Digital Twin</strong> para el mantenimiento predictivo de bombas axiales industriales. 
+              El proyecto integra el diseño mecánico detallado con modelos de arquitectura de sistemas para predecir fallos en 
+              componentes críticos antes de que ocurran, reduciendo el tiempo de inactividad en un 30%.
+            </p>
+          </section>
 
+          <section class="modal-section">
             <h4>Key Contributions</h4>
-            <ul id="modalTasks"></ul>
+            <ul id="modalTasks" class="custom-list">
+              <li>Modelado de la arquitectura lógica y física del sistema utilizando la metodología <strong>ARCADIA</strong> en Capella y Papyrus.</li>
+              <li>Sincronización de parámetros técnicos entre el modelo <strong>SysML</strong> y el diseño CAD en <strong>Autodesk Inventor</strong>.</li>
+              <li>Implementación de un flujo de datos para monitoreo de vibración y temperatura orientado al mantenimiento predictivo.</li>
+              <li>Cálculo de <strong>VME (Valor Monetario Esperado)</strong> para justificar el retorno de inversión en tecnologías de monitoreo.</li>
+            </ul>
+          </section>
 
+          <section class="modal-section">
             <h4>Tools & Technologies</h4>
-            <div class="modal-tags" id="modalTools"></div>
+            <div class="modal-tags" id="modalTools">
+              <span>Eclipse Papyrus</span>
+              <span>SysML 1.6</span>
+              <span>Autodesk Inventor</span>
+              <span>Python (Data Science)</span>
+              <span>MBSE</span>
+              <span>IoT Sensors</span>
+            </div>
+          </section>
 
-            <a id="modalLink" href="#" class="modal-btn">
-              View Full Project →
+          <div class="modal-footer">
+            <a id="modalLink" href="#" class="modal-btn-primary">
+              Ver Caso de Estudio Completo →
             </a>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- HK Experience -->
+<div class="modal" id="hk-modal" aria-hidden="true">
+  <div class="modal__content">
+    <button id="close" class="modal-close-btn" data-modal-close aria-label="Cerrar modal">
+      <span class="material-icons">close</span>
+    </button>
+
+    <div class="modal-grid">
+      <div class="modal-visuals">
+        <div class="modal-gallery" id="modalImages">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1000" alt="Industrial Engineering Project">
+        </div>
+      </div>
+
+      <div class="modal-info-container">
+        <header class="modal-header">
+          <p class="modal-label">Featured Project • MBSE & Digital Twin</p>
+          <h2 id="modalTitle">Optimización de Sistemas de Bombeo Axial</h2>
+          <p id="modalCompany" class="company-name">MONCAN Engineering Services</p>
+        </header>
+
+        <div class="modal-body">
+          <section class="modal-section">
+            <h4>Overview</h4>
+            <p id="modalDesc">
+              Desarrollo de un <strong>Digital Twin</strong> para el mantenimiento predictivo de bombas axiales industriales. 
+              El proyecto integra el diseño mecánico detallado con modelos de arquitectura de sistemas para predecir fallos en 
+              componentes críticos antes de que ocurran, reduciendo el tiempo de inactividad en un 30%.
+            </p>
+          </section>
+
+          <section class="modal-section">
+            <h4>Key Contributions</h4>
+            <ul id="modalTasks" class="custom-list">
+              <li>Modelado de la arquitectura lógica y física del sistema utilizando la metodología <strong>ARCADIA</strong> en Capella y Papyrus.</li>
+              <li>Sincronización de parámetros técnicos entre el modelo <strong>SysML</strong> y el diseño CAD en <strong>Autodesk Inventor</strong>.</li>
+              <li>Implementación de un flujo de datos para monitoreo de vibración y temperatura orientado al mantenimiento predictivo.</li>
+              <li>Cálculo de <strong>VME (Valor Monetario Esperado)</strong> para justificar el retorno de inversión en tecnologías de monitoreo.</li>
+            </ul>
+          </section>
+
+          <section class="modal-section">
+            <h4>Tools & Technologies</h4>
+            <div class="modal-tags" id="modalTools">
+              <span>Eclipse Papyrus</span>
+              <span>SysML 1.6</span>
+              <span>Autodesk Inventor</span>
+              <span>Python (Data Science)</span>
+              <span>MBSE</span>
+              <span>IoT Sensors</span>
+            </div>
+          </section>
+
+          <div class="modal-footer">
+            <a id="modalLink" href="#" class="modal-btn-primary">
+              Ver Caso de Estudio Completo →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CRTG Experience -->
+<div class="modal" id="crtg-modal" aria-hidden="true">
+  <div class="modal__content">
+    <button id="close" class="modal-close-btn" data-modal-close aria-label="Cerrar modal">
+      <span class="material-icons">close</span>
+    </button>
+
+    <div class="modal-grid">
+      <div class="modal-visuals">
+        <div class="modal-gallery" id="modalImages">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1000" alt="Industrial Engineering Project">
+        </div>
+      </div>
+
+      <div class="modal-info-container">
+        <header class="modal-header">
+          <p class="modal-label">Featured Project • MBSE & Digital Twin</p>
+          <h2 id="modalTitle">Optimización de Sistemas de Bombeo Axial</h2>
+          <p id="modalCompany" class="company-name">MONCAN Engineering Services</p>
+        </header>
+
+        <div class="modal-body">
+          <section class="modal-section">
+            <h4>Overview</h4>
+            <p id="modalDesc">
+              Desarrollo de un <strong>Digital Twin</strong> para el mantenimiento predictivo de bombas axiales industriales. 
+              El proyecto integra el diseño mecánico detallado con modelos de arquitectura de sistemas para predecir fallos en 
+              componentes críticos antes de que ocurran, reduciendo el tiempo de inactividad en un 30%.
+            </p>
+          </section>
+
+          <section class="modal-section">
+            <h4>Key Contributions</h4>
+            <ul id="modalTasks" class="custom-list">
+              <li>Modelado de la arquitectura lógica y física del sistema utilizando la metodología <strong>ARCADIA</strong> en Capella y Papyrus.</li>
+              <li>Sincronización de parámetros técnicos entre el modelo <strong>SysML</strong> y el diseño CAD en <strong>Autodesk Inventor</strong>.</li>
+              <li>Implementación de un flujo de datos para monitoreo de vibración y temperatura orientado al mantenimiento predictivo.</li>
+              <li>Cálculo de <strong>VME (Valor Monetario Esperado)</strong> para justificar el retorno de inversión en tecnologías de monitoreo.</li>
+            </ul>
+          </section>
+
+          <section class="modal-section">
+            <h4>Tools & Technologies</h4>
+            <div class="modal-tags" id="modalTools">
+              <span>Eclipse Papyrus</span>
+              <span>SysML 1.6</span>
+              <span>Autodesk Inventor</span>
+              <span>Python (Data Science)</span>
+              <span>MBSE</span>
+              <span>IoT Sensors</span>
+            </div>
+          </section>
+
+          <div class="modal-footer">
+            <a id="modalLink" href="#" class="modal-btn-primary">
+              Ver Caso de Estudio Completo →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
