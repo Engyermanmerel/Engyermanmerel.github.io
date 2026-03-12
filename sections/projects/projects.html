@@ -199,7 +199,7 @@
           <!-- Title and Subtitle -->
           <div class="modal-header">
             <Span>Mechatronics</Span>
-            <h2>Design and Development of a RoboCup <br>Small Size League - Division B Robot</h2>
+            <h2>Design and Development of a Autonomous Robot <br>Small Size League - Division B Robot</h2>
           </div>
           <!-- Introduction -->
           <div class="modal-intr modal-secs content-section">
@@ -221,11 +221,11 @@
                 <br>
                 Division B was chosen according to its own criteria of design and the resources available at that time. 
                 <br>
-                The principal constraints of Division B were defined by the Rules of the RoboCup Small Size League document.
+                The principal constraints of Division B were defined by the <a href="https://robocup-ssl.github.io/ssl-rules/2024/sslrules.html" target="_blank">Rules of the RoboCup Small Size League document.</a>
               </P>
               <figure>
-                  <img src="./assets/Projects/Robot/Field_Dimension.png" alt="Field Dimension for Division B">
-                  <figcaption class="img__caption">Field dimensions and markings for division B</figcaption>
+                  <img src="/assets/Projects/Robot/Field_Dimension_1.webp" alt="Field Dimension for Division B">
+                  <figcaption class="img__caption">Fig 1. Restriction from Robocup Organization</figcaption>
               </figure>
             </section>
             <section class="content-section">
@@ -246,39 +246,78 @@
                 <li>Use of Raspberry Pi 4 controller to communicate actuators and programming algorithms.</li>
               </ul>
               <figure>
-                  <img src="./assets/Projects/Robot/AsemblieRobot.png" alt="Mounting Parts of Robot">
-                  <figcaption class="img__caption">Mounting the dribble, wheels and batteries to the base of the robot</figcaption>
+                  <img src="/assets/Projects/Robot/AsemblieRobot.webp" alt="Global Design">
+                  <figcaption class="img__caption">Fig 2. Global design</figcaption>
               </figure>
+
+              <h3>Approach</h3>
+              <p>WBS is organized by critical subsystems that enable modular integration of the robot:</p>
+              <!-- Part One -->
+              <h4>1. Locomotion and Propulsion System</h4>
+              <p>This subsystem governs the robot's dynamic mobility. In SSL, omnidirectional traction is the standard architecture.</p>
+              <li>1.1 Omnidirectional Wheel Assembly: Design and selection of sub-rollers and wheel hubs to minimize friction and slip.</li>
+              <figure>
+                  <img src="/assets/Projects/Robot/Omnidirectional_Wheel.webp" alt="Omnidirectional Wheel">
+                  <figcaption class="img__caption">Fig 3. Omnidirectional Wheel</figcaption>
+              </figure>
+              <li>1.2 Actuation and Transmission: Selection of high-torque BLDC (Brushless DC) motors and optimized gear ratio calculations.</li>
             </section>
           </div>
           <!-- Colum 2 -->
           <div class="modal-col-sc modal-secs">
             <section class="content-section">
-              <h3>Approach</h3>
-              <p></p>
+              <li>1.3 Motor Mounting and Alignment: Mechanical housing designed to maintain a low center of gravity while ensuring structural rigidity.</li>
               <figure>
-                  <img src="./assets/Projects/Sismic/PlanoDeConstrucciònEstructura1.png" alt="Plano técnico de una estructura">
-                  <figcaption class="img__caption">Plano técnico de la estructura principal</figcaption>
+                  <img src="/assets/Projects/Robot/Reduction_Gearbox.webp" alt="Gear Reducer">
+                  <figcaption class="img__caption">Fig 4. Gear Reducer</figcaption>
               </figure>
-              <h3>Results</h3>
-              <p>
-                  Este plano detalla la disposición y dimensiones de la estructura, incluyendo las ubicaciones de las columnas y vigas. Se han considerado los códigos de construcción locales para garantizar la estabilidad y seguridad de la obra.
-              </p>
-            </section>
-            <section class="content-section">
-                <figure>
-                    <img src="./assets/Projects/Sismic/AnalisisInvetorEstructura1.png" alt="Modelo 3D con análisis de tensiones">
-                    <figcaption>Análisis de tensiones en el modelo 3D</figcaption>
-                </figure>
-                <p>
-                    Este modelo 3D muestra un análisis de tensiones y deformaciones utilizando colores para indicar las áreas de mayor y menor esfuerzo. Los resultados sugieren ajustes en el diseño para optimizar la resistencia estructural.
-                </p>
-            </section>
+              <!-- Part Two -->
+              <h4>2. Ball Handling Mechanisms</h4>
+              <p>These systems define the robot’s interactive capabilities with the game element.</p>
+              <li>2.1 Dribbling Unit: An active roller mechanism, utilizing high-friction elastomers, to impart backspin for ball retention.</li>
+              <figure>
+                  <img src="/assets/Projects/Robot/Dribbling_Unit_1.webp" alt="Dribbling Unit">
+                  <figcaption class="img__caption">Fig 5. Dribbling Unit</figcaption>
+              </figure>
+              <li>
+                2.2 Kick/Discharge System:
+                <ul>
+                  <li>Flat Kicker: A plunger mechanism for high-velocity ground-level passes.</li>
+                  <li>Chip Kicker: An angled wedge or lever for parabolic trajectories to bypass opposing robots</li>
+                </ul>
+              </li>
+              <li>2.3 Discharge Electronics: High-voltage Boost Converters and Capacitor Discharge Units (CDUs) to power the solenoids.</li>
+              <figure>
+                  <img src="/assets/Projects/Robot/Diagram of the capacitor charge and discharge control circuit.webp" alt="Diagram of the capacitor charge and discharge">
+                  <figcaption class="img__caption">Fig 6. Diagram of the capacitor charge and discharge</figcaption>
+              </figure>
+
+              <!-- Part Three -->
+              <h4>3. Electronics and Instrumentation</h4>
+              <p>The embedded architecture responsible for data processing and power distribution.</p>
+              <li>3.1 Central Processing Unit (CPU): High-performance FPGA or Microcontroller (MCU) for real-time control execution.</li>
+              <li>3.2 Electronic Speed Controllers (ESC): Dedicated H-bridges or drivers for precise motor velocity and position control.</li>
+              <li>
+                3.3 Sensor Suite: 
+                <ul>
+                  <li>Encoders: High-resolution magnetic or optical sensors for odometry feedback.</li>
+                  <li>Inertial Measurement Unit (IMU): Gyroscopes and accelerometers for orientation correction.</li>
+                  <li>Ball Detection: Infrared (IR) break-beam sensors to confirm ball possession.</li>
+                </ul>
+              </li>
+              <li>3.4 Power Management System: Battery protection circuits (LiPo) and multi-stage voltage regulation (e.g., 3.3V, 5V, 12V).</li>
+              <figure>
+                  <img src="/assets/Projects/Robot/motor_mounting_and_alignment.webp" alt="Diagram of the capacitor charge and discharge">
+                  <figcaption class="img__caption">Fig 6. Diagram of the capacitor charge and discharge</figcaption>
+              </figure>
+
+              <!-- Part Four -->
+              
           </div>
           <!-- Conclution -->
           <div class="modal-concl modal-secs">
             <h3>Conclusion</h3>
-            <p>Here goes the conclution </p>
+            <p>The project has progressed from a basic functional unit to a scalable architecture. The integration of optimized image processing and structural integrity provides the necessary framework for professional autonomous strategic execution.</p>
           </div>
         </div>
       </div>

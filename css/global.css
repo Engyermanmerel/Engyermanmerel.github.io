@@ -55,7 +55,7 @@ h1{
 }
 
 a{
-  color:var(--ink);
+  color:var(--brand-2-btn);
   text-decoration:none
 }
 
@@ -299,7 +299,7 @@ h3{
 /* 5. Ajustes para Mobile (Pantallas pequeñas) */
 @media (max-width: 480px) {
   .modal__content {
-    width: 95%;
+    width: 75%;
     padding: 2rem 1rem;
     margin: 10px;
     border-radius: 20px; /* Bordes más suaves en móvil */

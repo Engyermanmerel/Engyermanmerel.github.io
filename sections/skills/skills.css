@@ -251,10 +251,6 @@
     border-radius: 20px;
   }
 
-  .skills-modal__content {
-    padding: 32px;
-  }
-
   .hotspot__label {
     display: none; /* evita saturación visual en móvil */
   }

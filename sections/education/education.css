@@ -30,7 +30,6 @@
   background: transparent; /* Quitamos el fondo de la card */
   border: none;            /* Quitamos bordes */
   border-radius: 0;
-  padding: 40px 0 40px 40px;
   position: relative;
   transition: all 0.3s ease;
 }
