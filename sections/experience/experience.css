@@ -7,6 +7,45 @@
   color: #f5f7ff;
 }
 
+/* Estilos para el efecto Dropdown */
+
+/* 1. Ocultamos el contenido extra por defecto */
+.experience-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 1s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+/* 2. Ajuste del padding para que el card se vea bien colapsado */
+.experience-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* 3. El estado HOVER */
+.experience-item:hover .experience-details {
+    max-height: 500px; /* Un valor lo suficientemente grande para cubrir el texto */
+    opacity: 1;
+    margin-top: 20px; /* Espacio que aparece al expandirse */
+}
+
+/* 4. Feedback visual opcional en la Card al hacer hover */
+.experience-item:hover .experience-card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-color); /* Usa tu variable de color azul si la tienes */
+}
+
+/* Asegurar que el header no se mueva bruscamente */
+.experience-top {
+    margin-bottom: 0;
+    transition: margin-bottom 0.3s ease;
+}
+
+.experience-item:hover .experience-top {
+    margin-bottom: 15px;
+}
+
 .experience-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -51,8 +90,7 @@
 
 /* CARD */
 .experience-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   padding: 1.8rem;
   border-radius: 18px;
   backdrop-filter: blur(10px);
@@ -62,6 +100,7 @@
 .experience-card:hover {
   transform: translateY(-6px);
   border-color: rgba(15, 76, 207, 0.5);
+  background-color: rgba(255, 255, 255, 0.02);
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.35);
 }
 
