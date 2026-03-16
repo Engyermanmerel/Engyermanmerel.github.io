@@ -64,7 +64,7 @@
   background-size: cover;
 }
 .proj__card-tr {
-  background-image: url('/assets/Projects/Vortex/VortexVibrationWallpaper2.png');
+  background-image: url('/assets/Projects/Vortex/VortexVibrationWallpaper2.webp');
   /* Contain es correcto para este tipo de imagen central */
   background-size: contain; 
   background-color: #f4f4f4; /* Fondo neutro para el logo */
