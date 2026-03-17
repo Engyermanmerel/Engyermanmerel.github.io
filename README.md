@@ -64,5 +64,5 @@ As an engineer, every technical decision is backed by data. The migration from v
 
 Interested in the intersection between physical engineering and systems development? Let's connect!
 
-- **LinkedIn:** [Your Link Here]
-- **Web:** [Your Portfolio Link Here]
+- **LinkedIn:** https://www.linkedin.com/in/yermanmerel/
+- **Web:** https://engyermanmerel.github.io/

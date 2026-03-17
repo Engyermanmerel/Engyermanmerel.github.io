@@ -1,136 +1,130 @@
+/* Variables de diseño - Personaliza aquí tus colores */
 :root {
-  --tesla-accent: #393c41; /* Gris oscuro Tesla */
-  --line-color: #e2e3e3;    /* Color de línea técnica */
-  --text-main: #171a20;
-  --text-muted: #5c5e62;
+    --primary-color: #0055a4; /* Azul UTP */
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --border-color: #f1f2f6;
+    --transition: all 0.3s ease;
 }
 
-/* Contenedor sin cajas */
-.edu-temp-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0; /* Eliminamos el gap de las cajas */
-  max-width: 900px;
-  position: relative;
-  padding-left: 20px;
+#education {
+    padding: 80px 0;
 }
 
-/* La línea vertical de ingeniería */
-.edu-temp-grid::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background-color: var(--line-color);
+/* Contenedor de la cuadrícula */
+.education__grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
-.card.utp {
-  background: transparent; /* Quitamos el fondo de la card */
-  border: none;            /* Quitamos bordes */
-  border-radius: 0;
-  position: relative;
-  transition: all 0.3s ease;
+@media (min-width: 992px) {
+    .education__grid {
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
 }
 
-/* El punto de conexión en la línea */
-.card.utp::after {
-  content: '';
-  position: absolute;
-  left: -4px; /* Centrado sobre la línea de 1px */
-  top: 48px;
-  width: 9px;
-  height: 9px;
-  background-color: var(--text-main);
-  border-radius: 50%;
-  transition: transform 0.3s ease;
+/* Tarjeta Estilo Minimalista */
+.education__card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
-.card.utp:hover::after {
-  transform: scale(1.5);
-  background-color: #cc0000; /* Un pequeño acento de color si deseas, o mantén negro */
+.education__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-color: var(--primary-color);
 }
 
-/* Layout Interno */
-.edu-card-grid {
-  display: grid;
-  grid-template-columns: 60px 1fr; /* Logo pequeño y texto */
-  grid-template-areas: 
-    "logo content"
-    "logo date";
-  column-gap: 30px;
-  align-items: center;
+/* Layout interno de la tarjeta */
+.education__content-wrapper {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1.5rem;
+    align-items: start;
 }
 
-.edu-card-log {
-  grid-area: logo;
-  background: transparent;
-  box-shadow: none;
-  padding: 0;
+/* Contenedor del Logo */
+.education__logo-container {
+    margin: 0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
 }
 
-.utp-logo {
-  width: 100%;
-  filter: grayscale(100%); /* Minimalismo puro */
-  opacity: 0.7;
-  transition: all 0.3s ease;
+.education__logo {
+    max-width: 100%;
+    filter: grayscale(20%);
+    transition: var(--transition);
 }
 
-.card.utp:hover .utp-logo {
-  filter: grayscale(0%);
-  opacity: 1;
+.education__card:hover .education__logo {
+    filter: grayscale(0%);
 }
 
-.edu-card-cont {
-  grid-area: content;
+/* Tipografía */
+.education__title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
 }
 
-.edu-card-cont strong {
-  font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  color: var(--ink);
+.education__institution {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
 }
 
-.edu-card-date {
-  grid-area: date;
-  margin-top: 5px;
+.education__specialization {
+    font-size: 0.9rem;
+    color: var(--text-muted);
 }
 
-.edu-card-date p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--text-muted);
-  margin: 0;
+/* Detalles y Listas */
+.education__details {
+    margin-top: 1rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
 }
 
-/* Detalles de logros (Achievments) */
-.edu-card-cont-ach {
-  margin-top: 15px;
-  padding-left: 0;
+.education__list {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
 }
 
-.edu-card-cont-ach p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: var(--text-muted);
-  max-width: 700px;
+.education__list li {
+    margin-bottom: 0.4rem;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-  .edu-card-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-      "date"
-      "content"
-      "logo";
-    gap: 15px;
-  }
-  .edu-card-log {
-    width: 40px;
-  }
+/* Badge de Fecha */
+.education__date {
+    grid-column: 1 / -1; /* Ocupa todo el ancho abajo */
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Modificador para destacar Herrenknecht (opcional) */
+.education__card--highlight {
+    border-left: 4px solid var(--accent-color);
 }
