@@ -6,88 +6,139 @@
         </header>
 
         <div class="education__grid">
-            
-            <article class="education__card">
-                <div class="education__content-wrapper">
-                    <figure class="education__logo-container">
-                        <img src="./assets/Logo/UTP.png" alt="Universidad Tecnológica de Panamá Logo" class="education__logo">
-                    </figure>
-                    
-                    <div class="education__body">
-                        <h3 class="education__title">Bachelor of Science in Mechanical Engineering</h3>
-                        <p class="education__institution">Technology University of Panama</p>
-                        <p class="education__specialization">
-                            <em>Minor in Dynamic Systems and Automation.</em>
-                        </p>
-
-                        <div class="education__details">
-                            <p>Comprehensive engineering program focused on the design, analysis, and manufacturing of mechanical systems:</p>
-                            <ul class="education__list">
-                                <li><strong>Systems Automation:</strong> Design and implementation of control systems, robotics, and automated processes.</li>
-                                <li><strong>Mechanical Design:</strong> Advanced CAD/CAM modeling, structural analysis, and materials science.</li>
-                                <li><strong>Dynamic Systems:</strong> Modeling and simulation of complex mechanical behaviors and vibrations.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="education__date">
-                        <time datetime="2018-01">Jan 2018</time> — <time datetime="2024-12">Dec 2024</time>
-                    </div>
+            <div class="container">
+                
+                <!-- Category Filters -->
+                <div class="blog__filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="utp">UTP</button>
+                    <button class="filter-btn" data-filter="Herrenknecht">Herrenknecht AG</button>
+                    <button class="filter-btn" data-filter="anthropic">Anthropic Academy</button>
+                    <button class="filter-btn" data-filter="platzi">Platzi</button>
                 </div>
-            </article>
 
-            <article class="education__card">
-                <div class="education__content-wrapper">
-                    <figure class="education__logo-container">
-                        <img src="./assets/Logo/UTP.png" alt="Universidad Tecnológica de Panamá Logo" class="education__logo">
-                    </figure>
-
-                    <div class="education__body">
-                        <h3 class="education__title">Professional Certification: Hydrosanitary, LPG, and Fire Systems Design</h3>
-                        <p class="education__institution">Technology University of Panama</p>
-                        
-                        <div class="education__details">
-                            <p>Advanced 20-hour technical program covering infrastructure engineering:</p>
-                            <ul class="education__list">
-                                <li><strong>Hydrosanitary Systems:</strong> Potable water and wastewater management.</li>
-                                <li><strong>LPG Gas Systems:</strong> Safe design and regulatory compliance.</li>
-                                <li><strong>Fire Suppression:</strong> Engineering standards for active protection.</li>
-                            </ul>
+                <!-- Blog Grid -->
+                <div class="blog__grid">
+                    <!-- Card 1 -->
+                    <article class="blog-card" data-category="utp">
+                        <div class="blog-card__image">
+                            <img src="/assets/blog/workflow-optimization.jpg" alt="Workflow Optimization">
                         </div>
-                    </div>
-
-                    <div class="education__date">
-                        <time datetime="2023-09">Sep 2023</time> — <time datetime="2023-10">Oct 2023</time>
-                    </div>
-                </div>
-            </article>
-
-            <article class="education__card">
-                <div class="education__content-wrapper">
-                    <figure class="education__logo-container">
-                        <img src="/assets/Logo/Herrenknecht_logo.svg.png" alt="Herrenknecht AG Logo" class="education__logo">
-                    </figure>
-
-                    <div class="education__body">
-                        <h3 class="education__title">TBM Fluid Technology & Hydraulic Fundamentals</h3>
-                        <p class="education__institution">Herrenknecht AG – Training Academy (Schwanau, Germany)</p>
-                        
-                        <div class="education__details">
-                            <p>Specialized training in Tunnel Boring Machine (TBM) mechanics:</p>
-                            <ul class="education__list">
-                                <li><strong>Hydraulic Fundamentals:</strong> High-pressure circuit analysis and troubleshooting.</li>
-                                <li><strong>Fluid Technology:</strong> Engineering of excavation-critical fluid systems.</li>
-                                <li><strong>System Maintenance:</strong> Reliability standards for Herrenknecht equipment.</li>
-                            </ul>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">Optimizing Workflow Processes for Maximum Efficiency</h3>
+                            <p class="blog-card__excerpt">Understand the importance of optimizing workflow processes to enhance efficiency and reduce operational costs in engineering projects.</p>
+                            <div class="blog-card__meta">
+                                <div class="blog-card__author">
+                                    <img src="/assets/authors/joel.jpg" alt="Joel Keneley" class="author-avatar">
+                                    <span class="author-name">Joel Keneley</span>
+                                </div>
+                                <span class="read-time">4 Min Read</span>
+                            </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="education__date">
-                        <time datetime="2025-05">May 2025</time> — <time datetime="2025-06">Jun 2025</time>
-                    </div>
+                    <!-- Card 2 -->
+                    <article class="blog-card" data-category="utp">
+                        <div class="blog-card__image">
+                            <img src="/assets/blog/project-documentation.jpg" alt="Project Documentation">
+                        </div>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">Best Practices for Effective Project Documentation</h3>
+                            <p class="blog-card__excerpt">Dive into the importance of maintaining thorough project documentation. Learn best practices for technical documentation in mechanical systems.</p>
+                            <div class="blog-card__meta">
+                                <div class="blog-card__author">
+                                    <img src="/assets/authors/sarah.jpg" alt="Sarah Devis" class="author-avatar">
+                                    <span class="author-name">Sarah Devis</span>
+                                </div>
+                                <span class="read-time">10 Min Read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="blog-card" data-category="Herrenknecht">
+                        <div class="blog-card__image">
+                            <img src="/assets/blog/stakeholder-management.jpg" alt="Stakeholder Management">
+                            <div class="blog-card__overlay">
+                                <button class="blog-card__cta">Open Blog →</button>
+                            </div>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">Managing Stakeholder Expectations for Project Success</h3>
+                            <p class="blog-card__excerpt">Understand the importance of stakeholder management in project planning. Learn strategies for effective communication and expectation alignment.</p>
+                            <div class="blog-card__meta">
+                                <div class="blog-card__author">
+                                    <img src="/assets/authors/michael.jpg" alt="Michael Smith" class="author-avatar">
+                                    <span class="author-name">Michael Smith</span>
+                                </div>
+                                <span class="read-time">14 Min Read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="blog-card" data-category="anthropic">
+                        <div class="blog-card__image">
+                            <img src="/assets/blog/stakeholder-management.jpg" alt="Stakeholder Management">
+                            <div class="blog-card__overlay">
+                                <button class="blog-card__cta">Open Blog →</button>
+                            </div>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">Managing Stakeholder Expectations for Project Success</h3>
+                            <p class="blog-card__excerpt">Understand the importance of stakeholder management in project planning. Learn strategies for effective communication and expectation alignment.</p>
+                            <div class="blog-card__meta">
+                                <div class="blog-card__author">
+                                    <img src="/assets/authors/michael.jpg" alt="Michael Smith" class="author-avatar">
+                                    <span class="author-name">Michael Smith</span>
+                                </div>
+                                <span class="read-time">14 Min Read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="blog-card" data-category="platzi">
+                        <div class="blog-card__image">
+                            <img src="/assets/blog/stakeholder-management.jpg" alt="Stakeholder Management">
+                            <div class="blog-card__overlay">
+                                <button class="blog-card__cta">Open Blog →</button>
+                            </div>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">Managing Stakeholder Expectations for Project Success</h3>
+                            <p class="blog-card__excerpt">Understand the importance of stakeholder management in project planning. Learn strategies for effective communication and expectation alignment.</p>
+                            <div class="blog-card__meta">
+                                <div class="blog-card__author">
+                                    <img src="/assets/authors/michael.jpg" alt="Michael Smith" class="author-avatar">
+                                    <span class="author-name">Michael Smith</span>
+                                </div>
+                                <span class="read-time">14 Min Read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="blog-card" data-category="platzi">
+                        <div class="blog-card__image">
+                            <img src="/assets/blog/stakeholder-management.jpg" alt="Stakeholder Management">
+                            <div class="blog-card__overlay">
+                                <button class="blog-card__cta">Open Blog →</button>
+                            </div>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">Managing Stakeholder Expectations for Project Success</h3>
+                            <p class="blog-card__excerpt">Understand the importance of stakeholder management in project planning. Learn strategies for effective communication and expectation alignment.</p>
+                            <div class="blog-card__meta">
+                                <div class="blog-card__author">
+                                    <img src="/assets/authors/michael.jpg" alt="Michael Smith" class="author-avatar">
+                                    <span class="author-name">Michael Smith</span>
+                                </div>
+                                <span class="read-time">14 Min Read</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-            </article>
-
-        </div>
+            </div>
     </div>
 </section>
