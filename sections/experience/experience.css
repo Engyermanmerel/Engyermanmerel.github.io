@@ -242,9 +242,9 @@
   box-shadow: 0 40px 100px rgba(0,0,0,0.05);
 }
 
-.modal-grid {
+.modal_experience-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Split screen */
+  grid-template-rows: 0.3fr 1fr; /* Split screen */
   height: 100%;
 }
 
@@ -390,7 +390,7 @@ h4 {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px) {
-  .modal-grid {
+  .modal_experience-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 300px 1fr;
   }
@@ -413,7 +413,7 @@ h4 {
     display: none; /* En móviles muy pequeños, priorizamos el texto */
   }
 
-  .modal-grid {
+  .modal_experience-grid {
     grid-template-rows: 1fr;
   }
 }
