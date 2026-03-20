@@ -7,68 +7,131 @@
   box-sizing: border-box;
 }
 
+/* ---- Carrusel Style ---- */
+:root {
+  /* Variables para el diseño minimalista */
+  --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Gradiente premium: oscuro abajo para legibilidad, suave arriba */
+  --overlay-gradient: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.85) 100%);
+}
+
+.proj__container {
+  max-width: 1024px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden; /* Importante para que el carrusel no rompa el layout */
+  padding: 20px; /* Pequeño respiro lateral */
+}
+
+/* ---- Carrusel Style ---- */
 .proj__carrusel {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: var(--transition-smooth);
   gap: 20px;
+  will-change: transform; /* Optimización de rendimiento para animaciones */
+  padding: 10px 0;
 }
 
 .proj__carrusel-card {
-  flex: 0 0 34%;
+  /* Ajuste preciso para que quepan 3 cards (33.33%) descontando el gap */
+  flex: 0 0 calc(33.33% - (20px * 2 / 3)); 
   height: 580px;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   border-radius: var(--border-radius-cards);
-  transform: scale(1.0);
-  transition: transform 0.3s ease-in-out;
+  overflow: hidden; /* Mantiene el contenido y gradientes dentro de los bordes */
+  transition: var(--transition-smooth);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .proj__carrusel-card:hover {
-  transform: scale(1.02);
+  /* Efecto de elevación más elegante que el scale */
+  transform: translateY(-8px); 
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
+/* Tus Clases Originales con Background-Image (INTACTAS)
+   -------------------------------------------------- 
+*/
 .proj__card-fi {
-  background-image: url('./assets/Projects/Wallpaper/Sismic/EstructuraRevit_Sismic.png');
+  background-image: url('/assets/Projects/Wallpaper/Sismic/EstructuraRevit_Sismic.png');
   background-size: cover;
 }
 
 .proj__card-sc {
-  background-image: url('./assets/Projects/Robot/AsemblieRobot.png');
+  background-image: url('/assets/Projects/Robot/AsemblieRobot.webp');
   background-size: cover;
 }
 .proj__card-tr {
-  background-image: url('./assets/Projects/Vortex/VortexVibrationWallpaper2.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-image: url('/assets/Projects/Vortex/VortexVibrationWallpaper2.webp');
+  /* Contain es correcto para este tipo de imagen central */
+  background-size: contain; 
+  background-color: #f4f4f4; /* Fondo neutro para el logo */
 }
 
 .proj__card-fr {
-  background-image: url('./assets/Projects/Web/Wallpaper_Web_Project.png');
+  background-image: url('/assets/Projects/Web/WebWallpaper.webp');
   background-size: cover;
   background-position: 80%;
 }
 
+/* Info & Overlay Mejorado
+   -------------------------------------------------- 
+*/
 .proj__carrusel-card__info {
-  position: relative;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, .9) 100%);
-  padding: 2.5rem;
-  z-index: 2;
+  position: absolute; /* Cambiado a absolute para cubrir toda la card */
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  border-radius: var(--border-radius-cards);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Texto hacia abajo para no tapar la imagen central */
+  padding: 3rem;
+  background: var(--overlay-gradient); /* Usamos el gradiente premium */
+  color: #ffffff; /* Texto siempre blanco sobre el gradiente */
+  z-index: 2;
+  box-sizing: border-box;
 }
 
 .proj__carrusel-card__info > h2 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.5rem; /* Un poco más grande y claro */
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em; /* Toque minimalista técnico */
   font-family: "Montserrat", sans-serif;
 }
 
 .proj__carrusel-card__info > p {
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  margin-top: 0.8rem;
+  opacity: 0.9;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* ---- Responsividad Automática (Media Queries) ---- */
+@media (max-width: 1024px) {
+  .proj__carrusel-card {
+    /* Mostramos 2 cards en tablets */
+    flex: 0 0 calc(50% - 10px); 
+    height: 500px;
+  }
+}
+
+@media (max-width: 650px) {
+  .proj__carrusel-card {
+    /* Mostramos 1 card casi completa en móviles */
+    flex: 0 0 85%; 
+    height: 450px;
+  }
+  .proj__container { padding: 10px; }
 }
 
 /* Layout + style of modal content */
+/* --- Contenedor Principal (Grid) --- */
 .grid-cont-mod {
   display: grid;
   grid-template-areas: 
@@ -77,50 +140,153 @@
     "colum-fr colum-sc"
     "concl concl";
   grid-template-columns: 1fr 1fr;
-  padding: 28px;
+  padding: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 30px;
 }
 
-.proj__card-grid-gap {
-  gap: 20px;
-}
-
+/* --- Estilos de Secciones --- */
 .modal-secs {
-  background-color: rgb(245, 245, 247);
+  background-color: var(--bg-section);
   border-radius: var(--border-radius-cards);
-  padding: 28px;
+  padding: 32px;
+  transition: var(--transition);
+  border: 1px solid transparent;
 }
 
-.modal-header > span {
-  color: var(--brand-2-btn);
-  font-weight: 400;
-}
-
-.modal-header > h2 {
-  line-height: 1.2;
-  font-family: "Montserrat", sans-serif;
-} 
-
+/* --- Tipografía y Títulos --- */
 .modal-header {
   grid-area: header;
-  margin-bottom: 18px;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 20px;
 }
 
-.modal-intr {
-  grid-area: Intro;
+.modal-header span {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+  color: var(--brand-2);
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
-.modal-col-fr {
-  grid-area: colum-fr;
+.modal-header h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+  line-height: 1.1;
 }
 
-.modal-col-sc {
-  grid-area: colum-sc;
+p {
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
 }
 
-.modal-concl {
+/* --- Imágenes y Figuras --- */
+figure {
+  margin: 24px 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  /* Filtro sutil para que las imágenes no desentonen con el minimalismo */
+  filter: grayscale(10%) contrast(105%);
+  transition: var(--transition);
+}
+
+figure:hover img {
+  filter: grayscale(0%) scale(1.02);
+}
+
+.img__caption {
+  padding: 12px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: center;
+  font-style: italic;
+  background: #fff;
+}
+
+/* --- Listas --- */
+.modal__list-robot {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.modal__list-robot li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e2e2e2;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.modal__list-robot li::before {
+  content: "— ";
+  color: var(--text-main);
+}
+
+/* --- Áreas Específicas --- */
+.modal-intr { grid-area: Intro; }
+.modal-col-fr { grid-area: colum-fr; }
+.modal-col-sc { grid-area: colum-sc; }
+.modal-concl { 
   grid-area: concl;
+  background-color: var(--text-main); /* Contraste final tipo Tesla */
+}
+
+.modal-concl h3, .modal-concl p {
+  color: #ffffff;
+}
+
+/* --- Responsive (Mobile First) --- */
+@media (max-width: 850px) {
+  .grid-cont-mod {
+    grid-template-areas: 
+      "header"
+      "Intro"
+      "colum-fr"
+      "colum-sc"
+      "concl";
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* --- Botón Cerrar (Sutil) --- */
+.btn-cont-clos {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-main);
+  opacity: 0.5;
+  transition: var(--transition);
+}
+
+#close:hover {
+  opacity: 1;
 }
 
 /* Carrusel Controls */
@@ -147,105 +313,4 @@
 
 .proj__controls button:hover {
   background: #444;
-}
-
-/* ==== Overlay + Modal ==== */
-.overlay {
-  position: fixed;
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  z-index: 1000;
-  /* Inicialmente oculto */
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  overflow: auto;
-}
-
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.modal {
-  background: white; /* tono beige/rosa claro */
-  color: var(--bg); /* Font color */
-  padding: 2rem;
-  border-radius: var(--border-radius-cards);
-  width: 846px;
-  overflow: auto;
-  position: relative;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-  transform: scale(0.7) translateY(-50px);
-  transition: all 0.3s ease;
-  /* Limita la altura del contenido a un porcentaje de la ventana */
-  overflow-y: auto; /* Permite el scroll vertical si el contenido excede la altura */
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.overlay.active .modal {
-  transform: scale(1) translateY(0);
-}
-
-.modal-content {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-.m-cat-span {
-  color: var(--muted);
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-}
-
-.modal-content h2 {
-  margin-top: 0;
-  font-family: "Montserrat", sans-serif;
-}
-
-/* Botón cerrar modal */
-#close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: black;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-#close:hover {
-  transform: rotate(90deg);
-}
-
-.content-section {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-/* Modal: Robot */
-.modal__list-robot{
-  list-style-position: inside;
-  padding-left: 8px;
-}
-
-.img__caption{
-  text-align: center;
-  font-style: italic;
-  font-size: 9px;
 }

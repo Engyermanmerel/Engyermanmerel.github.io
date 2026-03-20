@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* --- Variables de Diseño Tesla-inspired --- */
 :root{
   --bg:#0b0f1a;         /* negro azulado */
   --ink:#e6e9ef;        /* texto principal */
@@ -13,6 +14,11 @@
   --card:#0f1422;       /* fondo tarjetas */
   --line:#1e2638;       /* bordes sutiles */
   --brand-2-btn:#0f4ccfa6;    /* azul acento para btn */
+  --accent: #393c41;
+  --bg-modal: #ffffff;
+  --bg-section: #f4f4f4; /* Gris ultra claro */
+  --text-main: #171a20;   /* El negro característico de Tesla */
+  --text-secondary: #5c5e62;
   --success:#21c07a;
   --warn:#ffb020;
   --danger:#ef476f;
@@ -22,6 +28,7 @@
   /* Escala para calculos responsive */
   --fluid-min-width: 320px;
   --fluid-max-width: 1200px;
+  --transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 html,body{
@@ -37,6 +44,7 @@ html,body{
   font-size: 12px;
   font-family: var(--font-secundary);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* REUSABLE COMPONENT OF STYLE */
@@ -47,7 +55,7 @@ h1{
 }
 
 a{
-  color:var(--ink);
+  color:var(--brand-2-btn);
   text-decoration:none
 }
 
@@ -190,6 +198,123 @@ h3{
 
 .close_icon:hover {
   transform: rotate(90deg);
+}
+
+/* ==========================================
+   SISTEMA DE MODALES GLOBAL (OPTIMIZADO)
+========================================== */
+
+:root {
+  --modal-bg: rgba(0, 0, 0, 0.75);
+  --modal-content-bg: #ffffff;
+  --modal-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --modal-z-index: 10000;
+}
+
+/* 1. Contenedor Principal (Overlay) */
+.modal {
+  position: fixed;
+  inset: 0; /* Simplifica top, left, width, height */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); /* Soporte Safari */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  z-index: var(--modal-z-index);
+  
+  /* Gestión de visibilidad para permitir animaciones */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* Evita clics cuando está oculto */
+  transition: opacity var(--modal-transition), 
+              visibility var(--modal-transition);
+}
+
+/* 2. Clase de Activación */
+.modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* 3. Caja de Contenido */
+.modal__content {
+  background: var(--modal-content-bg);
+  width: 92%;
+  max-width: 800px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  color: var(--bg);
+  max-height: 90vh; /* Evita que el modal sea más alto que la pantalla */
+  overflow-y: auto; /* Scroll interno si el contenido es largo */
+  padding: 3rem 3rem;
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  
+  /* Animación de entrada: Escalado + Desplazamiento */
+  transform: scale(0.9) translateY(30px);
+  transition: transform var(--modal-transition);
+}
+
+/* Animación cuando el modal se abre */
+
+/* Clase que activa el JS */
+.modal.is-open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.modal.is-open .modal__content {
+  transform: scale(1) translateY(0);
+}
+
+/* 4. Botón de Cierre Estandarizado */
+[data-modal-close] {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: #f4f4f4;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+[data-modal-close]:hover {
+  background: #e0e0e0;
+  transform: rotate(90deg);
+}
+
+/* 5. Ajustes para Mobile (Pantallas pequeñas) */
+@media (max-width: 480px) {
+  .modal__content {
+    width: 75%;
+    padding: 2rem 1rem;
+    margin: 10px;
+    border-radius: 20px; /* Bordes más suaves en móvil */
+  }
+  
+  [data-modal-close] {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
+
+/* 6. Utilidad para bloquear scroll (Clase aplicada al body) */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
 
 

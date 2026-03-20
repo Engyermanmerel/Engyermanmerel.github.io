@@ -1,88 +1,121 @@
 /* ===================================
    SKILL SECTION
-   =================================== */
+=================================== */
 
 .skills__visual-container {
   position: relative;
   width: 100%;
   max-width: 1000px;
-  margin: 0 auto;
+  margin-inline: auto;
   border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+  isolation: isolate; /* evita conflictos de z-index */
 }
 
 .skills__diagram {
   width: 100%;
   display: block;
-  filter: brightness(0.8); /* Oscurecemos un poco para que resalten los botones */
-  transition: filter 0.3s ease;
+  padding: 35px;
+  filter: brightness(0.85);
+  transition: filter 0.4s ease;
 }
 
 .skills__visual-container:hover .skills__diagram {
   filter: brightness(1);
 }
 
-/* Estilo de los Hotspots (Botones con pulso) */
+/* ===================================
+   HOTSPOTS
+=================================== */
+
 .hotspot {
   position: absolute;
-  background: #0f4ccf;
-  color: white;
-  border: none;
-  width: clamp(36px, 4vw, 48px);
-  height: clamp(36px, 4vw, 48px);
+  display: grid;
+  place-items: center;
+
+  width: clamp(38px, 4vw, 50px);
+  height: clamp(38px, 4vw, 50px);
+
   border-radius: 50%;
+  border: none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  background: linear-gradient(135deg, #0f4ccf, #002e94);
+  color: #fff;
+
+  box-shadow:
+    0 8px 20px rgba(15, 76, 207, 0.4),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+
+  transition:
+    transform 0.35s cubic-bezier(.22,1,.36,1),
+    box-shadow 0.35s ease;
+
   z-index: 10;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .hotspot:hover {
-  transform: scale(1.2);
-  background: #002e94;
+  transform: scale(1.15);
+  box-shadow:
+    0 12px 28px rgba(15, 76, 207, 0.6),
+    inset 0 1px 0 rgba(255,255,255,0.4);
 }
 
-/* Animación de pulso técnica */
+/* Pulso optimizado */
 .hotspot__pulse {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   border-radius: 50%;
-  background: rgba(15, 76, 207, 0.5);
-  animation: pulse 2s infinite;
+  background: rgba(15, 76, 207, 0.4);
+  animation: pulse 2.2s infinite ease-out;
   z-index: -1;
+  pointer-events: none;
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  100% { transform: scale(2.5); opacity: 0; }
+  0%   { transform: scale(1); opacity: 1; }
+  70%  { opacity: 0.4; }
+  100% { transform: scale(2.3); opacity: 0; }
 }
 
-/* Posicionamiento lógico (Ajusta estos % según tu imagen) */
+/* Posicionamiento */
 .hotspot--1 { top: 28%; left: 12%; }
 .hotspot--2 { top: 50%; left: 60%; }
 .hotspot--3 { top: 64%; right: 12%; }
 
-/* Etiqueta flotante del botón */
+/* ===================================
+   LABEL
+=================================== */
+
 .hotspot__label {
   position: absolute;
-  top: 110%;
-  background: rgba(0,0,0,0.7);
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: 10px;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 6px 12px;
+  border-radius: 8px;
+
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(6px);
+
+  font-size: 11px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   white-space: nowrap;
+
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease;
 }
 
 .hotspot:hover .hotspot__label {
   opacity: 1;
 }
+
+/* ===================================
+   GRID AUXILIAR
+=================================== */
 
 .grid-cont-mod {
   display: grid;
@@ -91,71 +124,134 @@
   padding: 40px;
 }
 
-/* ================= SKILLS MODAL SYSTEM ================= */
+/* ---- Modal ---- */
+/* --- Variables de Diseño Tesla-inspired --- */
+:root {
+  --bg-modal: #ffffff;          /* Fondo blanco puro */
+  --bg-body-dark: #171a20;      /* El negro característico de Tesla */
+  --text-main: #171a20;
+  --text-secondary: #5c5e62;   /* Gris para descripciones */
+  --text-on-dark: #ffffff;
+  --border-radius: 8px;         /* Bordes suaves pero definidos */
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --line-color: #e2e2e2;
+  --mono-font: 'Roboto Mono', monospace; /* Para detalles técnicos */
+}
 
-.skills-modal {
-  position: fixed;
-  inset: 0;
+/* --- Estilos Base del Modal --- */
+
+/* --- Estructura Interna (Industrial-Minimalista) --- */
+.modal-stage-header {
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--line-color);
+  padding-bottom: 25px;
+}
+
+.stage-label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal__content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* --- Grid de Habilidades --- */
+.modal-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.skill-category {
+  margin-bottom: 30px;
+}
+
+.skill-category-title {
   display: flex;
-  justify-content: center;
   align-items: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s ease;
-  z-index: 2000;
+  margin-bottom: 15px;
 }
 
-.skills-modal.is-open {
-  opacity: 1;
-  visibility: visible;
+.skill-category-title h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0;
 }
 
-.skills-modal__overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(5px);
+/* El punto técnico de Tesla */
+.skill-category-title::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #171a20; /* Negro o un acento si prefieres */
+  border-radius: 50%;
+  margin-right: 12px;
 }
 
-.skills-modal__content {
+/* Lista de Habilidades Mono-espaciada */
+.modal__content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal__content li {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
   position: relative;
-  background: #111;
-  color: #fff;
-  width: 90%;
-  max-width: 520px;
-  padding: 40px;
-  border-radius: 18px;
-  z-index: 10;
-  transform: translateY(50px);
-  transition: 0.3s ease;
+  padding-left: 18px;
 }
 
-.skills-modal.is-open .skills-modal__content {
-  transform: translateY(0);
-}
-
-.skills-modal__close {
+.modal__content li::before {
+  content: '>'; /* Símbolo técnico */
   position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
+  left: 0;
+  color: #171a20;
+  font-weight: bold;
 }
 
-.skills-modal__close:hover {
-  opacity: 0.7;
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+  .modal__content {
+    padding: 30px;
+  }
+  .modal__content h3 {
+    font-size: 1.8rem;
+  }
+  .modal-skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
-.skills-modal__list {
-  margin-top: 25px;
-  padding-left: 20px;
-}
 
-.skills-modal__list li {
-  margin-bottom: 12px;
-  font-weight: 300;
-  letter-spacing: 0.5px;
+/* ===================================
+   MOBILE OPTIMIZATION
+=================================== */
+
+@media (max-width: 768px) {
+
+  .skills__visual-container {
+    border-radius: 20px;
+  }
+
+  .hotspot__label {
+    display: none; /* evita saturación visual en móvil */
+  }
 }

@@ -1,56 +1,165 @@
-<section id="education" class="section_normal">
-    <div class="container fl-ly-sect">
+<section id="education" class="education" aria-labelledby="edu-heading">
+    <div class="container">
         <header class="ti-sect ti-sect--right">
             <span class="section-span">Education</span>
-            <h2>Academic</h2>
+            <h2 id="edu-heading" class="section-header__title">Academic Background</h2>
         </header>
 
-        <div class="grid edu-temp-grid">
-            <div class="card utp">
-                <div class="edu-card-grid">
-                    <div class="edu-card-log">
-                    <img src="./assets/Logo/UTP.png" class="utp-logo" alt="Technology University of Panama">
-                    </div>
-                    <!-- content item -->
-                    <div class="edu-card-cont">
-                    <strong>Bachelor of Science (B.Sc.), Mechanical Engineering</strong>
-                    <div class="muted">Technology University of Panama</div>
-                    <p class="muted"><em>With a minor in Dynamic Systems and Automation.</em></p>
-                    </div>
-                    <!-- Date -->
-                    <div class="edu-card-date">
-                    <p>Jan 2018 - Dec 2024</p>
-                    </div>
+        <div class="education__grid">
+            <div class="container">
+                
+                <!-- Category Filters -->
+                <div class="blog__filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="utp">UTP</button>
+                    <button class="filter-btn" data-filter="Herrenknecht">Herrenknecht AG</button>
+                    <button class="filter-btn" data-filter="anthropic">Anthropic Academy</button>
+                    <button class="filter-btn" data-filter="platzi">Platzi</button>
+                </div>
+
+                <!-- Blog Grid -->
+                <div class="blog__grid">
+                    <!-- Card 1 -->
+                    <article class="blog-card" data-category="utp">
+                        <div class="blog-card__image">
+                            <img src="/assets/Certificacion/B_Sc_Mechanical-Engineering.png" alt="Workflow Optimization">
+                        </div>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">Bachelor of Science in Mechanical Engineering</h3>
+                            <p class="blog-card__excerpt">An intensive program focused on the principles of energy, materials, and mechanics to design and manufacture complex systems, ranging from micro-scale devices to large industrial machinery.</p>
+                            <div class="blog-card__meta">
+                                <div class="blog-card__author">
+                                    <img src="/assets/Logo/UTP.png" alt="UTP" class="author-avatar">
+                                    <span class="author-name">Universidad Tecnológica de Panamá</span>
+                                </div>
+                                <span class="read-time">Academic Degree</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="blog-card" data-category="utp">
+                        <div class="blog-card__image">
+                            <img src="/assets/Certificacion/Design_Course-utp.png" alt="Project Documentation">
+                        </div>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">Design of Hydrosanitary Systems, LPG Gas, and Fire Suppression Networks</h3>
+                            <p class="blog-card__excerpt">Technical certification focused on the design and implementation of critical building systems, including plumbing, LPG gas distribution, and fire safety infrastructure according to engineering standards.</p>
+                            <div class="blog-card__meta">
+                                <div class="blog-card__author">
+                                    <img src="/assets/Logo/UTP.png" alt="Yerman Merel" class="author-avatar">
+                                    <span class="author-name">Universidad Tecnológica de Panamá</span>
+                                </div>
+                                <span class="read-time">20 Hours • UTP</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="blog-card" data-category="Herrenknecht">
+                        <div class="blog-card__image">
+                            <img src="/assets/Certificacion/Training_Course_by_HK.png" alt="Stakeholder Management">
+                            <div class="blog-card__overlay">
+                                <button class="blog-card__cta">Open Blog →</button>
+                            </div>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">TBM Fluid Technology: Hydraulic Fundamentals</h3>
+                            <p class="blog-card__excerpt">Advanced technical training by Herrenknecht AG covering the core principles of hydraulic systems and fluid technology specifically applied to Tunnel Boring Machines (TBM).</p>
+                            <div class="blog-card__meta">
+                                <div class="blog-card__author">
+                                    <img src="/assets/Logo/Herrenknecht_logo.svg.png" alt="Herrenknecht AG" class="author-avatar">
+                                    <span class="author-name">Herrenknecht AG</span>
+                                </div>
+                                <span class="read-time">Herrenknecht AG</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="blog-card" data-category="anthropic">
+                        <div class="blog-card__image">
+                            <img src="/assets/Certificacion/Claude_101.png" alt="Claude 101">
+                            <div class="blog-card__overlay">
+                                <button class="blog-card__cta">Open Blog →</button>
+                            </div>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">Claude 101: Artificial Intelligence Fundamentals</h3>
+                            <p class="blog-card__excerpt">Official certification by Anthropic covering the fundamentals of Claude AI, including prompt engineering, model capabilities, and ethical AI implementation for complex problem-solving.</p>
+                            <div class="blog-card__meta">
+                                <div class="blog-card__author">
+                                    <img src="/assets/Logo/Anthropic.png" alt="Anthropic AI" class="author-avatar">
+                                    <span class="author-name">Anthropic AI</span>
+                                </div>
+                                <span class="read-time">Anthropic Certified</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="blog-card" data-category="platzi">
+                        <div class="blog-card__image">
+                            <img src="/assets/Certificacion/JS-Asincrono-Platzi.png" alt="Stakeholder Management">
+                            <div class="blog-card__overlay">
+                                <button class="blog-card__cta">Open Blog →</button>
+                            </div>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">Asynchronism in JavaScript</h3>
+                            <p class="blog-card__excerpt">Mastery of asynchronous programming patterns in JS, including Callbacks, Promises, and Async/Await to manage concurrent operations and API data fetching efficiently.</p>
+                            <div class="blog-card__meta">
+                                <div class="blog-card__author">
+                                    <img src="/assets/Logo/Platzi_Logo.png" alt="Yerman Merel" class="author-avatar">
+                                    <span class="author-name">Platzi</span>
+                                </div>
+                                <span class="read-time">7 Hours • Platzi</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="blog-card" data-category="platzi">
+                        <div class="blog-card__image">
+                            <img src="/assets/Certificacion/Node-JS.png" alt="Stakeholder Management">
+                            <div class="blog-card__overlay">
+                                <button class="blog-card__cta">Open Blog →</button>
+                            </div>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">Backend with Node.js: REST API with Express.js</h3>
+                            <p class="blog-card__excerpt">Development of scalable backend applications using Node.js and Express. Construction of RESTful APIs, middleware implementation, and database integration.</p>
+                            <div class="blog-card__meta">
+                                <div class="blog-card__author">
+                                    <img src="/assets/Logo/Platzi_Logo.png" alt="Yerman Merel" class="author-avatar">
+                                    <span class="author-name">Platzi</span>
+                                </div>
+                                <span class="read-time">15 Hours • Platzi</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 7 -->
+                     <article class="blog-card" data-category="platzi">
+                        <div class="blog-card__image">
+                            <img src="/assets/Certificacion/React-JS.png" alt="Stakeholder Management">
+                            <div class="blog-card__overlay">
+                                <button class="blog-card__cta">Open Blog →</button>
+                            </div>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">Practical Course of React.js</h3>
+                            <p class="blog-card__excerpt">Hands-on experience building modern user interfaces with React.js, focusing on component-based architecture, hooks, and state management for web applications.</p>
+                            <div class="blog-card__meta">
+                                <div class="blog-card__author">
+                                    <img src="/assets/Logo/Platzi_Logo.png" alt="Yerman Merel" class="author-avatar">
+                                    <span class="author-name">Platzi</span>
+                                </div>
+                                <span class="read-time">19 Hours • Platzi</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-            
-            <!-- L&T EduTech -->
-            <div class="card utp">
-                <div class="edu-card-grid">
-                    <div class="edu-card-log">
-                    <img src="./assets/Logo/L_and_T_EduTech.png" class="utp-logo" alt="L&T EduTech">
-                    </div>
-                    <!-- content item -->
-                    <div class="edu-card-cont">
-                    <strong>Specialization: Design of Industrial Piping Systems</strong>
-                    <div class="muted">L&T EduTech</div>
-                    <div class="edu-card-cont-ach">
-                        <p class="muted">
-                        <em>
-                            Design the piping system to comply with global codes standards, 
-                            Stress analysis using industry-accepted stress analysis software, 
-                            Modify the pipe routing along with supports, Material specification sheet, 
-                            Optimization of pipe routing.
-                        </em>
-                        </p>
-                    </div>
-                    </div>
-                    <!-- Date -->
-                    <div class="edu-card-date">
-                    <p>Expected - Dec 2026</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>

@@ -1,81 +1,170 @@
-<section id="skills" class="section_normal">
-    <div class="container">
-        <header class="ti-sect ti-sect--left">
-            <span class="section-span">Engineering Stack</span>
-            <h2>Product Development Lifecycle</h2>
-        </header>
+<section id="skills-section" class="section_normal">
+  <div class="container">
+    <header class="ti-sect ti-sect--left">
+      <span class="section-span">Engineering Stack</span>
+      <h2>Product Development Lifecycle</h2>
+    </header>
 
-        <div class="skills__visual-container">
-            <img src="./assets/Background_Home_Page/Skill_Resource/Redesign of Skill Section - Normal Status.png" 
-                alt="Product Development Lifecycle Diagram" 
-                class="skills__diagram">
+    <div class="skills__visual-container">
+      <img 
+        src="./assets/Background_Home_Page/Skill_Resource/Redesign of Skill Section - Normal Status.png"
+        alt="Product Development Lifecycle Diagram"
+        class="skills__diagram"
+        loading="lazy"
+      >
 
-            <div class="skills__hotspots">
-            <button class="hotspot hotspot--1" data-skills-modal="skills-modal-concept">
-                <span class="hotspot__pulse"></span>
-                <span class="material-icons">add</span>
-                <span class="hotspot__label">Concept</span>
-            </button>
+      <div class="skills__hotspots">
+        <button class="hotspot hotspot--1" data-modal-open="concept-modal" type="button">
+          <span class="hotspot__pulse"></span>
+          <span class="material-icons" aria-hidden="true">add</span>
+          <span class="hotspot__label">Concept</span>
+        </button>
 
-            <button class="hotspot hotspot--2" data-skills-modal="skills-modal-development">
-                <span class="hotspot__pulse"></span>
-                <span class="material-icons">add</span>
-                <span class="hotspot__label">Development</span>
-            </button>
+        <button class="hotspot hotspot--2" data-modal-open="development-modal" type="button">
+          <span class="hotspot__pulse"></span>
+          <span class="material-icons" aria-hidden="true">add</span>
+          <span class="hotspot__label">Development</span>
+        </button>
 
-            <button class="hotspot hotspot--3" data-skills-modal="skills-modal-realization">
-                <span class="hotspot__pulse"></span>
-                <span class="material-icons">add</span>
-                <span class="hotspot__label">Realization</span>
-            </button>
-            </div>
-        </div>
+        <button class="hotspot hotspot--3" data-modal-open="realization-modal" type="button">
+          <span class="hotspot__pulse"></span>
+          <span class="material-icons" aria-hidden="true">add</span>
+          <span class="hotspot__label">Realization</span>
+        </button>
+      </div>
     </div>
+  </div>
+
+  <!-- Modales -->
+<div id="concept-modal" class="modal" aria-hidden="true">
+  <div class="modal__content" tabindex="-1">
+  
+    <button class="modal__close-btn" data-modal-close aria-label="Cerrar modal">
+      &times;
+    </button>
+
+    <div class="modal__body">
+      <header class="modal-stage-header">
+        <span class="stage-label">Stage 01</span>
+        <h3>Conceptual & System Design</h3>
+      </header>
+
+      <div class="modal-skills-grid">
+        <section class="skill-category">
+          <header class="skill-category-title">
+            <h4>Systems Engineering Foundations</h4>
+          </header>
+          <ul>
+            <li>Requirements Traceability (PRD to SYRS)</li>
+            <li>System Architecture Design (Functional & Physical)</li>
+            <li>Functional Decomposition & Flow Block Diagrams</li>
+            <li>Interference & Interface Management</li>
+            <li>Safety and Reliability Goal Setting</li>
+          </ul>
+        </section>
+
+        <section class="skill-category">
+          <header class="skill-category-title">
+            <h4>Concept Selection & Analysis</h4>
+          </header>
+          <ul>
+            <li>Brainstorming & Pugh Matrix Evaluation</li>
+            <li>First-Order Calculations & Hand Specs</li>
+            <li>Material Selection (Fundamental Properties)</li>
+            <li>Initial Design FMEA (DFMEA)</li>
+            <li>Trade-off Analysis for System Parameters</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="development-modal" class="modal" aria-hidden="true">
+  <div class="modal__content" tabindex="-1">
+  
+    <button class="modal__close-btn" data-modal-close aria-label="Cerrar modal">
+      &times;
+    </button>
+
+    <div class="modal__body">
+      <header class="modal-stage-header">
+        <span class="stage-label">Stage 02</span>
+        <h3>Detailed Design & Prototyping</h3>
+      </header>
+
+      <div class="modal-skills-grid">
+        <section class="skill-category">
+          <header class="skill-category-title">
+            <h4>Advanced 3D CAD Modeling</h4>
+          </header>
+          <ul>
+            <li>Parametric & Assembly Modeling (Top-Down Design)</li>
+            <li>Design Rational Documentation</li>
+            <li>Subsystem Design Integration</li>
+            <li>Advanced Tolerance / Stack-up Analysis</li>
+            <li>GD&T Application (ASME Y14.5 / ISO)</li>
+          </ul>
+        </section>
+
+        <section class="skill-category">
+          <header class="skill-category-title">
+            <h4>Simulation & Optimization</h4>
+          </header>
+          <ul>
+            <li>Finite Element Analysis (FEA - Static & Thermal)</li>
+            <li>Computational Fluid Dynamics (CFD - Initial)</li>
+            <li>Multi-Body Dynamics (MBD)</li>
+            <li>Subsystem Verification Testing Plans</li>
+            <li>Numerical optimization of system parameters</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="realization-modal" class="modal" aria-hidden="true">
+  <div class="modal__content" tabindex="-1">
+  
+    <button class="modal__close-btn" data-modal-close aria-label="Cerrar modal">
+      &times;
+    </button>
+
+    <div class="modal__body">
+      <header class="modal-stage-header">
+        <span class="stage-label">Stage 03</span>
+        <h3>Manufacturing & Realization</h3>
+      </header>
+
+      <div class="modal-skills-grid">
+        <section class="skill-category">
+          <header class="skill-category-title">
+            <h4>Design for Manufacturing & Sustenance</h4>
+          </header>
+          <ul>
+            <li>DFMA / PFMEA Execution</li>
+            <li>Material Specification & Procurement Sheet (BOM)</li>
+            <li>Critical-to-Quality (CTQ) Parameter Identification</li>
+            <li>Change Control & File Storage Management</li>
+            <li>Risk-Based Product Support Planning</li>
+          </ul>
+        </section>
+
+        <section class="skill-category">
+          <header class="skill-category-title">
+            <h4>Verification & Product Launch</h4>
+          </header>
+          <ul>
+            <li>Verification/Validation Testing (DVP&R)</li>
+            <li>Root Cause Analysis (RCA - 8D/5 Whys)</li>
+            <li>Transfer to Manufacturing Documentation</li>
+            <li>Rational for inspection dimensions</li>
+            <li>Human Factor & Ergonomics Studies</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
-
-<!-- ================= SKILLS MODALS ================= -->
-
-<!-- Concept -->
-<div class="skills-modal" id="skills-modal-concept">
-  <div class="skills-modal__overlay" data-skills-close></div>
-  <div class="skills-modal__content">
-    <button class="skills-modal__close" data-skills-close>&times;</button>
-    <h3>Concept Phase</h3>
-    <ul class="skills-modal__list">
-      <li>Market Research</li>
-      <li>Problem Definition</li>
-      <li>Feasibility Analysis</li>
-      <li>System Architecture</li>
-    </ul>
-  </div>
-</div>
-
-<!-- Development -->
-<div class="skills-modal" id="skills-modal-development">
-  <div class="skills-modal__overlay" data-skills-close></div>
-  <div class="skills-modal__content">
-    <button class="skills-modal__close" data-skills-close>&times;</button>
-    <h3>Development Phase</h3>
-    <ul class="skills-modal__list">
-      <li>CAD Modeling</li>
-      <li>Prototyping</li>
-      <li>Simulation & Testing</li>
-      <li>Optimization</li>
-    </ul>
-  </div>
-</div>
-
-<!-- Realization -->
-<div class="skills-modal" id="skills-modal-realization">
-  <div class="skills-modal__overlay" data-skills-close></div>
-  <div class="skills-modal__content">
-    <button class="skills-modal__close" data-skills-close>&times;</button>
-    <h3>Realization Phase</h3>
-    <ul class="skills-modal__list">
-      <li>Manufacturing Planning</li>
-      <li>Supply Chain</li>
-      <li>Quality Control</li>
-      <li>Deployment</li>
-    </ul>
-  </div>
-</div>

@@ -1,33 +1,315 @@
-/* Education */
-.edu-card-grid {
-  display: grid;
-  grid-template-areas:
-    "logo"
-    "content";
-  grid-template-columns: 1fr 5fr 2fr; 
+/* Variables de diseño - Personaliza aquí tus colores */
+:root {
+    --primary-color: #0055a4; /* Azul UTP */
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --border-color: #f1f2f6;
+    --transition: all 0.3s ease;
 }
 
-.edu-card-log {
-  width: 50%; /* Ocupa la mitad del ancho del padre */
-  max-width: 400px; /* Pero nunca más de 600px */
-  margin: 0 auto; /* Centrar el contenedor */
-} 
-
-.utp-logo {
-  max-width: 100%; /* La imagen nunca excede el ancho del contenedor */
-  height: auto; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#education {
+    padding: 80px 0;
 }
 
-.edu-card-cont {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* Filters */
+.blog__filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
 }
 
-.edu-card-date {
-  display: flex;
-  justify-content: end;
+.filter-btn {
+    padding: 10px 24px;
+    border: 1px solid #e0e0e0;
+    border-radius: 24px;
+    background: #fff;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: #1a1a1a;
+    color: #1a1a1a;
+}
+
+.filter-btn.active {
+    background: #1a1a1a;
+    color: #fff;
+    border-color: #1a1a1a;
+}
+
+/* Blog Grid */
+.blog__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin: 0 auto;
+}
+
+/* Blog Card */
+.blog-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.blog-card__image {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.blog-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-card__image img {
+    transform: scale(1.05);
+}
+
+/* Overlay for CTA */
+.blog-card__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.blog-card:hover .blog-card__overlay {
+    opacity: 1;
+}
+
+.blog-card__cta {
+    background: #fff;
+    color: #1a1a1a;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s ease;
+}
+
+.blog-card__cta:hover {
+    transform: scale(1.05);
+}
+
+/* Card Content */
+.blog-card__content {
+    padding: 24px;
+}
+
+.blog-card__title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.blog-card__excerpt {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Meta Info */
+.blog-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.blog-card__author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-name {
+    font-size: 0.85rem;
+    color: #444;
+    font-weight: 500;
+}
+
+.read-time {
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 500;
+}
+
+/* Contenedor de la cuadrícula */
+.education__grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 992px) {
+    .education__grid {
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+}
+
+/* Tarjeta Estilo Minimalista */
+.education__card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.education__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-color: var(--primary-color);
+}
+
+/* Layout interno de la tarjeta */
+.education__content-wrapper {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* Contenedor del Logo */
+.education__logo-container {
+    margin: 0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.education__logo {
+    max-width: 100%;
+    filter: grayscale(20%);
+    transition: var(--transition);
+}
+
+.education__card:hover .education__logo {
+    filter: grayscale(0%);
+}
+
+/* Tipografía */
+.education__title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+}
+
+.education__institution {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.education__specialization {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Detalles y Listas */
+.education__details {
+    margin-top: 1rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.education__list {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.education__list li {
+    margin-bottom: 0.4rem;
+}
+
+/* Badge de Fecha */
+.education__date {
+    grid-column: 1 / -1; /* Ocupa todo el ancho abajo */
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Modificador para destacar Herrenknecht (opcional) */
+.education__card--highlight {
+    border-left: 4px solid var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .blog__grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .blog__filters {
+        gap: 8px;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
 }

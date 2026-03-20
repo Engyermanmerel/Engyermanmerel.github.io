@@ -5,6 +5,8 @@ async function loadFooter() {
     
     // Aquí puedes inicializar eventos de esta sección
     console.log(`Hola, el Footer se ha cargado.`);
+
+    document.getElementById('year').textContent = new Date().getFullYear(); 
 }
 
 loadFooter();

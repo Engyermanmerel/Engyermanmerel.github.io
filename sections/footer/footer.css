@@ -1,147 +1,51 @@
-/* Footer */
 .footer {
-  width: 100%;
-  background: #0b0f19; /* Dark premium tone */
-  padding: 3rem 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  font-family: "Poppins", sans-serif;
+    padding: 24px 0;
+    width: 100%;
+    background-color: transparent; /* O el color de tu fondo */
 }
 
-.footer_container_sect {
-  max-width: 1200px;
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 2rem;
-
-  align-items: center;
+.footer_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* ================================
-   FOOTER LOGO
-================================ */
-
-.footer_logo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+/* Estilo para los textos y enlaces */
+.footer_legal, .footer_nav {
+    display: flex;
+    gap: 15px;
+    color: #5c5e62; /* Gris sutil estilo Tesla */
+    font-size: 12px;
+    font-weight: 500;
 }
 
-.footer_logo img {
-  width: 58px;
-  height: auto;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.footer_nav a {
+    text-decoration: none;
+    color: #5c5e62;
+    transition: color 0.3s ease;
 }
 
-.footer_logo img:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-/* ================================
-   FOOTER CONTENT
-================================ */
-
-.footer_cont {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.footer_cont p {
-  margin: 0.35rem 0;
-}
-
-.footer_cont strong {
-  color: #ffffff;
-  font-weight: 600;
+.footer_nav a:hover {
+    color: var(--brand-2); /* Color más oscuro al hacer hover */
 }
 
 .footer_version {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.55);
-  margin-top: 0.7rem;
+    color: #a2a3a5; /* Un poco más claro para la versión */
 }
 
-/* ================================
-   FOOTER SOCIAL LINKS
-================================ */
-
-.footer_list_socialmedia {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1.2rem;
-}
-
-.footer_list_socialmedia a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.95rem;
-  font-weight: 500;
-
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-/* Underline animation */
-.footer_list_socialmedia a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, #00c6ff, #7f00ff);
-  transition: width 0.3s ease;
-  border-radius: 10px;
-}
-
-.footer_list_socialmedia a:hover {
-  color: #ffffff;
-}
-
-.footer_list_socialmedia a:hover::after {
-  width: 100%;
-}
-
-/* ================================
-   RESPONSIVE DESIGN
-================================ */
-
-@media (max-width: 900px) {
-  .footer_container_sect {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .footer_logo {
-    justify-content: center;
-  }
-
-  .footer_list_socialmedia {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer {
-    padding: 2.5rem 1.2rem;
-  }
-
-  .footer_logo img {
-    width: 75px;
-  }
-
-  .footer_cont {
-    font-size: 0.9rem;
-  }
-
-  .footer_list_socialmedia {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
+/* Responsive: En móviles se apilan ligeramente */
+@media (max-width: 600px) {
+    .footer_container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .hide-mobile {
+        display: none; /* Oculta info extra en móviles para limpieza */
+    }
 }
