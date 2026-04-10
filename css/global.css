@@ -70,7 +70,7 @@ img{
   margin: 0 auto;
   box-sizing: border-box;
   width: 100%;
-  padding: 0 5vw; /* Margen interno lateral que crece con la pantalla */
+  padding: 0 2vw; /* Margen interno lateral que crece con la pantalla */
 }
 
 .grid{

@@ -1,0 +1,252 @@
+/* Sección Laboratorio - Namespaced completo */
+#lab-section.lab-engineering-section {
+    padding: 80px 0;
+}
+
+#lab-section .lab-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Header específico */
+
+/* Grid específico */
+#lab-section .lab-projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+/* Tarjetas específicas */
+#lab-section .lab-project-item {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 32px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+#lab-section .lab-project-item:hover {
+    border-color: #2563eb;
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+}
+
+/* Estados por atributo data específico */
+#lab-section .lab-project-item[data-lab-status="design"] {
+    border-left: 4px solid #737373;
+}
+
+#lab-section .lab-project-item[data-lab-status="prototyping"] {
+    border-left: 4px solid #d97706;
+}
+
+#lab-section .lab-project-item[data-lab-status="testing"] {
+    border-left: 4px solid #059669;
+}
+
+/* Header de tarjeta */
+#lab-section .lab-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+#lab-section .lab-status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'SF Mono', Monaco, monospace;
+    font-weight: 600;
+}
+
+#lab-section .lab-pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
+    position: relative;
+}
+
+#lab-section .lab-project-item[data-lab-status="prototyping"] .lab-status-indicator,
+#lab-section .lab-project-item[data-lab-status="testing"] .lab-status-indicator {
+    color: inherit;
+}
+
+#lab-section .lab-project-item[data-lab-status="prototyping"] .lab-status-indicator {
+    color: #d97706;
+}
+
+#lab-section .lab-project-item[data-lab-status="testing"] .lab-status-indicator {
+    color: #059669;
+}
+
+#lab-section .lab-project-item[data-lab-status="design"] .lab-status-indicator {
+    color: #737373;
+}
+
+/* Animación específica */
+#lab-section .lab-project-item[data-lab-status="prototyping"] .lab-pulse-dot,
+#lab-section .lab-project-item[data-lab-status="testing"] .lab-pulse-dot {
+    animation: lab-pulse-animation 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes lab-pulse-animation {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+#lab-section .lab-status-label {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 11px;
+}
+
+#lab-section .lab-timestamp {
+    color: #737373;
+    font-family: 'SF Mono', Monaco, monospace;
+    font-size: 11px;
+}
+
+/* Contenido de proyecto */
+#lab-section .lab-project-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #171717;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+#lab-section .lab-project-summary {
+    color: #525252;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+    font-size: 15px;
+}
+
+/* Progress bar específica */
+#lab-section .lab-progress-track {
+    margin-bottom: 20px;
+}
+
+#lab-section .lab-progress-rail {
+    width: 100%;
+    height: 4px;
+    background-color: #e5e5e5;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+#lab-section .lab-progress-fill {
+    height: 100%;
+    background-color: #171717;
+    transition: width 0.6s ease;
+    border-radius: 2px;
+}
+
+#lab-section .lab-project-item[data-lab-status="prototyping"] .lab-progress-fill {
+    background-color: #d97706;
+}
+
+#lab-section .lab-project-item[data-lab-status="testing"] .lab-progress-fill {
+    background-color: #059669;
+}
+
+#lab-section .lab-project-item[data-lab-status="design"] .lab-progress-fill {
+    background-color: #737373;
+}
+
+#lab-section .lab-progress-value {
+    font-family: 'SF Mono', Monaco, monospace;
+    font-size: 11px;
+    color: #737373;
+    font-weight: 500;
+}
+
+/* Tech stack específico */
+#lab-section .lab-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+#lab-section .lab-skill-tag {
+    font-family: 'SF Mono', Monaco, monospace;
+    font-size: 10px;
+    padding: 4px 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    color: #525252;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+}
+
+/* Footer específico */
+.lab-footer { 
+    margin-top: clamp(2rem, 5vh, 3rem); 
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    width: 100%; 
+}
+
+/* BOTÓN LINK DINÁMICO */
+.btn-link {
+  gap: 8px;
+  text-decoration: none;
+  color: var(--ink);
+  font: 600 1rem var(--font-primary);
+  position: relative;
+  padding-bottom: 4px;
+  transition: .3s ease;
+}
+
+.btn-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 40%; height: 2px;
+  background: var(--brand-2);
+  transition: .4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-link__icon { font-size: 1.2rem; transition: .4s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+.btn-link:hover::after { width: 100%; }
+.btn-link:hover .btn-link__icon { transform: translateX(6px); }
+
+
+/* Responsive específico */
+@media (max-width: 768px) {
+    #lab-section.lab-engineering-section {
+        padding: 60px 0;
+    }
+    
+    #lab-section .lab-wrapper {
+        padding: 0 20px;
+    }
+    
+    #lab-section .lab-projects-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    #lab-section .lab-project-item {
+        padding: 24px;
+    }
+    
+    #lab-section .lab-header-block {
+        margin-bottom: 40px;
+    }
+}
